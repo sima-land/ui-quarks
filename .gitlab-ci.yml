@@ -11,7 +11,7 @@ publish-package:
     - echo //gitlab.sima-land.ru/api/v4/projects/${CI_PROJECT_ID}/packages/npm/:_authToken=${CI_JOB_TOKEN} > .npmrc
     - npm --no-git-tag-version version $CI_COMMIT_REF_NAME
     - npm install
-    - npm dist
+    - npm run dist
   script:
     - npm publish build
   only:
