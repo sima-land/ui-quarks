@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "module": "es2020",
+    "target": "es2020",
+    "declaration": true,
+    "noImplicitAny": true,
+    "sourceMap": false,
+    "strict": true,
+    "moduleResolution": "node"
+  }
+}
