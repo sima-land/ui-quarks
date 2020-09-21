@@ -8,7 +8,7 @@
   },
   "repository": "ssh://git@gitlab.sima-land.ru:7888/dev-dep/dev/packages/ui-quarks.git",
   "scripts": {
-    "build:before": "node prebuild.js --tempDir=build-temp",
+    "build:before": "rm -rf build && node prebuild.js --tempDir=build-temp",
     "build:main": "tsc --rootDir build-temp --outDir build",
     "build:after": "rm -rf build-temp",
     "build": "npm run build:before && npm run build:main && npm run build:after"
@@ -18,7 +18,9 @@
   "devDependencies": {
     "@svgr/core": "^5.4.0",
     "@svgr/plugin-svgo": "^5.4.0",
+    "@types/fs-extra": "^9.0.1",
     "@types/react": "^16.9.49",
+    "eslint": "^7.9.0",
     "fs-extra": "^9.0.1",
     "lodash": "^4.17.20",
     "typescript": "^4.0.2"
