@@ -2,7 +2,6 @@
   "name": "@dev-dep/ui-quarks",
   "version": "0.0.0",
   "description": "Sima-land design tokens as a React components/helpers",
-  "main": "index.js",
   "publishConfig": {
     "@dev-dep:registry": "https://gitlab.sima-land.ru/api/v4/projects/1151/packages/npm/"
   },

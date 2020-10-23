@@ -6,6 +6,7 @@ module.exports = {
   typescript: true,
   svgoConfig: {
     plugins: [
+      { removeAttrs: { attrs: 'fill' } },
       { removeViewBox: false },
       { cleanupIDs: false },
       { mergePaths: true },

@@ -1,5 +1,6 @@
 const fs = require('fs-extra');
 const path = require('path');
+const SVGO = require('svgo');
 const { default: svgr } = require('@svgr/core');
 const svgrConfig = require('./svgr.config');
 const { upperFirst, camelCase, kebabCase } = require('lodash');
@@ -37,12 +38,14 @@ async function copySVG (srcPath, targetPath) {
 
   const files = (await listAllFiles(targetPath)).filter(file => path.extname(file.name) === '.svg');
 
+  const svgo = new SVGO({ plugins: svgrConfig.svgoConfig.plugins });
+
   for (const file of files) {
     const cleanName = path.basename(file.name, '.svg').replace('&', 'And');
     const fileNameBase = kebabCase(cleanName);
+    const optimizedSvgSource = await svgo.optimize(await fs.readFile(file.path), { path: file.path });
 
-    // переименовываем в kebab-case
-    await fs.rename(file.path, path.join(file.dirname, `${fileNameBase}.svg`));
+    await fs.writeFile(path.join(file.dirname, `${fileNameBase}.svg`), optimizedSvgSource.data);
   }
 }
 
