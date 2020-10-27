@@ -16,9 +16,6 @@ stages:
 prepare:
   stage: prepare
   <<: *node_image
-  cache:
-    paths:
-      - node_modules
   script:
     - npm i
   <<: *runner_tags
@@ -29,7 +26,6 @@ publish-package:
   before_script:
     - echo //gitlab.sima-land.ru/api/v4/projects/${CI_PROJECT_ID}/packages/npm/:_authToken=${CI_JOB_TOKEN} > .npmrc
     - npm --no-git-tag-version version $CI_COMMIT_REF_NAME
-    - npm install
     - npm run dist
   script:
     - npm publish build
@@ -38,8 +34,7 @@ publish-package:
       - tags
   <<: *runner_tags
 
-
-publish-pages:
+pages:
   stage: publish
   <<: *node_image
   script:
