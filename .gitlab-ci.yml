@@ -29,7 +29,6 @@ pages:
     paths:
     - docs-build
   only:
-    refs:
-      - tags
+  - master
   tags:
     - sl-frontend
