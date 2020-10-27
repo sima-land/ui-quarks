@@ -1,8 +1,8 @@
 build
 build-temp
 
-docs-build
 docs-temp
+public
 
 node_modules
 .cache

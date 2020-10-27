@@ -43,7 +43,7 @@ pages:
   - npm run build:docs
   artifacts:
     paths:
-    - docs-build
+    - public
   only:
   - master
   <<: *runner_tags
