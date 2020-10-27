@@ -22,6 +22,7 @@ publish-package:
 
 pages:
   stage: publish
+  image: node:10.15.3-alpine
   script:
   - npm run build
   - npm run build:docs
