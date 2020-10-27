@@ -17,7 +17,6 @@ prepare:
       - node_modules
   script:
     - npm i
-  <<: *runner_tags
 
 publish-package:
   stage: publish
