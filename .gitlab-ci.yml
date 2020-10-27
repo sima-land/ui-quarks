@@ -1,9 +1,27 @@
 stages:
+  - prepare
   - publish
+
+prepare:
+  stage: prepare
+  <<: *node_image
+  cache:
+    paths:
+      - node_modules
+  script:
+    - yarn install
+  <<: *runner_tags
+
+.node_image_template: &node_image
+  image: node:10.15.3-alpine
+  cache:
+    paths:
+      - node_modules
+    policy: pull
 
 publish-package:
   stage: publish
-  image: node:10.15.3-alpine
+  <<: *node_image
   cache:
     paths:
       - node_modules
@@ -22,7 +40,7 @@ publish-package:
 
 pages:
   stage: publish
-  image: node:10.15.3-alpine
+  <<: *node_image
   script:
   - npm run build
   - npm run build:docs
