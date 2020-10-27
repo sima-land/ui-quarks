@@ -1,5 +1,9 @@
 build
 build-temp
+
+docs-build
+docs-temp
+
 node_modules
 .cache
 dist

@@ -19,3 +19,17 @@ publish-package:
       - tags
   tags:
     - sl-frontend
+
+pages:
+  stage: publish
+  script:
+  - npm run build
+  - npm run build:docs
+  artifacts:
+    paths:
+    - docs-build
+  only:
+    refs:
+      - tags
+  tags:
+    - sl-frontend
