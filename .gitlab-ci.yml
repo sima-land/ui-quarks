@@ -1,6 +1,7 @@
 stages:
   - prepare
   - publish
+  - deploy
 
 .node_image_template: &node_image
   image: node:10.15.3-alpine
@@ -35,7 +36,7 @@ publish-package:
   <<: *runner_tags
 
 pages:
-  stage: publish
+  stage: deploy
   <<: *node_image
   script:
   - npm run build
