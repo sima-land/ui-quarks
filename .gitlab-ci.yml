@@ -9,6 +9,10 @@ stages:
       - node_modules
     policy: pull
 
+.runner_tags_template: &runner_tags
+  tags:
+    - sl-frontend
+
 prepare:
   stage: prepare
   <<: *node_image
@@ -17,6 +21,7 @@ prepare:
       - node_modules
   script:
     - npm i
+  <<: *runner_tags
 
 publish-package:
   stage: publish
@@ -31,10 +36,10 @@ publish-package:
   only:
     refs:
       - tags
-  tags:
-    - sl-frontend
+  <<: *runner_tags
 
-pages:
+
+publish-pages:
   stage: publish
   <<: *node_image
   script:
@@ -45,5 +50,5 @@ pages:
     - docs-build
   only:
   - master
-  tags:
-    - sl-frontend
+  <<: *runner_tags
+
