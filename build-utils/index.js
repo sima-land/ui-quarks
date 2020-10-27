@@ -1,7 +1,7 @@
 const fs = require('fs-extra');
 const path = require('path');
 
-async function listAllFiles (rootPath) {
+async function listAllFiles (rootPath, { ext } = {}) {
   const entries = await fs.readdir(rootPath, { withFileTypes: true });
 
   const files = [];
@@ -18,7 +18,9 @@ async function listAllFiles (rootPath) {
     }
   }
 
-  return files;
+  return ext
+    ? files.filter(file => path.extname(file.name) === ext)
+    : files;
 }
 
 module.exports = { listAllFiles };
