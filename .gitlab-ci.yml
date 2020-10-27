@@ -2,16 +2,6 @@ stages:
   - prepare
   - publish
 
-prepare:
-  stage: prepare
-  <<: *node_image
-  cache:
-    paths:
-      - node_modules
-  script:
-    - yarn install
-  <<: *runner_tags
-
 .node_image_template: &node_image
   image: node:10.15.3-alpine
   cache:
@@ -19,12 +9,19 @@ prepare:
       - node_modules
     policy: pull
 
-publish-package:
-  stage: publish
+prepare:
+  stage: prepare
   <<: *node_image
   cache:
     paths:
       - node_modules
+  script:
+    - npm i
+  <<: *runner_tags
+
+publish-package:
+  stage: publish
+  <<: *node_image
   before_script:
     - echo //gitlab.sima-land.ru/api/v4/projects/${CI_PROJECT_ID}/packages/npm/:_authToken=${CI_JOB_TOKEN} > .npmrc
     - npm --no-git-tag-version version $CI_COMMIT_REF_NAME
