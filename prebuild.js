@@ -1,3 +1,4 @@
+/* eslint-disable require-jsdoc, jsdoc/require-jsdoc */
 const fs = require('fs-extra');
 const path = require('path');
 const SVGO = require('svgo');
@@ -9,6 +10,7 @@ const { listAllFiles } = require('./build-utils');
 async function main () {
   await preBuild(parseArgs());
 
+  // eslint-disable-next-line no-console
   console.log('pre build: success!');
 }
 
@@ -35,7 +37,7 @@ async function preBuild ({ tempDir: tsxDir }) {
     const cleanName = path.basename(file.name, '.svg').replace('&', 'And');
     const fileNameBase = kebabCase(cleanName);
     const componentName = `${upperFirst(camelCase(cleanName))}SVG`;
-    const basePath = file.dirname.replace(process.cwd() + '/src', '');
+    const basePath = file.dirname.replace(`${process.cwd()}/src`, '');
 
     const readySVG = (await svgo.optimize(fileSource, { path: file.path })).data;
     const readyTSX = await svgr(fileSource, svgrConfig, { componentName });
