@@ -1,59 +1,26 @@
+/* eslint-disable require-jsdoc, jsdoc/require-jsdoc */
 import React, { useState, useEffect } from 'react';
-import { useReducer } from 'react';
 import ReactDOM from 'react-dom';
+import { isEmpty, last } from 'lodash';
+import { prop } from 'lodash/fp';
 import * as Icons from 'ui-quarks';
 
-const App = () => {
-  const [value, setValue] = useState('');
+const useNotices = () => {
+  const EXPIRE_TIME = 600;
+  const [notices, setNotices] = useState([]);
 
-  const [notices, dispatchNotices] = useReducer((state = [], action) => {
-    switch (action.type) {
-      case 'ADD': return [...state, action.payload].slice(-5);
-      case 'DEQUEUE': return state.slice(1);
-    }
-  });
-  const addNotice = message => dispatchNotices({ type: 'ADD', payload: message });
-  const dequeueNotice = () => dispatchNotices({ type: 'DEQUEUE' });
+  const createNotice = message => ({ message, createdAt: Date.now() });
+  const isExpired = notice => Date.now() - notice.createdAt > EXPIRE_TIME;
 
-  const foundIcons = Object.values(Icons).filter(data => data.name.toLowerCase().includes(value));
+  const add = message => setNotices(list => [...list, createNotice(message)].slice(-5));
+  const dequeue = () => setNotices(list => !isEmpty(list) && isExpired(last(list)) ? list.slice(1) : list);
 
   useEffect(() => {
-    setInterval(() => dequeueNotice(), 600);
+    const timerId = setInterval(dequeue, EXPIRE_TIME);
+    return () => clearInterval(timerId);
   }, []);
 
-  return (
-    <>
-      <input
-        value={value}
-        className='search-input'
-        type="text"
-        onChange={e => setValue(e.target.value)}
-        placeholder='Имя иконки...'
-      />
-
-      <div className="icons">
-        {!foundIcons.length && (
-          <div className='not-found-message'>Не найдено</div>
-        )}
-        {foundIcons.map(({ icon: Icon, name, path }, index) => (
-          <div
-            key={index}
-            className='icon-block'
-            onClick={() => {
-              navigator.clipboard.writeText(`import ${name} from '@dev-dep/ui-nucleons/${path}';`).then(() => {
-                addNotice('Copied to clipboard: import');
-              });
-            }}
-          >
-            <Icon className='icon-block__icon' />
-            <div className='icon-block__title'>{name}</div>
-          </div>
-        ))}
-      </div>
-
-      <Notices items={notices} />
-    </>
-  );
+  return [notices, add];
 };
 
 const Notices = ({ items = [] }) => {
@@ -64,6 +31,8 @@ const Notices = ({ items = [] }) => {
 
     document.body.append(container);
     setElement(container);
+
+    return () => container.remove();
   }, []);
 
   return element
@@ -77,12 +46,62 @@ const Notices = ({ items = [] }) => {
       ),
       element
     )
-    : null
+    : null;
 };
 
-window.addEventListener('DOMContentLoaded', () => {
-  ReactDOM.render(
-    <App />,
-    document.querySelector('#root')
+const App = () => {
+  const [searchValue, setSearchValue] = useState('');
+  const [notices, addNotice] = useNotices();
+
+  const foundIcons = Object
+    .values(Icons)
+    .filter(({ name }) => name.toLowerCase().includes(searchValue.toLowerCase()));
+
+  return (
+    <>
+      <h1 className='main-title'>Иконки дизайн-системы</h1>
+      <input
+        type='text'
+        value={searchValue}
+        placeholder='Имя иконки...'
+        onChange={e => setSearchValue(e.target.value)}
+        className='search-input'
+      />
+
+      <div className='icons'>
+        {!foundIcons.length && (
+          <div className='not-found-message'>Не найдено</div>
+        )}
+        {foundIcons.map((iconData, index) => {
+          const { icon: Icon } = iconData;
+
+          return (
+            <div
+              key={index}
+              className='icon-block'
+              title={iconData.name}
+              onClick={() => {
+                navigator.clipboard && navigator.clipboard.writeText(
+                  `import ${iconData.name} from '@dev-dep/ui-nucleons/${iconData.path}';`
+                )
+                  .then(() => {
+                    addNotice(`Copied to clipboard: import for ${iconData.name}`);
+                  });
+              }}
+            >
+              <Icon className='icon-block__icon' />
+              <div className='icon-block__title'>{iconData.name}</div>
+            </div>
+          );
+        })}
+      </div>
+
+      <Notices items={notices.map(prop('message'))} />
+    </>
   );
-});
+};
+
+window.addEventListener('DOMContentLoaded', () => void ReactDOM.render(
+  <App />,
+  document.querySelector('#root')
+));

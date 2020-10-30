@@ -1,3 +1,4 @@
+/* eslint-disable require-jsdoc, jsdoc/require-jsdoc */
 const fs = require('fs-extra');
 const path = require('path');
 const babelParser = require('@babel/parser');
@@ -19,13 +20,13 @@ async function main () {
   const parts = [];
 
   for (const file of files) {
-    const relativePath = file.path.replace(process.cwd() + '/build/', '');
-    const originalExportName = getDefaultExportName(await fs.readFile(file.path, 'utf-8'));
+    const relativePath = file.path.replace(`${process.cwd()}/build/`, '');
+    const exportName = getDefaultExportName(await fs.readFile(file.path, 'utf-8'));
 
     parts.push({
       importName: randomString(),
       importPath: relativePath,
-      originalExportName,
+      exportName,
     });
   }
 
@@ -34,12 +35,11 @@ async function main () {
     .join('\n');
 
   const constants = parts
-    .map(part => {
-      return `const ${part.importName + 'Data'} = { icon: ${part.importName}, name: "${part.originalExportName}", path: "${part.importPath}" };`;
-    })
+    // eslint-disable-next-line max-len
+    .map(p => `const ${p.importName}Data = { icon: ${p.importName}, name: "${p.exportName}", path: "${p.importPath}" };`)
     .join('\n');
 
-  const exports = `export { ${parts.map(part => part.importName + 'Data').join(',\n')} };`;
+  const exports = `export { ${parts.map(part => `${part.importName}Data`).join(',\n')} };`;
 
   await fs.outputFile(path.join(process.cwd(), 'docs-temp/icons.js'), [
     imports,
