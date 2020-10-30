@@ -1,7 +1,8 @@
 /* eslint-disable require-jsdoc, jsdoc/require-jsdoc */
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
-import { isEmpty, last } from 'lodash';
+import Clipboard from 'clipboard';
+import { groupBy, isEmpty, last } from 'lodash';
 import { prop } from 'lodash/fp';
 import * as Icons from 'ui-quarks';
 
@@ -57,6 +58,19 @@ const App = () => {
     .values(Icons)
     .filter(({ name }) => name.toLowerCase().includes(searchValue.toLowerCase()));
 
+  const iconGroups = groupBy(
+    foundIcons,
+    ({ path }) => path.replace(/[^/]*$/g, '').replace(/^icons/, '').split('/').filter(Boolean).join(' / ')
+  );
+
+  useEffect(() => {
+    const clipboard = new Clipboard('.icon-block');
+
+    clipboard.on('success', event => {
+      addNotice(`Copied to clipboard: import for ${event.trigger.title}`);
+    });
+  }, []);
+
   return (
     <>
       <h1 className='main-title'>Иконки дизайн-системы</h1>
@@ -69,31 +83,29 @@ const App = () => {
       />
 
       <div className='icons'>
+        {Object.entries(iconGroups).map(([groupName, items]) => (
+          <>
+            <h3 className='group-title'>{groupName}</h3>
+            {items.map((iconData, index) => {
+              const { icon: Icon } = iconData;
+
+              return (
+                <div
+                  key={index}
+                  className='icon-block'
+                  title={iconData.name}
+                  data-clipboard-text={`import ${iconData.name} from '@dev-dep/ui-quarks/${iconData.path}';`}
+                >
+                  <Icon className='icon-block__icon' />
+                  <div className='icon-block__title'>{iconData.name}</div>
+                </div>
+              );
+            })}
+          </>
+        ))}
         {!foundIcons.length && (
           <div className='not-found-message'>Не найдено</div>
         )}
-        {foundIcons.map((iconData, index) => {
-          const { icon: Icon } = iconData;
-
-          return (
-            <div
-              key={index}
-              className='icon-block'
-              title={iconData.name}
-              onClick={() => {
-                navigator.clipboard && navigator.clipboard.writeText(
-                  `import ${iconData.name} from '@dev-dep/ui-nucleons/${iconData.path}';`
-                )
-                  .then(() => {
-                    addNotice(`Copied to clipboard: import for ${iconData.name}`);
-                  });
-              }}
-            >
-              <Icon className='icon-block__icon' />
-              <div className='icon-block__title'>{iconData.name}</div>
-            </div>
-          );
-        })}
       </div>
 
       <Notices items={notices.map(prop('message'))} />
