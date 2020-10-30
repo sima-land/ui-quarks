@@ -12,8 +12,8 @@
     "build:after": "rm -rf build-temp",
     "build": "npm run build:before && npm run build:main && npm run build:after",
     "dist": "npm run build && cp ./package.json build && cp ./readme.md build",
-    "build:docs": "node ./docs/prebuild.js; parcel build ./docs/src/index.html --out-dir ./public --public-url ./; rm -rf ./docs-temp",
-    "watch:docs": "npm run build; node ./docs/prebuild.js; parcel ./docs/src/index.html --out-dir ./public"
+    "build:docs": "node ./docs/prebuild.js && parcel build ./docs/src/index.html --out-dir ./public --public-url ./ && rm -rf ./docs-temp",
+    "watch:docs": "npm run build && node ./docs/prebuild.js && parcel ./docs/src/index.html --out-dir ./public"
   },
   "author": "www.sima-land.ru team",
   "license": "ISC",
