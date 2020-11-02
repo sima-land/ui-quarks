@@ -5,25 +5,35 @@ stages:
 
 .node_image_template: &node_image
   image: node:10.15.3-alpine
-  cache:
-    paths:
-      - node_modules
-    policy: pull
 
 .runner_tags_template: &runner_tags
   tags:
     - sl-frontend
 
+.cache_only_pull_template: &cache_only_pull
+  cache:
+    paths:
+      - node_modules
+    policy: pull
+
 prepare:
   stage: prepare
   <<: *node_image
+  cache:
+    paths:
+      - node_modules
   script:
     - npm i
+  only:
+    refs:
+      - tags
+      - master
   <<: *runner_tags
 
 publish-package:
   stage: publish
   <<: *node_image
+  <<: *cache_only_pull
   before_script:
     - echo //gitlab.sima-land.ru/api/v4/projects/${CI_PROJECT_ID}/packages/npm/:_authToken=${CI_JOB_TOKEN} > .npmrc
     - npm --no-git-tag-version version $CI_COMMIT_REF_NAME
@@ -38,6 +48,7 @@ publish-package:
 pages:
   stage: deploy
   <<: *node_image
+  <<: *cache_only_pull
   script:
   - npm run build
   - npm run build:docs
