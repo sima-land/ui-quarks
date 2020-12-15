@@ -43,6 +43,27 @@ publish-package:
   only:
     refs:
       - tags
+  artifacts:
+    paths:
+      - build/icons/**/*.svg
+  <<: *runner_tags
+
+publish-icons:
+  stage: deploy
+  image: gitlab.sima-land.ru:5544/dev-dep/dev/s3-uploader:1.2.2
+  dependencies:
+    - publish-package
+  variables:
+    UPS3_BASEPATH: "build/icons"
+    UPS3_AWS_KEY: $AWS_KEY
+    UPS3_AWS_SECRET: $AWS_SECRET_KEY
+    UPS3_AWS_ENDPOINT: $AWS_ENDPOINT
+    UPS3_AWS_BUCKET: $AWS_ASSETS_BUCKET
+  script:
+    - uploader sync --dst-folder ui-icons -p release -r
+  only:
+    refs:
+      - tags
   <<: *runner_tags
 
 pages:
@@ -52,6 +73,7 @@ pages:
   script:
   - npm run build
   - npm run build:docs
+  dependencies: []
   artifacts:
     paths:
     - public
