@@ -45,7 +45,8 @@ publish-package:
       - tags
   artifacts:
     paths:
-      - build/icons/**/*.svg
+      - build/icons/*/*/*.svg
+      - build/icons/*/*/*/*.svg
   <<: *runner_tags
 
 publish-icons:
@@ -60,7 +61,7 @@ publish-icons:
     UPS3_AWS_ENDPOINT: $AWS_ENDPOINT
     UPS3_AWS_BUCKET: $AWS_ASSETS_BUCKET
   script:
-    - uploader sync --dst-folder ui-icons -p release -r
+    - uploader sync --dst-folder ui-icons -r
   only:
     refs:
       - tags
