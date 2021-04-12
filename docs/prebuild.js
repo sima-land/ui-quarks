@@ -1,27 +1,22 @@
 /* eslint-disable require-jsdoc, jsdoc/require-jsdoc */
 const fs = require('fs-extra');
 const path = require('path');
-const babelParser = require('@babel/parser');
 const { customAlphabet } = require('nanoid');
 const englishLowercase = require('nanoid-dictionary/lowercase');
 const { listAllFiles } = require('../build-utils');
+const { camelCase, upperFirst } = require('lodash');
 
 const randomString = customAlphabet(englishLowercase, 10);
 
-function getDefaultExportName (source) {
-  const { program } = babelParser.parse(source, { sourceType: 'module' });
-
-  return program.body.find(({ type }) => type === 'ExportDefaultDeclaration').declaration.name;
-}
+const baseName = value => path.basename(value).replace(path.extname(value), '');
 
 async function main () {
   const files = await listAllFiles(path.join(process.cwd(), 'build/'), { ext: '.js' });
-
   const parts = [];
 
   for (const file of files) {
     const relativePath = file.path.replace(`${process.cwd()}/build/`, '');
-    const exportName = getDefaultExportName(await fs.readFile(file.path, 'utf-8'));
+    const exportName = `${upperFirst(camelCase(baseName(relativePath)))}SVG`;
 
     parts.push({
       importName: randomString(),

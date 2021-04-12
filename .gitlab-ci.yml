@@ -4,7 +4,7 @@ stages:
   - deploy
 
 .node_image_template: &node_image
-  image: node:10.15.3-alpine
+  image: node:14.16.0-alpine
 
 .runner_tags_template: &runner_tags
   tags:
