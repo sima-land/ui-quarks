@@ -4,6 +4,7 @@ module.exports = {
     '@svgr/plugin-jsx',
   ],
   typescript: true,
+  ref: true,
   svgoConfig: {
     plugins: [
       { removeAttrs: { attrs: 'fill' } },
