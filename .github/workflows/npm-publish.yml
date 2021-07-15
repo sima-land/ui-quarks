@@ -1,0 +1,22 @@
+name: Publish sima-land design system icons as npm package
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  publish-npm:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14
+          registry-url: https://registry.npmjs.org/
+      - run: yarn install
+      - run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+      - run: npm --no-git-tag-version version $RELEASE_VERSION
+      - run: npm run dist
+      - run: npm publish build --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
