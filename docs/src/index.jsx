@@ -94,7 +94,7 @@ const App = () => {
                   key={index}
                   className='icon-block'
                   title={iconData.name}
-                  data-clipboard-text={`import ${iconData.name} from '@dev-dep/ui-quarks/${iconData.path}';`}
+                  data-clipboard-text={`import ${iconData.name} from '@sima-land/ui-quarks/${iconData.path}';`}
                 >
                   <Icon className='icon-block__icon' />
                   <div className='icon-block__title'>{iconData.name}</div>

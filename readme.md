@@ -9,7 +9,7 @@
 Иконки доступны как React-компоненты:
 
 ```jsx
-import AddSVG from '@dev-dep/quarks/icons/16x16/Filled/add';
+import AddSVG from '@sima-land/ui-quarks/icons/16x16/Filled/add';
 
 const SomeComponent = () => (
   <div>
