@@ -1,1 +1,1 @@
-module.exports = require('@dev-dep/linters/eslint');
+module.exports = require('@sima-land/linters/eslint');
