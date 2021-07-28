@@ -1,10 +1,19 @@
 # Иконки дизайн-системы www.sima-land.ru
 
 Разрабатывается в соответствии с дизайн-руководствами:
-- Tokens: https://www.figma.com/file/eJ2Q6XbVFsJZHPUojBitZB/Tokens-SF
-- Icons: https://www.figma.com/file/NUkikBKmMo6WiXbWbHJWhkWh/Icons
+https://www.figma.com/file/NUkikBKmMo6WiXbWbHJWhkWh/Icons
 
-## Использование иконок
+## Установка
+
+```bash
+# npm
+npm i -S @sima-land/ui-quarks
+
+# или yarn
+yarn add @sima-land/ui-quarks
+```
+
+## Использование
 
 Иконки доступны как React-компоненты:
 
