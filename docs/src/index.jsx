@@ -73,7 +73,7 @@ const App = () => {
 
   return (
     <>
-      <h1 className='main-title'>Иконки дизайн-системы</h1>
+      <h1 className='main-title'>Иконки дизайн-системы Сима-ленд</h1>
       <input
         type='text'
         value={searchValue}
