@@ -1,4 +1,4 @@
-name: Publish sima-land design system icons as npm package
+name: Publish Node.js package
 
 on:
   release:

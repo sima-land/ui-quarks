@@ -13,7 +13,7 @@
     "watch:docs": "npm run build && node ./docs/prebuild.js && parcel ./docs/src/index.html --out-dir ./public"
   },
   "author": "www.sima-land.ru team",
-  "license": "ISC",
+  "license": "Apache-2.0",
   "devDependencies": {
     "@babel/parser": "^7.12.3",
     "@sima-land/linters": "^1.0.12",
