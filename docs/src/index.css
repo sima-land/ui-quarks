@@ -96,6 +96,7 @@ body {
 }
 
 .icon-block__icon {
+  flex-shrink: 0;
   margin: auto 0;
   fill: #002B41;
 }
