@@ -84,7 +84,7 @@ const App = () => {
 
       <div className='icons'>
         {Object.entries(iconGroups).map(([groupName, items]) => (
-          <>
+          <React.Fragment key={groupName}>
             <h3 className='group-title'>{groupName}</h3>
             {items.map((iconData, index) => {
               const { icon: Icon } = iconData;
@@ -101,7 +101,7 @@ const App = () => {
                 </div>
               );
             })}
-          </>
+          </React.Fragment>
         ))}
         {!foundIcons.length && (
           <div className='not-found-message'>Не найдено</div>
