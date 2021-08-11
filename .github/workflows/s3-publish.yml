@@ -12,7 +12,7 @@ jobs:
       - uses: actions/setup-node@v2
 
       - name: Build
-      - run: | 
+        run: | 
           npm ci
           npm run dist
           
