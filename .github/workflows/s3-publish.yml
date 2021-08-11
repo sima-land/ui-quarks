@@ -12,10 +12,13 @@ jobs:
       - uses: actions/setup-node@v2
 
       - name: Build
-        run: | 
+        run: |
           npm ci
           npm run dist
-          
+
+      - name: Keep only SVG
+        run: find ./build/icons/ -not -name "*.svg" -not -type d -exec rm {} \;
+
       - uses: jakejarvis/s3-sync-action@master
         with:
           args: --acl public-read --delete
