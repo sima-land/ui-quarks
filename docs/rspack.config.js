@@ -1,11 +1,11 @@
 const path = require('path');
 
-module.exports = env => ({
+module.exports = (env, argv) => ({
   entry: {
     main: './src/index.tsx',
   },
   output: {
-    publicPath: env.mode === 'production' ? '/ui-quarks/' : undefined,
+    publicPath: argv.mode === 'production' ? '/ui-quarks/' : undefined,
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
   },
