@@ -1,0 +1,53 @@
+@use 'node_modules/@sima-land/ui-nucleons/colors';
+@use 'node_modules/@sima-land/ui-nucleons/breakpoints';
+
+.wrapper {
+  margin-top: 48px;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.group {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.item {
+  padding: 8px;
+  padding-top: 16px;
+  border-radius: 4px;
+  border: 1px solid var(--border-color-primary);
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: calc((100% - (16px * 1)) / 2);
+  &:hover {
+    cursor: pointer;
+    border-color: var(--border-color-secondary);
+  }
+  @include breakpoints.up('ml') {
+    width: calc((100% - (16px * 2)) / 3);
+  }
+  @include breakpoints.up('xs') {
+    width: calc((100% - (16px * 3)) / 4);
+  }
+  @include breakpoints.up('s') {
+    width: calc((100% - (16px * 4)) / 5);
+  }
+}
+
+.name {
+  max-width: 100%;
+  margin-top: 12px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
