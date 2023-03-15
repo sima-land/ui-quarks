@@ -8,15 +8,39 @@ jobs:
   publish-npm:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
-          node-version: 14
+          node-version: 16
           registry-url: https://registry.npmjs.org/
-      - run: npm ci
-      - run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
-      - run: npm --no-git-tag-version version $RELEASE_VERSION
-      - run: npm run dist
-      - run: npm publish build --access public
+
+      - uses: ./.github/actions/publish-notify
+        with:
+          stage: start
+          tg-bot-token: ${{ secrets.TG_BOT_TOKEN }}
+          tg-chat-id: ${{ secrets.TG_CHAT_ID }}
+
+      - name: Build
+        run: |
+          npm ci
+          npm --no-git-tag-version version ${GITHUB_REF#refs/*/}
+          npm run dist
+
+      - name: Publish
+        run: npm publish ./dist --access public
         env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+          NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
+
+      - uses: ./.github/actions/publish-notify
+        if: success()
+        with:
+          stage: done
+          tg-bot-token: ${{ secrets.TG_BOT_TOKEN }}
+          tg-chat-id: ${{ secrets.TG_CHAT_ID }}
+
+      - uses: ./.github/actions/publish-notify
+        if: failure()
+        with:
+          stage: fail
+          tg-bot-token: ${{ secrets.TG_BOT_TOKEN }}
+          tg-chat-id: ${{ secrets.TG_CHAT_ID }}

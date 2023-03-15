@@ -1,12 +1,12 @@
 {
   "compilerOptions": {
-    "jsx": "react",
-    "module": "commonjs",
+    "outDir": "dist/icons",
+    "jsx": "react-jsx",
+    "module": "CommonJS",
     "target": "es2020",
-    "declaration": true,
-    "noImplicitAny": true,
-    "sourceMap": false,
-    "strict": true,
-    "moduleResolution": "node"
-  }
+    "sourceMap": true,
+    "declaration": true
+  },
+  "include": ["./temp/**/*"],
+  "exclude": ["node_modules"]
 }

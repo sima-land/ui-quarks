@@ -1,0 +1,66 @@
+@use 'node_modules/@sima-land/ui-nucleons/colors';
+
+.root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex-grow: 1;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.title {
+  font-size: 32px;
+  line-height: 40px;
+}
+
+.search {
+  margin-top: 24px;
+  width: 100%;
+}
+
+:root[data-theme='dark'] {
+  .search {
+    --field-background: var(--background-color-secondary);
+    --field-main-text-color: var(--text-color-primary);
+  }
+}
+
+.stub {
+  margin-top: 48px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  line-height: 32px;
+}
+
+.footer {
+  padding: 32px 0;
+  text-align: center;
+  background: var(--background-color-secondary);
+}
+
+.toasts {
+  position: fixed;
+  top: 32px;
+  right: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 400px;
+  width: calc(100% - 64px);
+  pointer-events: none;
+}
+
+.toast {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  transition: opacity 0.1s ease-in-out, top 0.1s ease-in-out;
+}

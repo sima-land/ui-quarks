@@ -4,35 +4,32 @@
   "description": "Sima-land design tokens as a React components/helpers",
   "repository": "ssh://git@gitlab.sima-land.ru:7888/dev-dep/dev/packages/ui-quarks.git",
   "scripts": {
-    "build:before": "rm -rf build && node prebuild.js --tempDir=build-temp",
-    "build:main": "tsc --rootDir build-temp --outDir build",
-    "build:after": "rm -rf build-temp",
+    "build:before": "rm -rf temp dist",
+    "build:main": "ts-node --project tsconfig.node.json prebuild.ts && tsc",
+    "build:after": "rm -rf temp",
     "build": "npm run build:before && npm run build:main && npm run build:after",
-    "dist": "npm run build && cp ./package.json build && cp ./readme.md build",
-    "build:docs": "node ./docs/prebuild.js && parcel build ./docs/src/index.html --out-dir ./public --public-url ./ && rm -rf ./docs-temp",
-    "watch:docs": "npm run build && node ./docs/prebuild.js && parcel ./docs/src/index.html --out-dir ./public"
+    "dist": "npm run build && cp package.json dist/package.json && cp readme.md dist/readme.md"
   },
   "author": "www.sima-land.ru team",
   "license": "Apache-2.0",
   "devDependencies": {
-    "@babel/parser": "^7.12.3",
-    "@sima-land/linters": "^1.0.12",
-    "@svgr/core": "^5.4.0",
-    "@svgr/plugin-svgo": "^5.4.0",
-    "@types/fs-extra": "^9.0.1",
-    "@types/react": "^16.9.49",
-    "clipboard": "^2.0.6",
-    "eslint": "^7.9.0",
-    "fs-extra": "^9.0.1",
-    "lodash": "^4.17.20",
-    "nanoid": "^3.1.16",
-    "nanoid-dictionary": "^4.1.0",
-    "parcel-bundler": "^1.12.4",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "typescript": "^4.0.2"
+    "@sima-land/linters": "^2.2.0",
+    "@svgr/core": "^6.5.1",
+    "@svgr/plugin-jsx": "^6.5.1",
+    "@svgr/plugin-prettier": "^6.5.1",
+    "@types/babel__core": "^7.20.0",
+    "@types/fs-extra": "^11.0.1",
+    "@types/lodash": "^4.14.191",
+    "@types/react": "^18.0.28",
+    "fast-glob": "^3.2.12",
+    "fs-extra": "^11.1.0",
+    "lodash": "^4.17.21",
+    "prettier": "^2.8.4",
+    "svgo": "^3.0.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5"
   },
-  "alias": {
-    "ui-quarks": "./docs-temp/icons.js"
+  "peerDependencies": {
+    "react": "^17.0.2"
   }
 }
