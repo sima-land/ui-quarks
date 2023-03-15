@@ -83,6 +83,7 @@ function Toasts({ items }: { items: Toast[] }) {
 
 function getIconGroups() {
   return icons.reduce<Record<string, IconData[]>>((acc, item) => {
+    // ВАЖНО: убираем "icons/" так как все иконки лежат в этом каталоге
     const groupName = item.packagePathname.replace('icons/', '');
 
     acc[groupName] = acc[groupName] || [];

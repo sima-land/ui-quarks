@@ -27,7 +27,7 @@ export async function prebuildIcon(svgRelativePath: string) {
     .then(readSVG)
     .then(optimizeSVG)
     .then(generateTSX)
-    .then(ctx => Promise.all([outputSVG(ctx), outputTSX(ctx)]));
+    .then(parallel(outputSVG, outputTSX));
 }
 
 async function start(svgRelativePath: string): Promise<Start> {
@@ -69,4 +69,8 @@ async function outputSVG(ctx: TSXGenerated) {
 async function outputTSX(ctx: TSXGenerated) {
   const temp = path.join('./temp', path.dirname(path.relative('./src', ctx.svgRelativePath)));
   await outputFile(path.join(temp, `${ctx.componentName}.tsx`), ctx.tsx);
+}
+
+function parallel<T extends any[]>(...fns: Array<(...args: T) => void>): (...args: T) => void {
+  return (...args: T) => Promise.all(fns.map(fn => fn(...args)));
 }

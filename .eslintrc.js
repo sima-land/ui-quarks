@@ -4,5 +4,6 @@ module.exports = {
   rules: {
     'require-jsdoc': 'off',
     'jsdoc/require-jsdoc': 'off',
+    'no-console': 'off',
   },
 };
