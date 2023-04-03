@@ -5,12 +5,12 @@ import { camelCase, upperFirst } from 'lodash';
 import { optimize } from 'svgo';
 import { svgoConfig, svgrConfig } from './configs';
 
-interface Start {
+interface ComponentNamed {
   svgRelativePath: string;
   componentName: string;
 }
 
-interface SVGRead extends Start {
+interface SVGRead extends ComponentNamed {
   svgRaw: string;
 }
 
@@ -23,16 +23,17 @@ interface TSXGenerated extends SVGOptimized {
 }
 
 export async function prebuildIcon(svgRelativePath: string) {
-  return start(svgRelativePath)
+  return Promise.resolve(svgRelativePath)
+    .then(defineName)
     .then(readSVG)
     .then(optimizeSVG)
     .then(generateTSX)
     .then(parallel(outputSVG, outputTSX));
 }
 
-async function start(svgRelativePath: string): Promise<Start> {
+async function defineName(svgRelativePath: string): Promise<ComponentNamed> {
   const filename = path.basename(svgRelativePath, path.extname(svgRelativePath)).trim();
-  const componentName = upperFirst(camelCase(filename.replace(/&/, 'And')));
+  const componentName = upperFirst(camelCase(filename.replace(/&/g, 'And')));
 
   return {
     componentName,
@@ -40,7 +41,7 @@ async function start(svgRelativePath: string): Promise<Start> {
   };
 }
 
-async function readSVG(ctx: Start): Promise<SVGRead> {
+async function readSVG(ctx: ComponentNamed): Promise<SVGRead> {
   return {
     ...ctx,
     svgRaw: await readFile(ctx.svgRelativePath, 'utf-8'),
@@ -57,7 +58,9 @@ async function optimizeSVG(ctx: SVGRead): Promise<SVGOptimized> {
 async function generateTSX(ctx: SVGOptimized): Promise<TSXGenerated> {
   return {
     ...ctx,
-    tsx: await transform(ctx.svgOptimized, svgrConfig),
+    tsx: await transform(ctx.svgOptimized, svgrConfig, {
+      componentName: `${ctx.componentName}SVG`,
+    }),
   };
 }
 
