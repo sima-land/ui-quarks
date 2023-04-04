@@ -5,10 +5,10 @@
   "repository": "ssh://git@gitlab.sima-land.ru:7888/dev-dep/dev/packages/ui-quarks.git",
   "scripts": {
     "build:before": "rm -rf temp dist",
-    "build:main": "ts-node --project tsconfig.node.json prebuild.ts && tsc",
+    "build:main": "ts-node --project tsconfig.node.json .build/prebuild.ts && tsc",
     "build:after": "rm -rf temp",
     "build": "npm run build:before && npm run build:main && npm run build:after",
-    "dist": "npm run build && cp package.json dist/package.json && cp readme.md dist/readme.md"
+    "dist": "npm run build && cp package.json dist/package.json && cp README.md dist/README.md"
   },
   "author": "www.sima-land.ru team",
   "license": "Apache-2.0",

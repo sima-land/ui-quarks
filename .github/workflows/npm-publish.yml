@@ -26,6 +26,9 @@ jobs:
           npm --no-git-tag-version version ${GITHUB_REF#refs/*/}
           npm run dist
 
+      - name: Lint
+        run: npx ts-node --project tsconfig.node.json .build/lint.ts
+
       - name: Publish
         run: npm publish ./dist --access public
         env:
