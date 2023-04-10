@@ -49,6 +49,8 @@ function IconGroupItem({
     if (ref.current) {
       const clipboard = new ClipboardJS(ref.current);
       clipboard.on('success', onCopied);
+
+      return () => clipboard.destroy();
     }
   }, [onCopied]);
 
