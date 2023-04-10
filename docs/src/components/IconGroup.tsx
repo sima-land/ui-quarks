@@ -50,7 +50,7 @@ function IconGroupItem({
       const clipboard = new ClipboardJS(ref.current);
       clipboard.on('success', onCopied);
     }
-  }, []);
+  }, [onCopied]);
 
   const valueToCopy = `import ${componentName} from '${importPath}';`;
 
