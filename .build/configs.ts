@@ -19,6 +19,23 @@ export const svgoConfig: SVGOConfig = {
   ],
 };
 
+export const svgoConfigColorful: SVGOConfig = {
+  plugins: [
+    {
+      name: 'preset-default',
+      params: {
+        overrides: {
+          cleanupIds: false,
+          removeViewBox: false,
+          collapseGroups: false,
+        },
+      },
+    },
+    { name: 'mergePaths' },
+    { name: 'prefixIds' },
+  ],
+};
+
 export const svgrConfig: SVGRConfig = {
   plugins: ['@svgr/plugin-jsx', '@svgr/plugin-prettier'],
   ref: true,

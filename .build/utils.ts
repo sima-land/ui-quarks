@@ -3,7 +3,7 @@ import { readFile, outputFile } from 'fs-extra';
 import { transform } from '@svgr/core';
 import { camelCase, upperFirst } from 'lodash';
 import { optimize } from 'svgo';
-import { svgoConfig, svgrConfig } from './configs';
+import { svgoConfig, svgoConfigColorful, svgrConfig } from './configs';
 
 interface IconDefined {
   svgPath: string;
@@ -49,9 +49,12 @@ async function readSVG(ctx: IconDefined): Promise<SVGRead> {
 }
 
 async function optimizeSVG(ctx: SVGRead): Promise<SVGOptimized> {
+  const colorful = ctx.svgPath.split(path.sep).includes('Colorful');
+  const config = colorful ? svgoConfigColorful : svgoConfig;
+
   return {
     ...ctx,
-    svgSourceOptimized: optimize(ctx.svgSourceRaw, svgoConfig).data,
+    svgSourceOptimized: optimize(ctx.svgSourceRaw, config).data,
   };
 }
 
