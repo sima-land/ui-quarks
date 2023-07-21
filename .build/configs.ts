@@ -1,5 +1,5 @@
-import { Config as SVGRConfig } from '@svgr/core';
-import { Config as SVGOConfig } from 'svgo';
+import type { Config as SVGRConfig } from '@svgr/core';
+import type { Config as SVGOConfig } from 'svgo';
 
 export const svgoConfig: SVGOConfig = {
   plugins: [

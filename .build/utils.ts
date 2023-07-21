@@ -2,7 +2,7 @@ import path from 'node:path';
 import { readFile, outputFile } from 'fs-extra';
 import { transform } from '@svgr/core';
 import { camelCase, upperFirst } from 'lodash';
-import { optimize } from 'svgo';
+import { optimize, Config as SVGOConfig } from 'svgo';
 import { svgoConfig, svgoConfigColorful, svgrConfig } from './configs';
 
 interface IconDefined {
@@ -16,6 +16,7 @@ interface SVGRead extends IconDefined {
 
 interface SVGOptimized extends SVGRead {
   svgSourceOptimized: string;
+  svgSourceOptimizedForInline: string;
 }
 
 interface TSXGenerated extends SVGOptimized {
@@ -52,18 +53,25 @@ async function readSVG(ctx: IconDefined): Promise<SVGRead> {
 
 async function optimizeSVG(ctx: SVGRead): Promise<SVGOptimized> {
   const colorful = ctx.svgPath.split(path.sep).includes('Colorful');
-  const config = colorful ? svgoConfigColorful : svgoConfig;
+
+  const config: SVGOConfig = colorful ? svgoConfigColorful : svgoConfig;
+
+  const configForInline: SVGOConfig = {
+    ...config,
+    plugins: [...(config.plugins ?? []), { name: 'removeXMLNS' }],
+  };
 
   return {
     ...ctx,
     svgSourceOptimized: optimize(ctx.svgSourceRaw, config).data,
+    svgSourceOptimizedForInline: optimize(ctx.svgSourceRaw, configForInline).data,
   };
 }
 
 async function generateTSX(ctx: SVGOptimized): Promise<TSXGenerated> {
   return {
     ...ctx,
-    tsxSource: await transform(ctx.svgSourceOptimized, svgrConfig, {
+    tsxSource: await transform(ctx.svgSourceOptimizedForInline, svgrConfig, {
       componentName: `${ctx.baseName}SVG`,
     }),
   };
