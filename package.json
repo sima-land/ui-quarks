@@ -15,8 +15,10 @@
     "build:types": "tsc --project tsconfig.types.json",
     "build:after": "rm -rf temp",
     "build": "npm run build:before && npm run build:main && npm run build:esm && npm run build:cjs && npm run build:types && npm run build:after",
-    "sync:exports": "ts-node --project tsconfig.node.json scripts/define-exports.ts && npm pkg set --json exports=\"$(cat ./temp/exports.json)\" && rm -rf temp/exports.json",
-    "dist": "npm run build && npm run sync:exports"
+    "sync:exports": "ts-node --project tsconfig.node.json scripts/emit-exports.ts && npm pkg set --json exports=\"$(cat ./temp/exports.json)\" && rm -rf temp/exports.json",
+    "dist": "npm run build && npm run sync:exports",
+    "lint:pkg": "ts-node --project tsconfig.node.json scripts/lint-pkg.ts",
+    "prepare": "husky install"
   },
   "author": "www.sima-land.ru team",
   "license": "Apache-2.0",
@@ -30,6 +32,7 @@
     "@types/react": "^18.0.28",
     "fast-glob": "^3.2.12",
     "fs-extra": "^11.1.0",
+    "husky": "^8.0.3",
     "lodash": "^4.17.21",
     "prettier": "^2.8.4",
     "svgo": "^3.0.2",
