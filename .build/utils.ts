@@ -1,16 +1,17 @@
 import path from 'node:path';
+import glob from 'fast-glob';
 import { readFile, outputFile } from 'fs-extra';
 import { transform } from '@svgr/core';
 import { camelCase, upperFirst } from 'lodash';
 import { optimize, Config as SVGOConfig } from 'svgo';
 import { svgoConfig, svgoConfigColorful, svgrConfig } from './configs';
 
-interface IconDefined {
+export interface IconDefined {
   svgSourcePath: string;
   baseName: string;
 }
 
-interface OutputDefined extends IconDefined {
+export interface OutputDefined extends IconDefined {
   packagePath: string;
   svgOutputPath: string;
   cjsOutputPath: string;
@@ -19,16 +20,28 @@ interface OutputDefined extends IconDefined {
   tsxOutputPath: string;
 }
 
-interface SVGRead extends OutputDefined {
+export interface ExportItemDefined extends OutputDefined {
+  export: {
+    pathname: string;
+    definition: {
+      types: string;
+      require: string;
+      import: string;
+      default: string;
+    };
+  };
+}
+
+export interface SVGRead extends OutputDefined {
   svgSourceRaw: string;
 }
 
-interface SVGOptimized extends SVGRead {
+export interface SVGOptimized extends SVGRead {
   svgSourceOptimized: string;
   svgSourceOptimizedForInline: string;
 }
 
-interface TSXGenerated extends SVGOptimized {
+export interface TSXGenerated extends SVGOptimized {
   tsxSource: string;
 }
 
@@ -39,7 +52,7 @@ export async function prebuildIcon(svgPath: string) {
     .then(readSVG)
     .then(optimizeSVG)
     .then(generateTSX)
-    .then(output);
+    .then(outputSvgAndTsx);
 }
 
 export async function defineIcon(svgPath: string): Promise<IconDefined> {
@@ -71,6 +84,21 @@ export async function defineOutput(ctx: IconDefined): Promise<OutputDefined> {
     cjsOutputPath: path.join(cjsDir, `${ctx.baseName}.js`),
     dtsOutputPath: path.join(dtsDir, `${ctx.baseName}.d.ts`),
     tsxOutputPath: path.join(tsxDir, `${ctx.baseName}.tsx`),
+  };
+}
+
+export function defineExportsItem(ctx: OutputDefined): ExportItemDefined {
+  return {
+    ...ctx,
+    export: {
+      pathname: `./${ctx.packagePath}`,
+      definition: {
+        types: `./${ctx.dtsOutputPath}`,
+        require: `./${ctx.cjsOutputPath}`,
+        import: `./${ctx.esmOutputPath}`,
+        default: `./${ctx.esmOutputPath}`,
+      },
+    },
   };
 }
 
@@ -107,11 +135,28 @@ async function generateTSX(ctx: SVGOptimized): Promise<TSXGenerated> {
   };
 }
 
-async function output(ctx: TSXGenerated): Promise<TSXGenerated> {
+async function outputSvgAndTsx(ctx: TSXGenerated): Promise<TSXGenerated> {
   await Promise.all([
     outputFile(ctx.svgOutputPath, ctx.svgSourceOptimized),
     outputFile(ctx.tsxOutputPath, ctx.tsxSource),
   ]);
 
   return { ...ctx };
+}
+
+export async function defineExports(iconPaths: string[]) {
+  const items = await Promise.all(iconPaths.map(item => defineIcon(item).then(defineOutput)));
+
+  const sortedExportItems = [...items]
+    .sort((a, b) => (a.packagePath > b.packagePath ? 1 : -1)) // ВАЖНО: используем сортировку для стабильности
+    .map(defineExportsItem);
+
+  const result: Record<string, unknown> = {};
+
+  for (const item of sortedExportItems) {
+    const { pathname, definition } = item.export;
+    result[pathname] = definition;
+  }
+
+  return result;
 }
