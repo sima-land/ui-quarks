@@ -3,10 +3,10 @@ import { TextButton } from '@sima-land/ui-nucleons/text-button';
 import { Panel } from '@sima-land/ui-nucleons/panel';
 import { Input } from '@sima-land/ui-nucleons/input';
 import { Layout } from '@sima-land/ui-nucleons/layout';
-import { IconData, IconGroup } from './IconGroup';
-import { Toast, useDarkTheme, useToasts } from './hooks';
-import { icons } from '../../generated/icons';
-import styles from './App.module.scss';
+import { IconData, IconGroup } from '../icon-group';
+import { Toast, useDarkTheme, useToasts } from '../hooks';
+import { icons } from '../../../generated/icons';
+import styles from './app.m.scss';
 
 export function App() {
   const [groups] = useState(getIconGroups);

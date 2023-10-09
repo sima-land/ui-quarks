@@ -10,7 +10,7 @@ function isNameInPascalCase(pathname: string): boolean {
 glob('./dist/**/*.{js,svg}')
   .then(paths => {
     if (paths.length === 0) {
-      throw Error(`[ui-quarks] dist folder has now JS/SVG files`);
+      throw Error(`[ui-quarks] dist folder has no JS/SVG files`);
     }
 
     for (const item of paths) {

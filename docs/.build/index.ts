@@ -1,5 +1,6 @@
 import path from 'node:path';
 import { camelCase, upperFirst } from 'lodash';
+import { readFile } from 'fs-extra';
 
 interface IconInfo {
   identifier: string;
@@ -8,22 +9,21 @@ interface IconInfo {
   packageFilename: string;
 }
 
-/**
- * Вернет данные иконки необходимые для формирования шаблонов.
- * @param jsRelativePath Путь до компонента иконки.
- * @return Данные.
- */
-export function iconInfo(jsRelativePath: string): IconInfo {
-  const distRel = path.relative('../dist', jsRelativePath);
-  const distRelNoExt = distRel.split('.').slice(0, -1).join('.');
+export async function defineIcons() {
+  const { exports } = JSON.parse(await readFile('../package.json', 'utf-8'));
 
-  return {
-    // ВАЖНО: путь может начинаться с цифры - добавляем "_" в начало
-    identifier: `_${upperFirst(camelCase(distRelNoExt))}`,
-    importPath: `@sima-land/ui-quarks/${distRel}`,
-    packagePathname: path.dirname(distRel),
-    packageFilename: path.basename(distRel, path.extname(distRel)),
-  };
+  const result: IconInfo[] = [];
+
+  for (const pathname of Object.keys(exports)) {
+    result.push({
+      identifier: `_${upperFirst(camelCase(pathname))}`,
+      importPath: path.join(`@sima-land/ui-quarks`, pathname),
+      packagePathname: path.dirname(pathname).replace(/^\.\//, ''),
+      packageFilename: path.basename(pathname).replace(/^\.\//, ''),
+    });
+  }
+
+  return result;
 }
 
 /**

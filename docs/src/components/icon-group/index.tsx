@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import ClipboardJS from 'clipboard';
-import styles from './IconGroup.module.scss';
+import styles from './icon-group.m.scss';
 
 export interface IconData {
   component: any;

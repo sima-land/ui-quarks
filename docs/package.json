@@ -3,16 +3,16 @@
   "version": "0.0.0",
   "description": "Icon search page",
   "scripts": {
-    "prebuild": "ts-node --project tsconfig.node.json prebuild.ts",
+    "preparing": "cd .. && npm run dist && npm pack && cd docs && npm i --no-save ../sima-land-ui-quarks-0.0.0.tgz",
+    "prebuild": "ts-node --project tsconfig.node.json scripts/prebuild.ts",
     "build": "npm run prebuild && rspack build --mode=production",
-    "dev": "rspack serve --mode=development"
+    "dev": "TS_NODE_PROJECT=tsconfig.node.json npx rspack serve --mode=development"
   },
   "keywords": [],
   "author": "www.sima-land.ru team",
   "license": "Apache-2.0",
   "devDependencies": {
-    "@rspack/cli": "^0.1.4",
-    "@sima-land/ui-quarks": "file:../dist",
+    "@rspack/cli": "^0.3.6",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "fast-glob": "^3.2.12",
@@ -22,7 +22,7 @@
     "sass": "^1.59.3",
     "sass-loader": "^13.2.0",
     "ts-node": "^10.9.1",
-    "typescript": "^4.9.5"
+    "typescript": "^5.2.2"
   },
   "dependencies": {
     "@sima-land/ui-nucleons": "^45.0.0-alpha.1",

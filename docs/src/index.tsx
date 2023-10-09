@@ -1,12 +1,9 @@
 import { createRoot } from 'react-dom/client';
-import { App } from './components/App';
+import { App } from './components/app';
 import './index.css';
 
-const rootElement = document.getElementById('root');
+const element = document.createElement('div');
+element.id = 'root';
 
-if (rootElement) {
-  const root = createRoot(rootElement);
-  root.render(<App />);
-} else {
-  throw new Error('Root element not found');
-}
+document.body.append(element);
+createRoot(element).render(<App />);

@@ -16,7 +16,7 @@ jobs:
       - name: Build
         run: |
           npm ci
-          npm run dist
+          npm run build
 
       - name: Keep only SVG
         run: find ./dist/icons/ -not -name "*.svg" -not -type d -exec rm {} \;
