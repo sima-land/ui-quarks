@@ -295,6 +295,12 @@
       "import": "./dist/esm/icons/16x16/Stroked/Watch.js",
       "default": "./dist/esm/icons/16x16/Stroked/Watch.js"
     },
+    "./icons/24x24/Colorful/SberCredit": {
+      "types": "./dist/types/icons/24x24/Colorful/SberCredit.d.ts",
+      "require": "./dist/cjs/icons/24x24/Colorful/SberCredit.js",
+      "import": "./dist/esm/icons/24x24/Colorful/SberCredit.js",
+      "default": "./dist/esm/icons/24x24/Colorful/SberCredit.js"
+    },
     "./icons/24x24/Filled/Cross": {
       "types": "./dist/types/icons/24x24/Filled/Cross.d.ts",
       "require": "./dist/cjs/icons/24x24/Filled/Cross.js",
@@ -787,6 +793,18 @@
       "import": "./dist/esm/icons/24x24/Stroked/MarkHeart.js",
       "default": "./dist/esm/icons/24x24/Stroked/MarkHeart.js"
     },
+    "./icons/24x24/Stroked/MicrophoneOff": {
+      "types": "./dist/types/icons/24x24/Stroked/MicrophoneOff.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/MicrophoneOff.js",
+      "import": "./dist/esm/icons/24x24/Stroked/MicrophoneOff.js",
+      "default": "./dist/esm/icons/24x24/Stroked/MicrophoneOff.js"
+    },
+    "./icons/24x24/Stroked/MicrophoneOn": {
+      "types": "./dist/types/icons/24x24/Stroked/MicrophoneOn.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/MicrophoneOn.js",
+      "import": "./dist/esm/icons/24x24/Stroked/MicrophoneOn.js",
+      "default": "./dist/esm/icons/24x24/Stroked/MicrophoneOn.js"
+    },
     "./icons/24x24/Stroked/Minus": {
       "types": "./dist/types/icons/24x24/Stroked/Minus.d.ts",
       "require": "./dist/cjs/icons/24x24/Stroked/Minus.js",
@@ -907,6 +925,12 @@
       "import": "./dist/esm/icons/24x24/Stroked/Screamer.js",
       "default": "./dist/esm/icons/24x24/Stroked/Screamer.js"
     },
+    "./icons/24x24/Stroked/Screwdriver": {
+      "types": "./dist/types/icons/24x24/Stroked/Screwdriver.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/Screwdriver.js",
+      "import": "./dist/esm/icons/24x24/Stroked/Screwdriver.js",
+      "default": "./dist/esm/icons/24x24/Stroked/Screwdriver.js"
+    },
     "./icons/24x24/Stroked/Search": {
       "types": "./dist/types/icons/24x24/Stroked/Search.d.ts",
       "require": "./dist/cjs/icons/24x24/Stroked/Search.js",
@@ -960,6 +984,18 @@
       "require": "./dist/cjs/icons/24x24/Stroked/Sort2.js",
       "import": "./dist/esm/icons/24x24/Stroked/Sort2.js",
       "default": "./dist/esm/icons/24x24/Stroked/Sort2.js"
+    },
+    "./icons/24x24/Stroked/SpeakerOff": {
+      "types": "./dist/types/icons/24x24/Stroked/SpeakerOff.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/SpeakerOff.js",
+      "import": "./dist/esm/icons/24x24/Stroked/SpeakerOff.js",
+      "default": "./dist/esm/icons/24x24/Stroked/SpeakerOff.js"
+    },
+    "./icons/24x24/Stroked/SpeakerOn": {
+      "types": "./dist/types/icons/24x24/Stroked/SpeakerOn.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/SpeakerOn.js",
+      "import": "./dist/esm/icons/24x24/Stroked/SpeakerOn.js",
+      "default": "./dist/esm/icons/24x24/Stroked/SpeakerOn.js"
     },
     "./icons/24x24/Stroked/Spruce": {
       "types": "./dist/types/icons/24x24/Stroked/Spruce.d.ts",
