@@ -3,7 +3,6 @@
     "outDir": "build",
     "allowJs": true,
     "jsx": "react-jsx",
-    "module": "es2020",
     "target": "es2020",
     "esModuleInterop": true,
     "noImplicitAny": true,

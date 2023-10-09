@@ -17,9 +17,11 @@ jobs:
       - name: Install and Build
         run: |
           npm ci
-          npm run dist
+          npm run build
+          npm pack
           cd docs
           npm ci
+          npm i --no-save ../sima-land-ui-quarks-0.0.0.tgz
           npm run build
 
       - name: Deploy

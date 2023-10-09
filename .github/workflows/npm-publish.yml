@@ -24,13 +24,13 @@ jobs:
         run: |
           npm ci
           npm --no-git-tag-version version ${GITHUB_REF#refs/*/}
-          npm run dist
+          npm run build
 
       - name: Lint
-        run: npx ts-node --project tsconfig.node.json .build/lint.ts
+        run: npx ts-node --project tsconfig.node.json scripts/pkg-lint.ts
 
       - name: Publish
-        run: npm publish ./dist --access public
+        run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
 

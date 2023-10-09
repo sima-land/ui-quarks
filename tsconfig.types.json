@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist/types/icons",
+    "declaration": true,
+    "emitDeclarationOnly": true
+  },
+  "include": ["./temp/**/*"],
+  "exclude": ["node_modules"]
+}

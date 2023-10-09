@@ -6,11 +6,20 @@ import { optimize, Config as SVGOConfig } from 'svgo';
 import { svgoConfig, svgoConfigColorful, svgrConfig } from './configs';
 
 interface IconDefined {
-  svgPath: string;
+  svgSourcePath: string;
   baseName: string;
 }
 
-interface SVGRead extends IconDefined {
+interface OutputDefined extends IconDefined {
+  packagePath: string;
+  svgOutputPath: string;
+  cjsOutputPath: string;
+  esmOutputPath: string;
+  dtsOutputPath: string;
+  tsxOutputPath: string;
+}
+
+interface SVGRead extends OutputDefined {
   svgSourceRaw: string;
 }
 
@@ -26,33 +35,54 @@ interface TSXGenerated extends SVGOptimized {
 export async function prebuildIcon(svgPath: string) {
   return Promise.resolve(svgPath)
     .then(defineIcon)
+    .then(defineOutput)
     .then(readSVG)
     .then(optimizeSVG)
     .then(generateTSX)
-    .then(parallel(outputSVG, outputTSX));
+    .then(output);
 }
 
-async function defineIcon(svgPath: string): Promise<IconDefined> {
+export async function defineIcon(svgPath: string): Promise<IconDefined> {
   const filename = path.basename(svgPath, path.extname(svgPath)).trim();
   const baseName = upperFirst(camelCase(filename.replace(/\+/g, 'Plus').replace(/\&/g, 'And')));
 
   // @todo валидация имени
 
   return {
-    svgPath,
+    svgSourcePath: svgPath,
     baseName,
   };
 }
 
-async function readSVG(ctx: IconDefined): Promise<SVGRead> {
+export async function defineOutput(ctx: IconDefined): Promise<OutputDefined> {
+  const packageDir = path.dirname(path.relative('./src', ctx.svgSourcePath));
+
+  const svgDir = path.join('./dist', packageDir);
+  const esmDir = path.join('./dist/esm', packageDir);
+  const cjsDir = path.join('./dist/cjs', packageDir);
+  const dtsDir = path.join('./dist/types', packageDir);
+  const tsxDir = path.join('./temp', packageDir);
+
   return {
     ...ctx,
-    svgSourceRaw: await readFile(ctx.svgPath, 'utf-8'),
+    packagePath: path.join(packageDir, ctx.baseName),
+    svgOutputPath: path.join(svgDir, `${ctx.baseName}.svg`),
+    esmOutputPath: path.join(esmDir, `${ctx.baseName}.js`),
+    cjsOutputPath: path.join(cjsDir, `${ctx.baseName}.js`),
+    dtsOutputPath: path.join(dtsDir, `${ctx.baseName}.d.ts`),
+    tsxOutputPath: path.join(tsxDir, `${ctx.baseName}.tsx`),
+  };
+}
+
+async function readSVG(ctx: OutputDefined): Promise<SVGRead> {
+  return {
+    ...ctx,
+    svgSourceRaw: await readFile(ctx.svgSourcePath, 'utf-8'),
   };
 }
 
 async function optimizeSVG(ctx: SVGRead): Promise<SVGOptimized> {
-  const colorful = ctx.svgPath.split(path.sep).includes('Colorful');
+  const colorful = ctx.svgSourcePath.split(path.sep).includes('Colorful');
 
   const config: SVGOConfig = colorful ? svgoConfigColorful : svgoConfig;
 
@@ -77,16 +107,11 @@ async function generateTSX(ctx: SVGOptimized): Promise<TSXGenerated> {
   };
 }
 
-async function outputSVG(ctx: TSXGenerated) {
-  const dist = path.join('./dist', path.dirname(path.relative('./src', ctx.svgPath)));
-  await outputFile(path.join(dist, `${ctx.baseName}.svg`), ctx.svgSourceOptimized);
-}
+async function output(ctx: TSXGenerated): Promise<TSXGenerated> {
+  await Promise.all([
+    outputFile(ctx.svgOutputPath, ctx.svgSourceOptimized),
+    outputFile(ctx.tsxOutputPath, ctx.tsxSource),
+  ]);
 
-async function outputTSX(ctx: TSXGenerated) {
-  const temp = path.join('./temp', path.dirname(path.relative('./src', ctx.svgPath)));
-  await outputFile(path.join(temp, `${ctx.baseName}.tsx`), ctx.tsxSource);
-}
-
-function parallel<T extends any[]>(...fns: Array<(...args: T) => void>): (...args: T) => void {
-  return (...args: T) => Promise.all(fns.map(fn => fn(...args)));
+  return { ...ctx };
 }

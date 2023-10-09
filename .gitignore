@@ -8,3 +8,7 @@ node_modules
 .cache
 dist
 temp
+.vscode
+
+# npm pack default output
+sima-land-ui-quarks-0.0.0.tgz
