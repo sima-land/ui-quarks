@@ -27,7 +27,7 @@ jobs:
           npm run build
 
       - name: Lint
-        run: npx ts-node --project tsconfig.node.json scripts/pkg-lint.ts
+        run: npx ts-node --project tsconfig.node.json scripts/lint-pkg.ts
 
       - name: Publish
         run: npm publish --access public
