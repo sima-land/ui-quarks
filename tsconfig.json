@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "jsx": "react-jsx",
+    "jsx": "react", // ВАЖНО: для того чтобы ESM работал и в react 17 и в react 18
     "target": "ES2021",
     "esModuleInterop": true,
     "strict": true,
