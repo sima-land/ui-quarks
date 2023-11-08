@@ -865,6 +865,12 @@
       "import": "./dist/esm/icons/24x24/Stroked/Phone.js",
       "default": "./dist/esm/icons/24x24/Stroked/Phone.js"
     },
+    "./icons/24x24/Stroked/Picture": {
+      "types": "./dist/types/icons/24x24/Stroked/Picture.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/Picture.js",
+      "import": "./dist/esm/icons/24x24/Stroked/Picture.js",
+      "default": "./dist/esm/icons/24x24/Stroked/Picture.js"
+    },
     "./icons/24x24/Stroked/Placeholder": {
       "types": "./dist/types/icons/24x24/Stroked/Placeholder.d.ts",
       "require": "./dist/cjs/icons/24x24/Stroked/Placeholder.js",
