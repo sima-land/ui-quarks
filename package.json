@@ -23,7 +23,7 @@
   "author": "www.sima-land.ru team",
   "license": "Apache-2.0",
   "devDependencies": {
-    "@sima-land/linters": "^2.2.0",
+    "@sima-land/linters": "^4.0.0",
     "@svgr/core": "^6.5.1",
     "@svgr/plugin-jsx": "^6.5.1",
     "@svgr/plugin-prettier": "^6.5.1",
@@ -34,7 +34,7 @@
     "fs-extra": "^11.1.0",
     "husky": "^8.0.3",
     "lodash": "^4.17.21",
-    "prettier": "^2.8.4",
+    "prettier": "^3.2.4",
     "svgo": "^3.0.2",
     "ts-node": "^10.9.1",
     "typescript": "^4.9.5"
@@ -295,6 +295,84 @@
       "import": "./dist/esm/icons/16x16/Stroked/Watch.js",
       "default": "./dist/esm/icons/16x16/Stroked/Watch.js"
     },
+    "./icons/24x24/Colorful/LogoDolyame": {
+      "types": "./dist/types/icons/24x24/Colorful/LogoDolyame.d.ts",
+      "require": "./dist/cjs/icons/24x24/Colorful/LogoDolyame.js",
+      "import": "./dist/esm/icons/24x24/Colorful/LogoDolyame.js",
+      "default": "./dist/esm/icons/24x24/Colorful/LogoDolyame.js"
+    },
+    "./icons/24x24/Colorful/LogoJcb": {
+      "types": "./dist/types/icons/24x24/Colorful/LogoJcb.d.ts",
+      "require": "./dist/cjs/icons/24x24/Colorful/LogoJcb.js",
+      "import": "./dist/esm/icons/24x24/Colorful/LogoJcb.js",
+      "default": "./dist/esm/icons/24x24/Colorful/LogoJcb.js"
+    },
+    "./icons/24x24/Colorful/LogoMaestro": {
+      "types": "./dist/types/icons/24x24/Colorful/LogoMaestro.d.ts",
+      "require": "./dist/cjs/icons/24x24/Colorful/LogoMaestro.js",
+      "import": "./dist/esm/icons/24x24/Colorful/LogoMaestro.js",
+      "default": "./dist/esm/icons/24x24/Colorful/LogoMaestro.js"
+    },
+    "./icons/24x24/Colorful/LogoMastercard": {
+      "types": "./dist/types/icons/24x24/Colorful/LogoMastercard.d.ts",
+      "require": "./dist/cjs/icons/24x24/Colorful/LogoMastercard.js",
+      "import": "./dist/esm/icons/24x24/Colorful/LogoMastercard.js",
+      "default": "./dist/esm/icons/24x24/Colorful/LogoMastercard.js"
+    },
+    "./icons/24x24/Colorful/LogoMir": {
+      "types": "./dist/types/icons/24x24/Colorful/LogoMir.d.ts",
+      "require": "./dist/cjs/icons/24x24/Colorful/LogoMir.js",
+      "import": "./dist/esm/icons/24x24/Colorful/LogoMir.js",
+      "default": "./dist/esm/icons/24x24/Colorful/LogoMir.js"
+    },
+    "./icons/24x24/Colorful/LogoPackmanSplit": {
+      "types": "./dist/types/icons/24x24/Colorful/LogoPackmanSplit.d.ts",
+      "require": "./dist/cjs/icons/24x24/Colorful/LogoPackmanSplit.js",
+      "import": "./dist/esm/icons/24x24/Colorful/LogoPackmanSplit.js",
+      "default": "./dist/esm/icons/24x24/Colorful/LogoPackmanSplit.js"
+    },
+    "./icons/24x24/Colorful/LogoPodeli": {
+      "types": "./dist/types/icons/24x24/Colorful/LogoPodeli.d.ts",
+      "require": "./dist/cjs/icons/24x24/Colorful/LogoPodeli.js",
+      "import": "./dist/esm/icons/24x24/Colorful/LogoPodeli.js",
+      "default": "./dist/esm/icons/24x24/Colorful/LogoPodeli.js"
+    },
+    "./icons/24x24/Colorful/LogoSber": {
+      "types": "./dist/types/icons/24x24/Colorful/LogoSber.d.ts",
+      "require": "./dist/cjs/icons/24x24/Colorful/LogoSber.js",
+      "import": "./dist/esm/icons/24x24/Colorful/LogoSber.js",
+      "default": "./dist/esm/icons/24x24/Colorful/LogoSber.js"
+    },
+    "./icons/24x24/Colorful/LogoSberCredit": {
+      "types": "./dist/types/icons/24x24/Colorful/LogoSberCredit.d.ts",
+      "require": "./dist/cjs/icons/24x24/Colorful/LogoSberCredit.js",
+      "import": "./dist/esm/icons/24x24/Colorful/LogoSberCredit.js",
+      "default": "./dist/esm/icons/24x24/Colorful/LogoSberCredit.js"
+    },
+    "./icons/24x24/Colorful/LogoSbp": {
+      "types": "./dist/types/icons/24x24/Colorful/LogoSbp.d.ts",
+      "require": "./dist/cjs/icons/24x24/Colorful/LogoSbp.js",
+      "import": "./dist/esm/icons/24x24/Colorful/LogoSbp.js",
+      "default": "./dist/esm/icons/24x24/Colorful/LogoSbp.js"
+    },
+    "./icons/24x24/Colorful/LogoUnionPay": {
+      "types": "./dist/types/icons/24x24/Colorful/LogoUnionPay.d.ts",
+      "require": "./dist/cjs/icons/24x24/Colorful/LogoUnionPay.js",
+      "import": "./dist/esm/icons/24x24/Colorful/LogoUnionPay.js",
+      "default": "./dist/esm/icons/24x24/Colorful/LogoUnionPay.js"
+    },
+    "./icons/24x24/Colorful/LogoVisa": {
+      "types": "./dist/types/icons/24x24/Colorful/LogoVisa.d.ts",
+      "require": "./dist/cjs/icons/24x24/Colorful/LogoVisa.js",
+      "import": "./dist/esm/icons/24x24/Colorful/LogoVisa.js",
+      "default": "./dist/esm/icons/24x24/Colorful/LogoVisa.js"
+    },
+    "./icons/24x24/Colorful/LogoVsegdaDa": {
+      "types": "./dist/types/icons/24x24/Colorful/LogoVsegdaDa.d.ts",
+      "require": "./dist/cjs/icons/24x24/Colorful/LogoVsegdaDa.js",
+      "import": "./dist/esm/icons/24x24/Colorful/LogoVsegdaDa.js",
+      "default": "./dist/esm/icons/24x24/Colorful/LogoVsegdaDa.js"
+    },
     "./icons/24x24/Colorful/SberCredit": {
       "types": "./dist/types/icons/24x24/Colorful/SberCredit.d.ts",
       "require": "./dist/cjs/icons/24x24/Colorful/SberCredit.js",
@@ -552,6 +630,12 @@
       "require": "./dist/cjs/icons/24x24/Stroked/Box.js",
       "import": "./dist/esm/icons/24x24/Stroked/Box.js",
       "default": "./dist/esm/icons/24x24/Stroked/Box.js"
+    },
+    "./icons/24x24/Stroked/Briefcase": {
+      "types": "./dist/types/icons/24x24/Stroked/Briefcase.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/Briefcase.js",
+      "import": "./dist/esm/icons/24x24/Stroked/Briefcase.js",
+      "default": "./dist/esm/icons/24x24/Stroked/Briefcase.js"
     },
     "./icons/24x24/Stroked/Burger": {
       "types": "./dist/types/icons/24x24/Stroked/Burger.d.ts",
