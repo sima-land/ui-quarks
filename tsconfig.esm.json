@@ -1,9 +1,14 @@
 {
-  "extends": "./tsconfig.json",
   "compilerOptions": {
-    "outDir": "./dist/esm/icons",
+    "jsx": "react", // ВАЖНО: для того чтобы ESM работал и в react 17 и в react 18
+    "target": "ES2021",
+    "outDir": "./dist/icons",
     "module": "ESNext",
-    "sourceMap": true
+    "sourceMap": true,
+    "declaration": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "skipLibCheck": true,
   },
   "include": ["./temp/**/*"],
   "exclude": ["node_modules"]

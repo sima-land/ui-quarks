@@ -1,5 +1,4 @@
 import path from 'node:path';
-import glob from 'fast-glob';
 import { readFile, outputFile } from 'fs-extra';
 import { transform } from '@svgr/core';
 import { camelCase, upperFirst } from 'lodash';
@@ -14,7 +13,6 @@ export interface IconDefined {
 export interface OutputDefined extends IconDefined {
   packagePath: string;
   svgOutputPath: string;
-  cjsOutputPath: string;
   esmOutputPath: string;
   dtsOutputPath: string;
   tsxOutputPath: string;
@@ -23,12 +21,7 @@ export interface OutputDefined extends IconDefined {
 export interface ExportItemDefined extends OutputDefined {
   export: {
     pathname: string;
-    definition: {
-      types: string;
-      require: string;
-      import: string;
-      default: string;
-    };
+    definition: string;
   };
 }
 
@@ -71,8 +64,7 @@ export async function defineOutput(ctx: IconDefined): Promise<OutputDefined> {
   const packageDir = path.dirname(path.relative('./src', ctx.svgSourcePath));
 
   const svgDir = path.join('./dist', packageDir);
-  const esmDir = path.join('./dist/esm', packageDir);
-  const cjsDir = path.join('./dist/cjs', packageDir);
+  const esmDir = path.join('./dist', packageDir);
   const dtsDir = path.join('./dist/types', packageDir);
   const tsxDir = path.join('./temp', packageDir);
 
@@ -81,7 +73,6 @@ export async function defineOutput(ctx: IconDefined): Promise<OutputDefined> {
     packagePath: path.join(packageDir, ctx.baseName),
     svgOutputPath: path.join(svgDir, `${ctx.baseName}.svg`),
     esmOutputPath: path.join(esmDir, `${ctx.baseName}.js`),
-    cjsOutputPath: path.join(cjsDir, `${ctx.baseName}.js`),
     dtsOutputPath: path.join(dtsDir, `${ctx.baseName}.d.ts`),
     tsxOutputPath: path.join(tsxDir, `${ctx.baseName}.tsx`),
   };
@@ -92,12 +83,7 @@ export function defineExportsItem(ctx: OutputDefined): ExportItemDefined {
     ...ctx,
     export: {
       pathname: `./${ctx.packagePath}`,
-      definition: {
-        types: `./${ctx.dtsOutputPath}`,
-        require: `./${ctx.cjsOutputPath}`,
-        import: `./${ctx.esmOutputPath}`,
-        default: `./${ctx.esmOutputPath}`,
-      },
+      definition: `./${ctx.esmOutputPath}`,
     },
   };
 }

@@ -1,32 +1,28 @@
 {
   "name": "@sima-land/ui-quarks",
+  "type": "module",
   "version": "0.0.0",
   "description": "Sima-land design system icons as a React components",
   "repository": "ssh://git@gitlab.sima-land.ru:7888/dev-dep/dev/packages/ui-quarks.git",
-  "files": [
-    "dist",
-    "README.md"
-  ],
   "scripts": {
-    "build:before": "rm -rf temp dist",
-    "build:main": "ts-node scripts/prebuild.ts && tsc",
-    "build:esm": "tsc --project tsconfig.esm.json && echo '{ \"type\": \"module\" }' > dist/esm/package.json",
-    "build:cjs": "tsc --project tsconfig.cjs.json && echo '{ \"type\": \"commonjs\" }' > dist/cjs/package.json",
-    "build:types": "tsc --project tsconfig.types.json",
+    "build:clean": "rm -rf temp dist",
+    "build:prebuild": "node scripts/prebuild.js",
+    "build:esm": "tsc --project tsconfig.esm.json",
     "build:after": "rm -rf temp",
-    "build": "npm run build:before && npm run build:main && npm run build:esm && npm run build:cjs && npm run build:types && npm run build:after",
-    "sync:exports": "ts-node --project tsconfig.node.json scripts/emit-exports.ts && npm pkg set --json exports=\"$(cat ./temp/exports.json)\" && rm -rf temp/exports.json",
+    "build": "npm run build:clean && npm run build:prebuild && npm run build:esm && npm run build:after",
+    "sync:exports": "node scripts/emit-exports.js && npm pkg set --json exports=\"$(cat ./temp/exports.json)\" && rm -rf temp/exports.json",
     "dist": "npm run build && npm run sync:exports",
-    "lint:pkg": "ts-node --project tsconfig.node.json scripts/lint-pkg.ts",
+    "lint": "eslint scripts .build --ext .js,.jsx,.ts,.tsx",
+    "lint:pkg": "node scripts/lint-pkg.js",
     "prepare": "husky install"
   },
   "author": "www.sima-land.ru team",
   "license": "Apache-2.0",
   "devDependencies": {
-    "@sima-land/linters": "^4.0.0",
     "@svgr/core": "^6.5.1",
     "@svgr/plugin-jsx": "^6.5.1",
     "@svgr/plugin-prettier": "^6.5.1",
+    "@swc-node/register": "^1.6.8",
     "@types/fs-extra": "^11.0.1",
     "@types/lodash": "^4.14.191",
     "@types/react": "^18.0.28",
@@ -37,1200 +33,212 @@
     "prettier": "^3.2.4",
     "svgo": "^3.0.2",
     "ts-node": "^10.9.1",
-    "typescript": "^4.9.5"
+    "typescript": "^5.3.3"
   },
   "peerDependencies": {
     "react": "^17.0 || ^18.0"
   },
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "exports": {
-    "./icons/16x16/Filled/Add": {
-      "types": "./dist/types/icons/16x16/Filled/Add.d.ts",
-      "require": "./dist/cjs/icons/16x16/Filled/Add.js",
-      "import": "./dist/esm/icons/16x16/Filled/Add.js",
-      "default": "./dist/esm/icons/16x16/Filled/Add.js"
-    },
-    "./icons/16x16/Filled/Camera": {
-      "types": "./dist/types/icons/16x16/Filled/Camera.d.ts",
-      "require": "./dist/cjs/icons/16x16/Filled/Camera.js",
-      "import": "./dist/esm/icons/16x16/Filled/Camera.js",
-      "default": "./dist/esm/icons/16x16/Filled/Camera.js"
-    },
-    "./icons/16x16/Filled/Comment": {
-      "types": "./dist/types/icons/16x16/Filled/Comment.d.ts",
-      "require": "./dist/cjs/icons/16x16/Filled/Comment.js",
-      "import": "./dist/esm/icons/16x16/Filled/Comment.js",
-      "default": "./dist/esm/icons/16x16/Filled/Comment.js"
-    },
-    "./icons/16x16/Filled/Cross": {
-      "types": "./dist/types/icons/16x16/Filled/Cross.d.ts",
-      "require": "./dist/cjs/icons/16x16/Filled/Cross.js",
-      "import": "./dist/esm/icons/16x16/Filled/Cross.js",
-      "default": "./dist/esm/icons/16x16/Filled/Cross.js"
-    },
-    "./icons/16x16/Filled/Eye": {
-      "types": "./dist/types/icons/16x16/Filled/Eye.d.ts",
-      "require": "./dist/cjs/icons/16x16/Filled/Eye.js",
-      "import": "./dist/esm/icons/16x16/Filled/Eye.js",
-      "default": "./dist/esm/icons/16x16/Filled/Eye.js"
-    },
-    "./icons/16x16/Filled/Funnel": {
-      "types": "./dist/types/icons/16x16/Filled/Funnel.d.ts",
-      "require": "./dist/cjs/icons/16x16/Filled/Funnel.js",
-      "import": "./dist/esm/icons/16x16/Filled/Funnel.js",
-      "default": "./dist/esm/icons/16x16/Filled/Funnel.js"
-    },
-    "./icons/16x16/Filled/Heart": {
-      "types": "./dist/types/icons/16x16/Filled/Heart.d.ts",
-      "require": "./dist/cjs/icons/16x16/Filled/Heart.js",
-      "import": "./dist/esm/icons/16x16/Filled/Heart.js",
-      "default": "./dist/esm/icons/16x16/Filled/Heart.js"
-    },
-    "./icons/16x16/Filled/Person": {
-      "types": "./dist/types/icons/16x16/Filled/Person.d.ts",
-      "require": "./dist/cjs/icons/16x16/Filled/Person.js",
-      "import": "./dist/esm/icons/16x16/Filled/Person.js",
-      "default": "./dist/esm/icons/16x16/Filled/Person.js"
-    },
-    "./icons/16x16/Filled/Place": {
-      "types": "./dist/types/icons/16x16/Filled/Place.d.ts",
-      "require": "./dist/cjs/icons/16x16/Filled/Place.js",
-      "import": "./dist/esm/icons/16x16/Filled/Place.js",
-      "default": "./dist/esm/icons/16x16/Filled/Place.js"
-    },
-    "./icons/16x16/Filled/Share": {
-      "types": "./dist/types/icons/16x16/Filled/Share.d.ts",
-      "require": "./dist/cjs/icons/16x16/Filled/Share.js",
-      "import": "./dist/esm/icons/16x16/Filled/Share.js",
-      "default": "./dist/esm/icons/16x16/Filled/Share.js"
-    },
-    "./icons/16x16/Filled/SortDown": {
-      "types": "./dist/types/icons/16x16/Filled/SortDown.d.ts",
-      "require": "./dist/cjs/icons/16x16/Filled/SortDown.js",
-      "import": "./dist/esm/icons/16x16/Filled/SortDown.js",
-      "default": "./dist/esm/icons/16x16/Filled/SortDown.js"
-    },
-    "./icons/16x16/Filled/SortUp": {
-      "types": "./dist/types/icons/16x16/Filled/SortUp.d.ts",
-      "require": "./dist/cjs/icons/16x16/Filled/SortUp.js",
-      "import": "./dist/esm/icons/16x16/Filled/SortUp.js",
-      "default": "./dist/esm/icons/16x16/Filled/SortUp.js"
-    },
-    "./icons/16x16/Filled/Star": {
-      "types": "./dist/types/icons/16x16/Filled/Star.d.ts",
-      "require": "./dist/cjs/icons/16x16/Filled/Star.js",
-      "import": "./dist/esm/icons/16x16/Filled/Star.js",
-      "default": "./dist/esm/icons/16x16/Filled/Star.js"
-    },
-    "./icons/16x16/Filled/ThumbDown": {
-      "types": "./dist/types/icons/16x16/Filled/ThumbDown.d.ts",
-      "require": "./dist/cjs/icons/16x16/Filled/ThumbDown.js",
-      "import": "./dist/esm/icons/16x16/Filled/ThumbDown.js",
-      "default": "./dist/esm/icons/16x16/Filled/ThumbDown.js"
-    },
-    "./icons/16x16/Filled/ThumbUp": {
-      "types": "./dist/types/icons/16x16/Filled/ThumbUp.d.ts",
-      "require": "./dist/cjs/icons/16x16/Filled/ThumbUp.js",
-      "import": "./dist/esm/icons/16x16/Filled/ThumbUp.js",
-      "default": "./dist/esm/icons/16x16/Filled/ThumbUp.js"
-    },
-    "./icons/16x16/Filled/Trash": {
-      "types": "./dist/types/icons/16x16/Filled/Trash.d.ts",
-      "require": "./dist/cjs/icons/16x16/Filled/Trash.js",
-      "import": "./dist/esm/icons/16x16/Filled/Trash.js",
-      "default": "./dist/esm/icons/16x16/Filled/Trash.js"
-    },
-    "./icons/16x16/Filled/Wallet": {
-      "types": "./dist/types/icons/16x16/Filled/Wallet.d.ts",
-      "require": "./dist/cjs/icons/16x16/Filled/Wallet.js",
-      "import": "./dist/esm/icons/16x16/Filled/Wallet.js",
-      "default": "./dist/esm/icons/16x16/Filled/Wallet.js"
-    },
-    "./icons/16x16/Stroked/Add": {
-      "types": "./dist/types/icons/16x16/Stroked/Add.d.ts",
-      "require": "./dist/cjs/icons/16x16/Stroked/Add.js",
-      "import": "./dist/esm/icons/16x16/Stroked/Add.js",
-      "default": "./dist/esm/icons/16x16/Stroked/Add.js"
-    },
-    "./icons/16x16/Stroked/ArrowDown": {
-      "types": "./dist/types/icons/16x16/Stroked/ArrowDown.d.ts",
-      "require": "./dist/cjs/icons/16x16/Stroked/ArrowDown.js",
-      "import": "./dist/esm/icons/16x16/Stroked/ArrowDown.js",
-      "default": "./dist/esm/icons/16x16/Stroked/ArrowDown.js"
-    },
-    "./icons/16x16/Stroked/ArrowLeft": {
-      "types": "./dist/types/icons/16x16/Stroked/ArrowLeft.d.ts",
-      "require": "./dist/cjs/icons/16x16/Stroked/ArrowLeft.js",
-      "import": "./dist/esm/icons/16x16/Stroked/ArrowLeft.js",
-      "default": "./dist/esm/icons/16x16/Stroked/ArrowLeft.js"
-    },
-    "./icons/16x16/Stroked/ArrowRight": {
-      "types": "./dist/types/icons/16x16/Stroked/ArrowRight.d.ts",
-      "require": "./dist/cjs/icons/16x16/Stroked/ArrowRight.js",
-      "import": "./dist/esm/icons/16x16/Stroked/ArrowRight.js",
-      "default": "./dist/esm/icons/16x16/Stroked/ArrowRight.js"
-    },
-    "./icons/16x16/Stroked/ArrowUp": {
-      "types": "./dist/types/icons/16x16/Stroked/ArrowUp.d.ts",
-      "require": "./dist/cjs/icons/16x16/Stroked/ArrowUp.js",
-      "import": "./dist/esm/icons/16x16/Stroked/ArrowUp.js",
-      "default": "./dist/esm/icons/16x16/Stroked/ArrowUp.js"
-    },
-    "./icons/16x16/Stroked/Arrows/Down": {
-      "types": "./dist/types/icons/16x16/Stroked/Arrows/Down.d.ts",
-      "require": "./dist/cjs/icons/16x16/Stroked/Arrows/Down.js",
-      "import": "./dist/esm/icons/16x16/Stroked/Arrows/Down.js",
-      "default": "./dist/esm/icons/16x16/Stroked/Arrows/Down.js"
-    },
-    "./icons/16x16/Stroked/Arrows/DownSquare": {
-      "types": "./dist/types/icons/16x16/Stroked/Arrows/DownSquare.d.ts",
-      "require": "./dist/cjs/icons/16x16/Stroked/Arrows/DownSquare.js",
-      "import": "./dist/esm/icons/16x16/Stroked/Arrows/DownSquare.js",
-      "default": "./dist/esm/icons/16x16/Stroked/Arrows/DownSquare.js"
-    },
-    "./icons/16x16/Stroked/Arrows/Left": {
-      "types": "./dist/types/icons/16x16/Stroked/Arrows/Left.d.ts",
-      "require": "./dist/cjs/icons/16x16/Stroked/Arrows/Left.js",
-      "import": "./dist/esm/icons/16x16/Stroked/Arrows/Left.js",
-      "default": "./dist/esm/icons/16x16/Stroked/Arrows/Left.js"
-    },
-    "./icons/16x16/Stroked/Arrows/Right": {
-      "types": "./dist/types/icons/16x16/Stroked/Arrows/Right.d.ts",
-      "require": "./dist/cjs/icons/16x16/Stroked/Arrows/Right.js",
-      "import": "./dist/esm/icons/16x16/Stroked/Arrows/Right.js",
-      "default": "./dist/esm/icons/16x16/Stroked/Arrows/Right.js"
-    },
-    "./icons/16x16/Stroked/Arrows/TurnLeft": {
-      "types": "./dist/types/icons/16x16/Stroked/Arrows/TurnLeft.d.ts",
-      "require": "./dist/cjs/icons/16x16/Stroked/Arrows/TurnLeft.js",
-      "import": "./dist/esm/icons/16x16/Stroked/Arrows/TurnLeft.js",
-      "default": "./dist/esm/icons/16x16/Stroked/Arrows/TurnLeft.js"
-    },
-    "./icons/16x16/Stroked/Arrows/TurnRight": {
-      "types": "./dist/types/icons/16x16/Stroked/Arrows/TurnRight.d.ts",
-      "require": "./dist/cjs/icons/16x16/Stroked/Arrows/TurnRight.js",
-      "import": "./dist/esm/icons/16x16/Stroked/Arrows/TurnRight.js",
-      "default": "./dist/esm/icons/16x16/Stroked/Arrows/TurnRight.js"
-    },
-    "./icons/16x16/Stroked/Arrows/Up": {
-      "types": "./dist/types/icons/16x16/Stroked/Arrows/Up.d.ts",
-      "require": "./dist/cjs/icons/16x16/Stroked/Arrows/Up.js",
-      "import": "./dist/esm/icons/16x16/Stroked/Arrows/Up.js",
-      "default": "./dist/esm/icons/16x16/Stroked/Arrows/Up.js"
-    },
-    "./icons/16x16/Stroked/Arrows/UpAndDown": {
-      "types": "./dist/types/icons/16x16/Stroked/Arrows/UpAndDown.d.ts",
-      "require": "./dist/cjs/icons/16x16/Stroked/Arrows/UpAndDown.js",
-      "import": "./dist/esm/icons/16x16/Stroked/Arrows/UpAndDown.js",
-      "default": "./dist/esm/icons/16x16/Stroked/Arrows/UpAndDown.js"
-    },
-    "./icons/16x16/Stroked/Burger": {
-      "types": "./dist/types/icons/16x16/Stroked/Burger.d.ts",
-      "require": "./dist/cjs/icons/16x16/Stroked/Burger.js",
-      "import": "./dist/esm/icons/16x16/Stroked/Burger.js",
-      "default": "./dist/esm/icons/16x16/Stroked/Burger.js"
-    },
-    "./icons/16x16/Stroked/Check": {
-      "types": "./dist/types/icons/16x16/Stroked/Check.d.ts",
-      "require": "./dist/cjs/icons/16x16/Stroked/Check.js",
-      "import": "./dist/esm/icons/16x16/Stroked/Check.js",
-      "default": "./dist/esm/icons/16x16/Stroked/Check.js"
-    },
-    "./icons/16x16/Stroked/Copy": {
-      "types": "./dist/types/icons/16x16/Stroked/Copy.d.ts",
-      "require": "./dist/cjs/icons/16x16/Stroked/Copy.js",
-      "import": "./dist/esm/icons/16x16/Stroked/Copy.js",
-      "default": "./dist/esm/icons/16x16/Stroked/Copy.js"
-    },
-    "./icons/16x16/Stroked/Cross": {
-      "types": "./dist/types/icons/16x16/Stroked/Cross.d.ts",
-      "require": "./dist/cjs/icons/16x16/Stroked/Cross.js",
-      "import": "./dist/esm/icons/16x16/Stroked/Cross.js",
-      "default": "./dist/esm/icons/16x16/Stroked/Cross.js"
-    },
-    "./icons/16x16/Stroked/Information": {
-      "types": "./dist/types/icons/16x16/Stroked/Information.d.ts",
-      "require": "./dist/cjs/icons/16x16/Stroked/Information.js",
-      "import": "./dist/esm/icons/16x16/Stroked/Information.js",
-      "default": "./dist/esm/icons/16x16/Stroked/Information.js"
-    },
-    "./icons/16x16/Stroked/Lock": {
-      "types": "./dist/types/icons/16x16/Stroked/Lock.d.ts",
-      "require": "./dist/cjs/icons/16x16/Stroked/Lock.js",
-      "import": "./dist/esm/icons/16x16/Stroked/Lock.js",
-      "default": "./dist/esm/icons/16x16/Stroked/Lock.js"
-    },
-    "./icons/16x16/Stroked/Minus": {
-      "types": "./dist/types/icons/16x16/Stroked/Minus.d.ts",
-      "require": "./dist/cjs/icons/16x16/Stroked/Minus.js",
-      "import": "./dist/esm/icons/16x16/Stroked/Minus.js",
-      "default": "./dist/esm/icons/16x16/Stroked/Minus.js"
-    },
-    "./icons/16x16/Stroked/Placeholder": {
-      "types": "./dist/types/icons/16x16/Stroked/Placeholder.d.ts",
-      "require": "./dist/cjs/icons/16x16/Stroked/Placeholder.js",
-      "import": "./dist/esm/icons/16x16/Stroked/Placeholder.js",
-      "default": "./dist/esm/icons/16x16/Stroked/Placeholder.js"
-    },
-    "./icons/16x16/Stroked/Plus": {
-      "types": "./dist/types/icons/16x16/Stroked/Plus.d.ts",
-      "require": "./dist/cjs/icons/16x16/Stroked/Plus.js",
-      "import": "./dist/esm/icons/16x16/Stroked/Plus.js",
-      "default": "./dist/esm/icons/16x16/Stroked/Plus.js"
-    },
-    "./icons/16x16/Stroked/Remove": {
-      "types": "./dist/types/icons/16x16/Stroked/Remove.d.ts",
-      "require": "./dist/cjs/icons/16x16/Stroked/Remove.js",
-      "import": "./dist/esm/icons/16x16/Stroked/Remove.js",
-      "default": "./dist/esm/icons/16x16/Stroked/Remove.js"
-    },
-    "./icons/16x16/Stroked/Screamer": {
-      "types": "./dist/types/icons/16x16/Stroked/Screamer.d.ts",
-      "require": "./dist/cjs/icons/16x16/Stroked/Screamer.js",
-      "import": "./dist/esm/icons/16x16/Stroked/Screamer.js",
-      "default": "./dist/esm/icons/16x16/Stroked/Screamer.js"
-    },
-    "./icons/16x16/Stroked/Watch": {
-      "types": "./dist/types/icons/16x16/Stroked/Watch.d.ts",
-      "require": "./dist/cjs/icons/16x16/Stroked/Watch.js",
-      "import": "./dist/esm/icons/16x16/Stroked/Watch.js",
-      "default": "./dist/esm/icons/16x16/Stroked/Watch.js"
-    },
-    "./icons/24x24/Colorful/LogoDolyame": {
-      "types": "./dist/types/icons/24x24/Colorful/LogoDolyame.d.ts",
-      "require": "./dist/cjs/icons/24x24/Colorful/LogoDolyame.js",
-      "import": "./dist/esm/icons/24x24/Colorful/LogoDolyame.js",
-      "default": "./dist/esm/icons/24x24/Colorful/LogoDolyame.js"
-    },
-    "./icons/24x24/Colorful/LogoJcb": {
-      "types": "./dist/types/icons/24x24/Colorful/LogoJcb.d.ts",
-      "require": "./dist/cjs/icons/24x24/Colorful/LogoJcb.js",
-      "import": "./dist/esm/icons/24x24/Colorful/LogoJcb.js",
-      "default": "./dist/esm/icons/24x24/Colorful/LogoJcb.js"
-    },
-    "./icons/24x24/Colorful/LogoMaestro": {
-      "types": "./dist/types/icons/24x24/Colorful/LogoMaestro.d.ts",
-      "require": "./dist/cjs/icons/24x24/Colorful/LogoMaestro.js",
-      "import": "./dist/esm/icons/24x24/Colorful/LogoMaestro.js",
-      "default": "./dist/esm/icons/24x24/Colorful/LogoMaestro.js"
-    },
-    "./icons/24x24/Colorful/LogoMastercard": {
-      "types": "./dist/types/icons/24x24/Colorful/LogoMastercard.d.ts",
-      "require": "./dist/cjs/icons/24x24/Colorful/LogoMastercard.js",
-      "import": "./dist/esm/icons/24x24/Colorful/LogoMastercard.js",
-      "default": "./dist/esm/icons/24x24/Colorful/LogoMastercard.js"
-    },
-    "./icons/24x24/Colorful/LogoMir": {
-      "types": "./dist/types/icons/24x24/Colorful/LogoMir.d.ts",
-      "require": "./dist/cjs/icons/24x24/Colorful/LogoMir.js",
-      "import": "./dist/esm/icons/24x24/Colorful/LogoMir.js",
-      "default": "./dist/esm/icons/24x24/Colorful/LogoMir.js"
-    },
-    "./icons/24x24/Colorful/LogoPackmanSplit": {
-      "types": "./dist/types/icons/24x24/Colorful/LogoPackmanSplit.d.ts",
-      "require": "./dist/cjs/icons/24x24/Colorful/LogoPackmanSplit.js",
-      "import": "./dist/esm/icons/24x24/Colorful/LogoPackmanSplit.js",
-      "default": "./dist/esm/icons/24x24/Colorful/LogoPackmanSplit.js"
-    },
-    "./icons/24x24/Colorful/LogoPodeli": {
-      "types": "./dist/types/icons/24x24/Colorful/LogoPodeli.d.ts",
-      "require": "./dist/cjs/icons/24x24/Colorful/LogoPodeli.js",
-      "import": "./dist/esm/icons/24x24/Colorful/LogoPodeli.js",
-      "default": "./dist/esm/icons/24x24/Colorful/LogoPodeli.js"
-    },
-    "./icons/24x24/Colorful/LogoSber": {
-      "types": "./dist/types/icons/24x24/Colorful/LogoSber.d.ts",
-      "require": "./dist/cjs/icons/24x24/Colorful/LogoSber.js",
-      "import": "./dist/esm/icons/24x24/Colorful/LogoSber.js",
-      "default": "./dist/esm/icons/24x24/Colorful/LogoSber.js"
-    },
-    "./icons/24x24/Colorful/LogoSberCredit": {
-      "types": "./dist/types/icons/24x24/Colorful/LogoSberCredit.d.ts",
-      "require": "./dist/cjs/icons/24x24/Colorful/LogoSberCredit.js",
-      "import": "./dist/esm/icons/24x24/Colorful/LogoSberCredit.js",
-      "default": "./dist/esm/icons/24x24/Colorful/LogoSberCredit.js"
-    },
-    "./icons/24x24/Colorful/LogoSbp": {
-      "types": "./dist/types/icons/24x24/Colorful/LogoSbp.d.ts",
-      "require": "./dist/cjs/icons/24x24/Colorful/LogoSbp.js",
-      "import": "./dist/esm/icons/24x24/Colorful/LogoSbp.js",
-      "default": "./dist/esm/icons/24x24/Colorful/LogoSbp.js"
-    },
-    "./icons/24x24/Colorful/LogoUnionPay": {
-      "types": "./dist/types/icons/24x24/Colorful/LogoUnionPay.d.ts",
-      "require": "./dist/cjs/icons/24x24/Colorful/LogoUnionPay.js",
-      "import": "./dist/esm/icons/24x24/Colorful/LogoUnionPay.js",
-      "default": "./dist/esm/icons/24x24/Colorful/LogoUnionPay.js"
-    },
-    "./icons/24x24/Colorful/LogoVisa": {
-      "types": "./dist/types/icons/24x24/Colorful/LogoVisa.d.ts",
-      "require": "./dist/cjs/icons/24x24/Colorful/LogoVisa.js",
-      "import": "./dist/esm/icons/24x24/Colorful/LogoVisa.js",
-      "default": "./dist/esm/icons/24x24/Colorful/LogoVisa.js"
-    },
-    "./icons/24x24/Colorful/LogoVsegdaDa": {
-      "types": "./dist/types/icons/24x24/Colorful/LogoVsegdaDa.d.ts",
-      "require": "./dist/cjs/icons/24x24/Colorful/LogoVsegdaDa.js",
-      "import": "./dist/esm/icons/24x24/Colorful/LogoVsegdaDa.js",
-      "default": "./dist/esm/icons/24x24/Colorful/LogoVsegdaDa.js"
-    },
-    "./icons/24x24/Colorful/SberCredit": {
-      "types": "./dist/types/icons/24x24/Colorful/SberCredit.d.ts",
-      "require": "./dist/cjs/icons/24x24/Colorful/SberCredit.js",
-      "import": "./dist/esm/icons/24x24/Colorful/SberCredit.js",
-      "default": "./dist/esm/icons/24x24/Colorful/SberCredit.js"
-    },
-    "./icons/24x24/Filled/Cross": {
-      "types": "./dist/types/icons/24x24/Filled/Cross.d.ts",
-      "require": "./dist/cjs/icons/24x24/Filled/Cross.js",
-      "import": "./dist/esm/icons/24x24/Filled/Cross.js",
-      "default": "./dist/esm/icons/24x24/Filled/Cross.js"
-    },
-    "./icons/24x24/Filled/Favorite": {
-      "types": "./dist/types/icons/24x24/Filled/Favorite.d.ts",
-      "require": "./dist/cjs/icons/24x24/Filled/Favorite.js",
-      "import": "./dist/esm/icons/24x24/Filled/Favorite.js",
-      "default": "./dist/esm/icons/24x24/Filled/Favorite.js"
-    },
-    "./icons/24x24/Filled/Flash": {
-      "types": "./dist/types/icons/24x24/Filled/Flash.d.ts",
-      "require": "./dist/cjs/icons/24x24/Filled/Flash.js",
-      "import": "./dist/esm/icons/24x24/Filled/Flash.js",
-      "default": "./dist/esm/icons/24x24/Filled/Flash.js"
-    },
-    "./icons/24x24/Filled/Mobile": {
-      "types": "./dist/types/icons/24x24/Filled/Mobile.d.ts",
-      "require": "./dist/cjs/icons/24x24/Filled/Mobile.js",
-      "import": "./dist/esm/icons/24x24/Filled/Mobile.js",
-      "default": "./dist/esm/icons/24x24/Filled/Mobile.js"
-    },
-    "./icons/24x24/Filled/More": {
-      "types": "./dist/types/icons/24x24/Filled/More.d.ts",
-      "require": "./dist/cjs/icons/24x24/Filled/More.js",
-      "import": "./dist/esm/icons/24x24/Filled/More.js",
-      "default": "./dist/esm/icons/24x24/Filled/More.js"
-    },
-    "./icons/24x24/Filled/MoreVert": {
-      "types": "./dist/types/icons/24x24/Filled/MoreVert.d.ts",
-      "require": "./dist/cjs/icons/24x24/Filled/MoreVert.js",
-      "import": "./dist/esm/icons/24x24/Filled/MoreVert.js",
-      "default": "./dist/esm/icons/24x24/Filled/MoreVert.js"
-    },
-    "./icons/24x24/Filled/Notification": {
-      "types": "./dist/types/icons/24x24/Filled/Notification.d.ts",
-      "require": "./dist/cjs/icons/24x24/Filled/Notification.js",
-      "import": "./dist/esm/icons/24x24/Filled/Notification.js",
-      "default": "./dist/esm/icons/24x24/Filled/Notification.js"
-    },
-    "./icons/24x24/Filled/Play": {
-      "types": "./dist/types/icons/24x24/Filled/Play.d.ts",
-      "require": "./dist/cjs/icons/24x24/Filled/Play.js",
-      "import": "./dist/esm/icons/24x24/Filled/Play.js",
-      "default": "./dist/esm/icons/24x24/Filled/Play.js"
-    },
-    "./icons/24x24/Filled/RadiobuttonSelected": {
-      "types": "./dist/types/icons/24x24/Filled/RadiobuttonSelected.d.ts",
-      "require": "./dist/cjs/icons/24x24/Filled/RadiobuttonSelected.js",
-      "import": "./dist/esm/icons/24x24/Filled/RadiobuttonSelected.js",
-      "default": "./dist/esm/icons/24x24/Filled/RadiobuttonSelected.js"
-    },
-    "./icons/24x24/Filled/Social/Facebook": {
-      "types": "./dist/types/icons/24x24/Filled/Social/Facebook.d.ts",
-      "require": "./dist/cjs/icons/24x24/Filled/Social/Facebook.js",
-      "import": "./dist/esm/icons/24x24/Filled/Social/Facebook.js",
-      "default": "./dist/esm/icons/24x24/Filled/Social/Facebook.js"
-    },
-    "./icons/24x24/Filled/Social/Google": {
-      "types": "./dist/types/icons/24x24/Filled/Social/Google.d.ts",
-      "require": "./dist/cjs/icons/24x24/Filled/Social/Google.js",
-      "import": "./dist/esm/icons/24x24/Filled/Social/Google.js",
-      "default": "./dist/esm/icons/24x24/Filled/Social/Google.js"
-    },
-    "./icons/24x24/Filled/Social/Inspiration": {
-      "types": "./dist/types/icons/24x24/Filled/Social/Inspiration.d.ts",
-      "require": "./dist/cjs/icons/24x24/Filled/Social/Inspiration.js",
-      "import": "./dist/esm/icons/24x24/Filled/Social/Inspiration.js",
-      "default": "./dist/esm/icons/24x24/Filled/Social/Inspiration.js"
-    },
-    "./icons/24x24/Filled/Social/Instagram": {
-      "types": "./dist/types/icons/24x24/Filled/Social/Instagram.d.ts",
-      "require": "./dist/cjs/icons/24x24/Filled/Social/Instagram.js",
-      "import": "./dist/esm/icons/24x24/Filled/Social/Instagram.js",
-      "default": "./dist/esm/icons/24x24/Filled/Social/Instagram.js"
-    },
-    "./icons/24x24/Filled/Social/Mail": {
-      "types": "./dist/types/icons/24x24/Filled/Social/Mail.d.ts",
-      "require": "./dist/cjs/icons/24x24/Filled/Social/Mail.js",
-      "import": "./dist/esm/icons/24x24/Filled/Social/Mail.js",
-      "default": "./dist/esm/icons/24x24/Filled/Social/Mail.js"
-    },
-    "./icons/24x24/Filled/Social/Ok": {
-      "types": "./dist/types/icons/24x24/Filled/Social/Ok.d.ts",
-      "require": "./dist/cjs/icons/24x24/Filled/Social/Ok.js",
-      "import": "./dist/esm/icons/24x24/Filled/Social/Ok.js",
-      "default": "./dist/esm/icons/24x24/Filled/Social/Ok.js"
-    },
-    "./icons/24x24/Filled/Social/Skype": {
-      "types": "./dist/types/icons/24x24/Filled/Social/Skype.d.ts",
-      "require": "./dist/cjs/icons/24x24/Filled/Social/Skype.js",
-      "import": "./dist/esm/icons/24x24/Filled/Social/Skype.js",
-      "default": "./dist/esm/icons/24x24/Filled/Social/Skype.js"
-    },
-    "./icons/24x24/Filled/Social/Telegram": {
-      "types": "./dist/types/icons/24x24/Filled/Social/Telegram.d.ts",
-      "require": "./dist/cjs/icons/24x24/Filled/Social/Telegram.js",
-      "import": "./dist/esm/icons/24x24/Filled/Social/Telegram.js",
-      "default": "./dist/esm/icons/24x24/Filled/Social/Telegram.js"
-    },
-    "./icons/24x24/Filled/Social/TikTok": {
-      "types": "./dist/types/icons/24x24/Filled/Social/TikTok.d.ts",
-      "require": "./dist/cjs/icons/24x24/Filled/Social/TikTok.js",
-      "import": "./dist/esm/icons/24x24/Filled/Social/TikTok.js",
-      "default": "./dist/esm/icons/24x24/Filled/Social/TikTok.js"
-    },
-    "./icons/24x24/Filled/Social/Twitter": {
-      "types": "./dist/types/icons/24x24/Filled/Social/Twitter.d.ts",
-      "require": "./dist/cjs/icons/24x24/Filled/Social/Twitter.js",
-      "import": "./dist/esm/icons/24x24/Filled/Social/Twitter.js",
-      "default": "./dist/esm/icons/24x24/Filled/Social/Twitter.js"
-    },
-    "./icons/24x24/Filled/Social/Viber": {
-      "types": "./dist/types/icons/24x24/Filled/Social/Viber.d.ts",
-      "require": "./dist/cjs/icons/24x24/Filled/Social/Viber.js",
-      "import": "./dist/esm/icons/24x24/Filled/Social/Viber.js",
-      "default": "./dist/esm/icons/24x24/Filled/Social/Viber.js"
-    },
-    "./icons/24x24/Filled/Social/Vk": {
-      "types": "./dist/types/icons/24x24/Filled/Social/Vk.d.ts",
-      "require": "./dist/cjs/icons/24x24/Filled/Social/Vk.js",
-      "import": "./dist/esm/icons/24x24/Filled/Social/Vk.js",
-      "default": "./dist/esm/icons/24x24/Filled/Social/Vk.js"
-    },
-    "./icons/24x24/Filled/Social/WhatsApp": {
-      "types": "./dist/types/icons/24x24/Filled/Social/WhatsApp.d.ts",
-      "require": "./dist/cjs/icons/24x24/Filled/Social/WhatsApp.js",
-      "import": "./dist/esm/icons/24x24/Filled/Social/WhatsApp.js",
-      "default": "./dist/esm/icons/24x24/Filled/Social/WhatsApp.js"
-    },
-    "./icons/24x24/Filled/Social/Yandex": {
-      "types": "./dist/types/icons/24x24/Filled/Social/Yandex.d.ts",
-      "require": "./dist/cjs/icons/24x24/Filled/Social/Yandex.js",
-      "import": "./dist/esm/icons/24x24/Filled/Social/Yandex.js",
-      "default": "./dist/esm/icons/24x24/Filled/Social/Yandex.js"
-    },
-    "./icons/24x24/Filled/Social/YouTube": {
-      "types": "./dist/types/icons/24x24/Filled/Social/YouTube.d.ts",
-      "require": "./dist/cjs/icons/24x24/Filled/Social/YouTube.js",
-      "import": "./dist/esm/icons/24x24/Filled/Social/YouTube.js",
-      "default": "./dist/esm/icons/24x24/Filled/Social/YouTube.js"
-    },
-    "./icons/24x24/Filled/Social/Zen": {
-      "types": "./dist/types/icons/24x24/Filled/Social/Zen.d.ts",
-      "require": "./dist/cjs/icons/24x24/Filled/Social/Zen.js",
-      "import": "./dist/esm/icons/24x24/Filled/Social/Zen.js",
-      "default": "./dist/esm/icons/24x24/Filled/Social/Zen.js"
-    },
-    "./icons/24x24/Filled/Tick": {
-      "types": "./dist/types/icons/24x24/Filled/Tick.d.ts",
-      "require": "./dist/cjs/icons/24x24/Filled/Tick.js",
-      "import": "./dist/esm/icons/24x24/Filled/Tick.js",
-      "default": "./dist/esm/icons/24x24/Filled/Tick.js"
-    },
-    "./icons/24x24/Stroked/Add": {
-      "types": "./dist/types/icons/24x24/Stroked/Add.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Add.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Add.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Add.js"
-    },
-    "./icons/24x24/Stroked/AddComment": {
-      "types": "./dist/types/icons/24x24/Stroked/AddComment.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/AddComment.js",
-      "import": "./dist/esm/icons/24x24/Stroked/AddComment.js",
-      "default": "./dist/esm/icons/24x24/Stroked/AddComment.js"
-    },
-    "./icons/24x24/Stroked/ApiKey": {
-      "types": "./dist/types/icons/24x24/Stroked/ApiKey.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/ApiKey.js",
-      "import": "./dist/esm/icons/24x24/Stroked/ApiKey.js",
-      "default": "./dist/esm/icons/24x24/Stroked/ApiKey.js"
-    },
-    "./icons/24x24/Stroked/ArrowDown": {
-      "types": "./dist/types/icons/24x24/Stroked/ArrowDown.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/ArrowDown.js",
-      "import": "./dist/esm/icons/24x24/Stroked/ArrowDown.js",
-      "default": "./dist/esm/icons/24x24/Stroked/ArrowDown.js"
-    },
-    "./icons/24x24/Stroked/ArrowLeft": {
-      "types": "./dist/types/icons/24x24/Stroked/ArrowLeft.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/ArrowLeft.js",
-      "import": "./dist/esm/icons/24x24/Stroked/ArrowLeft.js",
-      "default": "./dist/esm/icons/24x24/Stroked/ArrowLeft.js"
-    },
-    "./icons/24x24/Stroked/ArrowRight": {
-      "types": "./dist/types/icons/24x24/Stroked/ArrowRight.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/ArrowRight.js",
-      "import": "./dist/esm/icons/24x24/Stroked/ArrowRight.js",
-      "default": "./dist/esm/icons/24x24/Stroked/ArrowRight.js"
-    },
-    "./icons/24x24/Stroked/ArrowUp": {
-      "types": "./dist/types/icons/24x24/Stroked/ArrowUp.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/ArrowUp.js",
-      "import": "./dist/esm/icons/24x24/Stroked/ArrowUp.js",
-      "default": "./dist/esm/icons/24x24/Stroked/ArrowUp.js"
-    },
-    "./icons/24x24/Stroked/Arrows/Down": {
-      "types": "./dist/types/icons/24x24/Stroked/Arrows/Down.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Arrows/Down.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Arrows/Down.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Arrows/Down.js"
-    },
-    "./icons/24x24/Stroked/Arrows/Up": {
-      "types": "./dist/types/icons/24x24/Stroked/Arrows/Up.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Arrows/Up.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Arrows/Up.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Arrows/Up.js"
-    },
-    "./icons/24x24/Stroked/Bag2": {
-      "types": "./dist/types/icons/24x24/Stroked/Bag2.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Bag2.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Bag2.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Bag2.js"
-    },
-    "./icons/24x24/Stroked/BagCheck": {
-      "types": "./dist/types/icons/24x24/Stroked/BagCheck.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/BagCheck.js",
-      "import": "./dist/esm/icons/24x24/Stroked/BagCheck.js",
-      "default": "./dist/esm/icons/24x24/Stroked/BagCheck.js"
-    },
-    "./icons/24x24/Stroked/BagCross": {
-      "types": "./dist/types/icons/24x24/Stroked/BagCross.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/BagCross.js",
-      "import": "./dist/esm/icons/24x24/Stroked/BagCross.js",
-      "default": "./dist/esm/icons/24x24/Stroked/BagCross.js"
-    },
-    "./icons/24x24/Stroked/Barcode": {
-      "types": "./dist/types/icons/24x24/Stroked/Barcode.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Barcode.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Barcode.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Barcode.js"
-    },
-    "./icons/24x24/Stroked/Binoculars": {
-      "types": "./dist/types/icons/24x24/Stroked/Binoculars.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Binoculars.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Binoculars.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Binoculars.js"
-    },
-    "./icons/24x24/Stroked/Book": {
-      "types": "./dist/types/icons/24x24/Stroked/Book.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Book.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Book.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Book.js"
-    },
-    "./icons/24x24/Stroked/Box": {
-      "types": "./dist/types/icons/24x24/Stroked/Box.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Box.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Box.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Box.js"
-    },
-    "./icons/24x24/Stroked/Briefcase": {
-      "types": "./dist/types/icons/24x24/Stroked/Briefcase.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Briefcase.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Briefcase.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Briefcase.js"
-    },
-    "./icons/24x24/Stroked/Burger": {
-      "types": "./dist/types/icons/24x24/Stroked/Burger.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Burger.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Burger.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Burger.js"
-    },
-    "./icons/24x24/Stroked/Calendar": {
-      "types": "./dist/types/icons/24x24/Stroked/Calendar.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Calendar.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Calendar.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Calendar.js"
-    },
-    "./icons/24x24/Stroked/Camera2": {
-      "types": "./dist/types/icons/24x24/Stroked/Camera2.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Camera2.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Camera2.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Camera2.js"
-    },
-    "./icons/24x24/Stroked/Car": {
-      "types": "./dist/types/icons/24x24/Stroked/Car.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Car.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Car.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Car.js"
-    },
-    "./icons/24x24/Stroked/Card": {
-      "types": "./dist/types/icons/24x24/Stroked/Card.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Card.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Card.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Card.js"
-    },
-    "./icons/24x24/Stroked/Cart": {
-      "types": "./dist/types/icons/24x24/Stroked/Cart.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Cart.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Cart.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Cart.js"
-    },
-    "./icons/24x24/Stroked/CatalogSearch": {
-      "types": "./dist/types/icons/24x24/Stroked/CatalogSearch.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/CatalogSearch.js",
-      "import": "./dist/esm/icons/24x24/Stroked/CatalogSearch.js",
-      "default": "./dist/esm/icons/24x24/Stroked/CatalogSearch.js"
-    },
-    "./icons/24x24/Stroked/Check": {
-      "types": "./dist/types/icons/24x24/Stroked/Check.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Check.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Check.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Check.js"
-    },
-    "./icons/24x24/Stroked/Clip": {
-      "types": "./dist/types/icons/24x24/Stroked/Clip.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Clip.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Clip.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Clip.js"
-    },
-    "./icons/24x24/Stroked/ComparisonAdd": {
-      "types": "./dist/types/icons/24x24/Stroked/ComparisonAdd.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/ComparisonAdd.js",
-      "import": "./dist/esm/icons/24x24/Stroked/ComparisonAdd.js",
-      "default": "./dist/esm/icons/24x24/Stroked/ComparisonAdd.js"
-    },
-    "./icons/24x24/Stroked/ComparisonAdded": {
-      "types": "./dist/types/icons/24x24/Stroked/ComparisonAdded.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/ComparisonAdded.js",
-      "import": "./dist/esm/icons/24x24/Stroked/ComparisonAdded.js",
-      "default": "./dist/esm/icons/24x24/Stroked/ComparisonAdded.js"
-    },
-    "./icons/24x24/Stroked/ComparisonDelete": {
-      "types": "./dist/types/icons/24x24/Stroked/ComparisonDelete.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/ComparisonDelete.js",
-      "import": "./dist/esm/icons/24x24/Stroked/ComparisonDelete.js",
-      "default": "./dist/esm/icons/24x24/Stroked/ComparisonDelete.js"
-    },
-    "./icons/24x24/Stroked/Consultant": {
-      "types": "./dist/types/icons/24x24/Stroked/Consultant.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Consultant.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Consultant.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Consultant.js"
-    },
-    "./icons/24x24/Stroked/Contract": {
-      "types": "./dist/types/icons/24x24/Stroked/Contract.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Contract.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Contract.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Contract.js"
-    },
-    "./icons/24x24/Stroked/Copy": {
-      "types": "./dist/types/icons/24x24/Stroked/Copy.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Copy.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Copy.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Copy.js"
-    },
-    "./icons/24x24/Stroked/Cross": {
-      "types": "./dist/types/icons/24x24/Stroked/Cross.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Cross.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Cross.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Cross.js"
-    },
-    "./icons/24x24/Stroked/Download": {
-      "types": "./dist/types/icons/24x24/Stroked/Download.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Download.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Download.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Download.js"
-    },
-    "./icons/24x24/Stroked/Edit": {
-      "types": "./dist/types/icons/24x24/Stroked/Edit.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Edit.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Edit.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Edit.js"
-    },
-    "./icons/24x24/Stroked/Entrance": {
-      "types": "./dist/types/icons/24x24/Stroked/Entrance.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Entrance.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Entrance.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Entrance.js"
-    },
-    "./icons/24x24/Stroked/Exit": {
-      "types": "./dist/types/icons/24x24/Stroked/Exit.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Exit.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Exit.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Exit.js"
-    },
-    "./icons/24x24/Stroked/Expand": {
-      "types": "./dist/types/icons/24x24/Stroked/Expand.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Expand.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Expand.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Expand.js"
-    },
-    "./icons/24x24/Stroked/FaceId": {
-      "types": "./dist/types/icons/24x24/Stroked/FaceId.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/FaceId.js",
-      "import": "./dist/esm/icons/24x24/Stroked/FaceId.js",
-      "default": "./dist/esm/icons/24x24/Stroked/FaceId.js"
-    },
-    "./icons/24x24/Stroked/Favorite": {
-      "types": "./dist/types/icons/24x24/Stroked/Favorite.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Favorite.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Favorite.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Favorite.js"
-    },
-    "./icons/24x24/Stroked/Feedback": {
-      "types": "./dist/types/icons/24x24/Stroked/Feedback.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Feedback.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Feedback.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Feedback.js"
-    },
-    "./icons/24x24/Stroked/Filters": {
-      "types": "./dist/types/icons/24x24/Stroked/Filters.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Filters.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Filters.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Filters.js"
-    },
-    "./icons/24x24/Stroked/Gift": {
-      "types": "./dist/types/icons/24x24/Stroked/Gift.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Gift.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Gift.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Gift.js"
-    },
-    "./icons/24x24/Stroked/GovernmentBuilding": {
-      "types": "./dist/types/icons/24x24/Stroked/GovernmentBuilding.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/GovernmentBuilding.js",
-      "import": "./dist/esm/icons/24x24/Stroked/GovernmentBuilding.js",
-      "default": "./dist/esm/icons/24x24/Stroked/GovernmentBuilding.js"
-    },
-    "./icons/24x24/Stroked/Hanger": {
-      "types": "./dist/types/icons/24x24/Stroked/Hanger.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Hanger.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Hanger.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Hanger.js"
-    },
-    "./icons/24x24/Stroked/Help": {
-      "types": "./dist/types/icons/24x24/Stroked/Help.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Help.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Help.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Help.js"
-    },
-    "./icons/24x24/Stroked/Home": {
-      "types": "./dist/types/icons/24x24/Stroked/Home.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Home.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Home.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Home.js"
-    },
-    "./icons/24x24/Stroked/Info": {
-      "types": "./dist/types/icons/24x24/Stroked/Info.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Info.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Info.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Info.js"
-    },
-    "./icons/24x24/Stroked/Links": {
-      "types": "./dist/types/icons/24x24/Stroked/Links.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Links.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Links.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Links.js"
-    },
-    "./icons/24x24/Stroked/List": {
-      "types": "./dist/types/icons/24x24/Stroked/List.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/List.js",
-      "import": "./dist/esm/icons/24x24/Stroked/List.js",
-      "default": "./dist/esm/icons/24x24/Stroked/List.js"
-    },
-    "./icons/24x24/Stroked/Loader": {
-      "types": "./dist/types/icons/24x24/Stroked/Loader.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Loader.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Loader.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Loader.js"
-    },
-    "./icons/24x24/Stroked/Location": {
-      "types": "./dist/types/icons/24x24/Stroked/Location.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Location.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Location.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Location.js"
-    },
-    "./icons/24x24/Stroked/Lock": {
-      "types": "./dist/types/icons/24x24/Stroked/Lock.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Lock.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Lock.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Lock.js"
-    },
-    "./icons/24x24/Stroked/Mail": {
-      "types": "./dist/types/icons/24x24/Stroked/Mail.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Mail.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Mail.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Mail.js"
-    },
-    "./icons/24x24/Stroked/MainPage": {
-      "types": "./dist/types/icons/24x24/Stroked/MainPage.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/MainPage.js",
-      "import": "./dist/esm/icons/24x24/Stroked/MainPage.js",
-      "default": "./dist/esm/icons/24x24/Stroked/MainPage.js"
-    },
-    "./icons/24x24/Stroked/Map": {
-      "types": "./dist/types/icons/24x24/Stroked/Map.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Map.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Map.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Map.js"
-    },
-    "./icons/24x24/Stroked/MarkHeart": {
-      "types": "./dist/types/icons/24x24/Stroked/MarkHeart.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/MarkHeart.js",
-      "import": "./dist/esm/icons/24x24/Stroked/MarkHeart.js",
-      "default": "./dist/esm/icons/24x24/Stroked/MarkHeart.js"
-    },
-    "./icons/24x24/Stroked/MicrophoneOff": {
-      "types": "./dist/types/icons/24x24/Stroked/MicrophoneOff.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/MicrophoneOff.js",
-      "import": "./dist/esm/icons/24x24/Stroked/MicrophoneOff.js",
-      "default": "./dist/esm/icons/24x24/Stroked/MicrophoneOff.js"
-    },
-    "./icons/24x24/Stroked/MicrophoneOn": {
-      "types": "./dist/types/icons/24x24/Stroked/MicrophoneOn.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/MicrophoneOn.js",
-      "import": "./dist/esm/icons/24x24/Stroked/MicrophoneOn.js",
-      "default": "./dist/esm/icons/24x24/Stroked/MicrophoneOn.js"
-    },
-    "./icons/24x24/Stroked/Minus": {
-      "types": "./dist/types/icons/24x24/Stroked/Minus.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Minus.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Minus.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Minus.js"
-    },
-    "./icons/24x24/Stroked/Mobile": {
-      "types": "./dist/types/icons/24x24/Stroked/Mobile.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Mobile.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Mobile.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Mobile.js"
-    },
-    "./icons/24x24/Stroked/Navigation": {
-      "types": "./dist/types/icons/24x24/Stroked/Navigation.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Navigation.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Navigation.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Navigation.js"
-    },
-    "./icons/24x24/Stroked/NoFavorite": {
-      "types": "./dist/types/icons/24x24/Stroked/NoFavorite.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/NoFavorite.js",
-      "import": "./dist/esm/icons/24x24/Stroked/NoFavorite.js",
-      "default": "./dist/esm/icons/24x24/Stroked/NoFavorite.js"
-    },
-    "./icons/24x24/Stroked/Notification": {
-      "types": "./dist/types/icons/24x24/Stroked/Notification.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Notification.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Notification.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Notification.js"
-    },
-    "./icons/24x24/Stroked/PasswordHide": {
-      "types": "./dist/types/icons/24x24/Stroked/PasswordHide.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/PasswordHide.js",
-      "import": "./dist/esm/icons/24x24/Stroked/PasswordHide.js",
-      "default": "./dist/esm/icons/24x24/Stroked/PasswordHide.js"
-    },
-    "./icons/24x24/Stroked/PasswordShow": {
-      "types": "./dist/types/icons/24x24/Stroked/PasswordShow.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/PasswordShow.js",
-      "import": "./dist/esm/icons/24x24/Stroked/PasswordShow.js",
-      "default": "./dist/esm/icons/24x24/Stroked/PasswordShow.js"
-    },
-    "./icons/24x24/Stroked/Payment": {
-      "types": "./dist/types/icons/24x24/Stroked/Payment.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Payment.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Payment.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Payment.js"
-    },
-    "./icons/24x24/Stroked/Person": {
-      "types": "./dist/types/icons/24x24/Stroked/Person.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Person.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Person.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Person.js"
-    },
-    "./icons/24x24/Stroked/Phone": {
-      "types": "./dist/types/icons/24x24/Stroked/Phone.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Phone.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Phone.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Phone.js"
-    },
-    "./icons/24x24/Stroked/Placeholder": {
-      "types": "./dist/types/icons/24x24/Stroked/Placeholder.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Placeholder.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Placeholder.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Placeholder.js"
-    },
-    "./icons/24x24/Stroked/Plus": {
-      "types": "./dist/types/icons/24x24/Stroked/Plus.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Plus.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Plus.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Plus.js"
-    },
-    "./icons/24x24/Stroked/Progress": {
-      "types": "./dist/types/icons/24x24/Stroked/Progress.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Progress.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Progress.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Progress.js"
-    },
-    "./icons/24x24/Stroked/QuickView": {
-      "types": "./dist/types/icons/24x24/Stroked/QuickView.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/QuickView.js",
-      "import": "./dist/esm/icons/24x24/Stroked/QuickView.js",
-      "default": "./dist/esm/icons/24x24/Stroked/QuickView.js"
-    },
-    "./icons/24x24/Stroked/QuickView2": {
-      "types": "./dist/types/icons/24x24/Stroked/QuickView2.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/QuickView2.js",
-      "import": "./dist/esm/icons/24x24/Stroked/QuickView2.js",
-      "default": "./dist/esm/icons/24x24/Stroked/QuickView2.js"
-    },
-    "./icons/24x24/Stroked/Repeat": {
-      "types": "./dist/types/icons/24x24/Stroked/Repeat.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Repeat.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Repeat.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Repeat.js"
-    },
-    "./icons/24x24/Stroked/Revise": {
-      "types": "./dist/types/icons/24x24/Stroked/Revise.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Revise.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Revise.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Revise.js"
-    },
-    "./icons/24x24/Stroked/Rubles": {
-      "types": "./dist/types/icons/24x24/Stroked/Rubles.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Rubles.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Rubles.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Rubles.js"
-    },
-    "./icons/24x24/Stroked/SalaryStatement": {
-      "types": "./dist/types/icons/24x24/Stroked/SalaryStatement.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/SalaryStatement.js",
-      "import": "./dist/esm/icons/24x24/Stroked/SalaryStatement.js",
-      "default": "./dist/esm/icons/24x24/Stroked/SalaryStatement.js"
-    },
-    "./icons/24x24/Stroked/Screamer": {
-      "types": "./dist/types/icons/24x24/Stroked/Screamer.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Screamer.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Screamer.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Screamer.js"
-    },
-    "./icons/24x24/Stroked/Screwdriver": {
-      "types": "./dist/types/icons/24x24/Stroked/Screwdriver.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Screwdriver.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Screwdriver.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Screwdriver.js"
-    },
-    "./icons/24x24/Stroked/Search": {
-      "types": "./dist/types/icons/24x24/Stroked/Search.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Search.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Search.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Search.js"
-    },
-    "./icons/24x24/Stroked/Settings": {
-      "types": "./dist/types/icons/24x24/Stroked/Settings.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Settings.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Settings.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Settings.js"
-    },
-    "./icons/24x24/Stroked/ShareAndroid": {
-      "types": "./dist/types/icons/24x24/Stroked/ShareAndroid.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/ShareAndroid.js",
-      "import": "./dist/esm/icons/24x24/Stroked/ShareAndroid.js",
-      "default": "./dist/esm/icons/24x24/Stroked/ShareAndroid.js"
-    },
-    "./icons/24x24/Stroked/ShareIOs": {
-      "types": "./dist/types/icons/24x24/Stroked/ShareIOs.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/ShareIOs.js",
-      "import": "./dist/esm/icons/24x24/Stroked/ShareIOs.js",
-      "default": "./dist/esm/icons/24x24/Stroked/ShareIOs.js"
-    },
-    "./icons/24x24/Stroked/Sima": {
-      "types": "./dist/types/icons/24x24/Stroked/Sima.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Sima.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Sima.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Sima.js"
-    },
-    "./icons/24x24/Stroked/Size": {
-      "types": "./dist/types/icons/24x24/Stroked/Size.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Size.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Size.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Size.js"
-    },
-    "./icons/24x24/Stroked/Skype": {
-      "types": "./dist/types/icons/24x24/Stroked/Skype.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Skype.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Skype.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Skype.js"
-    },
-    "./icons/24x24/Stroked/Sort": {
-      "types": "./dist/types/icons/24x24/Stroked/Sort.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Sort.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Sort.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Sort.js"
-    },
-    "./icons/24x24/Stroked/Sort2": {
-      "types": "./dist/types/icons/24x24/Stroked/Sort2.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Sort2.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Sort2.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Sort2.js"
-    },
-    "./icons/24x24/Stroked/SpeakerOff": {
-      "types": "./dist/types/icons/24x24/Stroked/SpeakerOff.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/SpeakerOff.js",
-      "import": "./dist/esm/icons/24x24/Stroked/SpeakerOff.js",
-      "default": "./dist/esm/icons/24x24/Stroked/SpeakerOff.js"
-    },
-    "./icons/24x24/Stroked/SpeakerOn": {
-      "types": "./dist/types/icons/24x24/Stroked/SpeakerOn.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/SpeakerOn.js",
-      "import": "./dist/esm/icons/24x24/Stroked/SpeakerOn.js",
-      "default": "./dist/esm/icons/24x24/Stroked/SpeakerOn.js"
-    },
-    "./icons/24x24/Stroked/Spruce": {
-      "types": "./dist/types/icons/24x24/Stroked/Spruce.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Spruce.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Spruce.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Spruce.js"
-    },
-    "./icons/24x24/Stroked/Statement": {
-      "types": "./dist/types/icons/24x24/Stroked/Statement.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Statement.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Statement.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Statement.js"
-    },
-    "./icons/24x24/Stroked/Taxes": {
-      "types": "./dist/types/icons/24x24/Stroked/Taxes.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Taxes.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Taxes.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Taxes.js"
-    },
-    "./icons/24x24/Stroked/Thermometer": {
-      "types": "./dist/types/icons/24x24/Stroked/Thermometer.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Thermometer.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Thermometer.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Thermometer.js"
-    },
-    "./icons/24x24/Stroked/ThumbsUp": {
-      "types": "./dist/types/icons/24x24/Stroked/ThumbsUp.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/ThumbsUp.js",
-      "import": "./dist/esm/icons/24x24/Stroked/ThumbsUp.js",
-      "default": "./dist/esm/icons/24x24/Stroked/ThumbsUp.js"
-    },
-    "./icons/24x24/Stroked/TouchId": {
-      "types": "./dist/types/icons/24x24/Stroked/TouchId.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/TouchId.js",
-      "import": "./dist/esm/icons/24x24/Stroked/TouchId.js",
-      "default": "./dist/esm/icons/24x24/Stroked/TouchId.js"
-    },
-    "./icons/24x24/Stroked/Trailer": {
-      "types": "./dist/types/icons/24x24/Stroked/Trailer.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Trailer.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Trailer.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Trailer.js"
-    },
-    "./icons/24x24/Stroked/Transfer": {
-      "types": "./dist/types/icons/24x24/Stroked/Transfer.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Transfer.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Transfer.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Transfer.js"
-    },
-    "./icons/24x24/Stroked/Trash": {
-      "types": "./dist/types/icons/24x24/Stroked/Trash.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Trash.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Trash.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Trash.js"
-    },
-    "./icons/24x24/Stroked/UnitedCustomers": {
-      "types": "./dist/types/icons/24x24/Stroked/UnitedCustomers.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/UnitedCustomers.js",
-      "import": "./dist/esm/icons/24x24/Stroked/UnitedCustomers.js",
-      "default": "./dist/esm/icons/24x24/Stroked/UnitedCustomers.js"
-    },
-    "./icons/24x24/Stroked/UnknownType": {
-      "types": "./dist/types/icons/24x24/Stroked/UnknownType.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/UnknownType.js",
-      "import": "./dist/esm/icons/24x24/Stroked/UnknownType.js",
-      "default": "./dist/esm/icons/24x24/Stroked/UnknownType.js"
-    },
-    "./icons/24x24/Stroked/Upload": {
-      "types": "./dist/types/icons/24x24/Stroked/Upload.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Upload.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Upload.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Upload.js"
-    },
-    "./icons/24x24/Stroked/View1": {
-      "types": "./dist/types/icons/24x24/Stroked/View1.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/View1.js",
-      "import": "./dist/esm/icons/24x24/Stroked/View1.js",
-      "default": "./dist/esm/icons/24x24/Stroked/View1.js"
-    },
-    "./icons/24x24/Stroked/View2": {
-      "types": "./dist/types/icons/24x24/Stroked/View2.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/View2.js",
-      "import": "./dist/esm/icons/24x24/Stroked/View2.js",
-      "default": "./dist/esm/icons/24x24/Stroked/View2.js"
-    },
-    "./icons/24x24/Stroked/View3": {
-      "types": "./dist/types/icons/24x24/Stroked/View3.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/View3.js",
-      "import": "./dist/esm/icons/24x24/Stroked/View3.js",
-      "default": "./dist/esm/icons/24x24/Stroked/View3.js"
-    },
-    "./icons/24x24/Stroked/Wallet": {
-      "types": "./dist/types/icons/24x24/Stroked/Wallet.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Wallet.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Wallet.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Wallet.js"
-    },
-    "./icons/24x24/Stroked/Watch": {
-      "types": "./dist/types/icons/24x24/Stroked/Watch.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Watch.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Watch.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Watch.js"
-    },
-    "./icons/40x40/Filled/Pause": {
-      "types": "./dist/types/icons/40x40/Filled/Pause.d.ts",
-      "require": "./dist/cjs/icons/40x40/Filled/Pause.js",
-      "import": "./dist/esm/icons/40x40/Filled/Pause.js",
-      "default": "./dist/esm/icons/40x40/Filled/Pause.js"
-    },
-    "./icons/40x40/Filled/Play": {
-      "types": "./dist/types/icons/40x40/Filled/Play.d.ts",
-      "require": "./dist/cjs/icons/40x40/Filled/Play.js",
-      "import": "./dist/esm/icons/40x40/Filled/Play.js",
-      "default": "./dist/esm/icons/40x40/Filled/Play.js"
-    },
-    "./icons/40x40/Filled/Round360": {
-      "types": "./dist/types/icons/40x40/Filled/Round360.d.ts",
-      "require": "./dist/cjs/icons/40x40/Filled/Round360.js",
-      "import": "./dist/esm/icons/40x40/Filled/Round360.js",
-      "default": "./dist/esm/icons/40x40/Filled/Round360.js"
-    },
-    "./icons/40x40/Stroked/ImageBroken": {
-      "types": "./dist/types/icons/40x40/Stroked/ImageBroken.d.ts",
-      "require": "./dist/cjs/icons/40x40/Stroked/ImageBroken.js",
-      "import": "./dist/esm/icons/40x40/Stroked/ImageBroken.js",
-      "default": "./dist/esm/icons/40x40/Stroked/ImageBroken.js"
-    },
-    "./icons/64x64/Colorful/TouchScrollX": {
-      "types": "./dist/types/icons/64x64/Colorful/TouchScrollX.d.ts",
-      "require": "./dist/cjs/icons/64x64/Colorful/TouchScrollX.js",
-      "import": "./dist/esm/icons/64x64/Colorful/TouchScrollX.js",
-      "default": "./dist/esm/icons/64x64/Colorful/TouchScrollX.js"
-    },
-    "./icons/64x64/Stroked/EighteenPlus": {
-      "types": "./dist/types/icons/64x64/Stroked/EighteenPlus.d.ts",
-      "require": "./dist/cjs/icons/64x64/Stroked/EighteenPlus.js",
-      "import": "./dist/esm/icons/64x64/Stroked/EighteenPlus.js",
-      "default": "./dist/esm/icons/64x64/Stroked/EighteenPlus.js"
-    },
-    "./icons/64x64/Stroked/Upload": {
-      "types": "./dist/types/icons/64x64/Stroked/Upload.d.ts",
-      "require": "./dist/cjs/icons/64x64/Stroked/Upload.js",
-      "import": "./dist/esm/icons/64x64/Stroked/Upload.js",
-      "default": "./dist/esm/icons/64x64/Stroked/Upload.js"
-    }
-  },
-  "typesVersions": {
-    ">=4.2": {
-      "*": [
-        "dist/types/*"
-      ]
-    }
+    "./icons/16x16/Filled/Add": "./dist/icons/16x16/Filled/Add.js",
+    "./icons/16x16/Filled/Camera": "./dist/icons/16x16/Filled/Camera.js",
+    "./icons/16x16/Filled/Comment": "./dist/icons/16x16/Filled/Comment.js",
+    "./icons/16x16/Filled/Cross": "./dist/icons/16x16/Filled/Cross.js",
+    "./icons/16x16/Filled/Eye": "./dist/icons/16x16/Filled/Eye.js",
+    "./icons/16x16/Filled/Funnel": "./dist/icons/16x16/Filled/Funnel.js",
+    "./icons/16x16/Filled/Heart": "./dist/icons/16x16/Filled/Heart.js",
+    "./icons/16x16/Filled/Person": "./dist/icons/16x16/Filled/Person.js",
+    "./icons/16x16/Filled/Place": "./dist/icons/16x16/Filled/Place.js",
+    "./icons/16x16/Filled/Share": "./dist/icons/16x16/Filled/Share.js",
+    "./icons/16x16/Filled/SortDown": "./dist/icons/16x16/Filled/SortDown.js",
+    "./icons/16x16/Filled/SortUp": "./dist/icons/16x16/Filled/SortUp.js",
+    "./icons/16x16/Filled/Star": "./dist/icons/16x16/Filled/Star.js",
+    "./icons/16x16/Filled/ThumbDown": "./dist/icons/16x16/Filled/ThumbDown.js",
+    "./icons/16x16/Filled/ThumbUp": "./dist/icons/16x16/Filled/ThumbUp.js",
+    "./icons/16x16/Filled/Trash": "./dist/icons/16x16/Filled/Trash.js",
+    "./icons/16x16/Filled/Wallet": "./dist/icons/16x16/Filled/Wallet.js",
+    "./icons/16x16/Stroked/Add": "./dist/icons/16x16/Stroked/Add.js",
+    "./icons/16x16/Stroked/ArrowDown": "./dist/icons/16x16/Stroked/ArrowDown.js",
+    "./icons/16x16/Stroked/ArrowLeft": "./dist/icons/16x16/Stroked/ArrowLeft.js",
+    "./icons/16x16/Stroked/ArrowRight": "./dist/icons/16x16/Stroked/ArrowRight.js",
+    "./icons/16x16/Stroked/ArrowUp": "./dist/icons/16x16/Stroked/ArrowUp.js",
+    "./icons/16x16/Stroked/Arrows/Down": "./dist/icons/16x16/Stroked/Arrows/Down.js",
+    "./icons/16x16/Stroked/Arrows/DownSquare": "./dist/icons/16x16/Stroked/Arrows/DownSquare.js",
+    "./icons/16x16/Stroked/Arrows/Left": "./dist/icons/16x16/Stroked/Arrows/Left.js",
+    "./icons/16x16/Stroked/Arrows/Right": "./dist/icons/16x16/Stroked/Arrows/Right.js",
+    "./icons/16x16/Stroked/Arrows/TurnLeft": "./dist/icons/16x16/Stroked/Arrows/TurnLeft.js",
+    "./icons/16x16/Stroked/Arrows/TurnRight": "./dist/icons/16x16/Stroked/Arrows/TurnRight.js",
+    "./icons/16x16/Stroked/Arrows/Up": "./dist/icons/16x16/Stroked/Arrows/Up.js",
+    "./icons/16x16/Stroked/Arrows/UpAndDown": "./dist/icons/16x16/Stroked/Arrows/UpAndDown.js",
+    "./icons/16x16/Stroked/Burger": "./dist/icons/16x16/Stroked/Burger.js",
+    "./icons/16x16/Stroked/Check": "./dist/icons/16x16/Stroked/Check.js",
+    "./icons/16x16/Stroked/Copy": "./dist/icons/16x16/Stroked/Copy.js",
+    "./icons/16x16/Stroked/Cross": "./dist/icons/16x16/Stroked/Cross.js",
+    "./icons/16x16/Stroked/Information": "./dist/icons/16x16/Stroked/Information.js",
+    "./icons/16x16/Stroked/Lock": "./dist/icons/16x16/Stroked/Lock.js",
+    "./icons/16x16/Stroked/Minus": "./dist/icons/16x16/Stroked/Minus.js",
+    "./icons/16x16/Stroked/Placeholder": "./dist/icons/16x16/Stroked/Placeholder.js",
+    "./icons/16x16/Stroked/Plus": "./dist/icons/16x16/Stroked/Plus.js",
+    "./icons/16x16/Stroked/Remove": "./dist/icons/16x16/Stroked/Remove.js",
+    "./icons/16x16/Stroked/Screamer": "./dist/icons/16x16/Stroked/Screamer.js",
+    "./icons/16x16/Stroked/Watch": "./dist/icons/16x16/Stroked/Watch.js",
+    "./icons/24x24/Colorful/LogoDolyame": "./dist/icons/24x24/Colorful/LogoDolyame.js",
+    "./icons/24x24/Colorful/LogoJcb": "./dist/icons/24x24/Colorful/LogoJcb.js",
+    "./icons/24x24/Colorful/LogoMaestro": "./dist/icons/24x24/Colorful/LogoMaestro.js",
+    "./icons/24x24/Colorful/LogoMastercard": "./dist/icons/24x24/Colorful/LogoMastercard.js",
+    "./icons/24x24/Colorful/LogoMir": "./dist/icons/24x24/Colorful/LogoMir.js",
+    "./icons/24x24/Colorful/LogoPackmanSplit": "./dist/icons/24x24/Colorful/LogoPackmanSplit.js",
+    "./icons/24x24/Colorful/LogoPodeli": "./dist/icons/24x24/Colorful/LogoPodeli.js",
+    "./icons/24x24/Colorful/LogoSber": "./dist/icons/24x24/Colorful/LogoSber.js",
+    "./icons/24x24/Colorful/LogoSberCredit": "./dist/icons/24x24/Colorful/LogoSberCredit.js",
+    "./icons/24x24/Colorful/LogoSbp": "./dist/icons/24x24/Colorful/LogoSbp.js",
+    "./icons/24x24/Colorful/LogoUnionPay": "./dist/icons/24x24/Colorful/LogoUnionPay.js",
+    "./icons/24x24/Colorful/LogoVisa": "./dist/icons/24x24/Colorful/LogoVisa.js",
+    "./icons/24x24/Colorful/LogoVsegdaDa": "./dist/icons/24x24/Colorful/LogoVsegdaDa.js",
+    "./icons/24x24/Colorful/SberCredit": "./dist/icons/24x24/Colorful/SberCredit.js",
+    "./icons/24x24/Filled/Cross": "./dist/icons/24x24/Filled/Cross.js",
+    "./icons/24x24/Filled/Favorite": "./dist/icons/24x24/Filled/Favorite.js",
+    "./icons/24x24/Filled/Flash": "./dist/icons/24x24/Filled/Flash.js",
+    "./icons/24x24/Filled/Mobile": "./dist/icons/24x24/Filled/Mobile.js",
+    "./icons/24x24/Filled/More": "./dist/icons/24x24/Filled/More.js",
+    "./icons/24x24/Filled/MoreVert": "./dist/icons/24x24/Filled/MoreVert.js",
+    "./icons/24x24/Filled/Notification": "./dist/icons/24x24/Filled/Notification.js",
+    "./icons/24x24/Filled/Play": "./dist/icons/24x24/Filled/Play.js",
+    "./icons/24x24/Filled/RadiobuttonSelected": "./dist/icons/24x24/Filled/RadiobuttonSelected.js",
+    "./icons/24x24/Filled/Social/Facebook": "./dist/icons/24x24/Filled/Social/Facebook.js",
+    "./icons/24x24/Filled/Social/Google": "./dist/icons/24x24/Filled/Social/Google.js",
+    "./icons/24x24/Filled/Social/Inspiration": "./dist/icons/24x24/Filled/Social/Inspiration.js",
+    "./icons/24x24/Filled/Social/Instagram": "./dist/icons/24x24/Filled/Social/Instagram.js",
+    "./icons/24x24/Filled/Social/Mail": "./dist/icons/24x24/Filled/Social/Mail.js",
+    "./icons/24x24/Filled/Social/Ok": "./dist/icons/24x24/Filled/Social/Ok.js",
+    "./icons/24x24/Filled/Social/Skype": "./dist/icons/24x24/Filled/Social/Skype.js",
+    "./icons/24x24/Filled/Social/Telegram": "./dist/icons/24x24/Filled/Social/Telegram.js",
+    "./icons/24x24/Filled/Social/TikTok": "./dist/icons/24x24/Filled/Social/TikTok.js",
+    "./icons/24x24/Filled/Social/Twitter": "./dist/icons/24x24/Filled/Social/Twitter.js",
+    "./icons/24x24/Filled/Social/Viber": "./dist/icons/24x24/Filled/Social/Viber.js",
+    "./icons/24x24/Filled/Social/Vk": "./dist/icons/24x24/Filled/Social/Vk.js",
+    "./icons/24x24/Filled/Social/WhatsApp": "./dist/icons/24x24/Filled/Social/WhatsApp.js",
+    "./icons/24x24/Filled/Social/Yandex": "./dist/icons/24x24/Filled/Social/Yandex.js",
+    "./icons/24x24/Filled/Social/YouTube": "./dist/icons/24x24/Filled/Social/YouTube.js",
+    "./icons/24x24/Filled/Social/Zen": "./dist/icons/24x24/Filled/Social/Zen.js",
+    "./icons/24x24/Filled/Tick": "./dist/icons/24x24/Filled/Tick.js",
+    "./icons/24x24/Stroked/Add": "./dist/icons/24x24/Stroked/Add.js",
+    "./icons/24x24/Stroked/AddComment": "./dist/icons/24x24/Stroked/AddComment.js",
+    "./icons/24x24/Stroked/ApiKey": "./dist/icons/24x24/Stroked/ApiKey.js",
+    "./icons/24x24/Stroked/ArrowDown": "./dist/icons/24x24/Stroked/ArrowDown.js",
+    "./icons/24x24/Stroked/ArrowLeft": "./dist/icons/24x24/Stroked/ArrowLeft.js",
+    "./icons/24x24/Stroked/ArrowRight": "./dist/icons/24x24/Stroked/ArrowRight.js",
+    "./icons/24x24/Stroked/ArrowUp": "./dist/icons/24x24/Stroked/ArrowUp.js",
+    "./icons/24x24/Stroked/Arrows/Down": "./dist/icons/24x24/Stroked/Arrows/Down.js",
+    "./icons/24x24/Stroked/Arrows/Up": "./dist/icons/24x24/Stroked/Arrows/Up.js",
+    "./icons/24x24/Stroked/Bag2": "./dist/icons/24x24/Stroked/Bag2.js",
+    "./icons/24x24/Stroked/BagCheck": "./dist/icons/24x24/Stroked/BagCheck.js",
+    "./icons/24x24/Stroked/BagCross": "./dist/icons/24x24/Stroked/BagCross.js",
+    "./icons/24x24/Stroked/Barcode": "./dist/icons/24x24/Stroked/Barcode.js",
+    "./icons/24x24/Stroked/Binoculars": "./dist/icons/24x24/Stroked/Binoculars.js",
+    "./icons/24x24/Stroked/Book": "./dist/icons/24x24/Stroked/Book.js",
+    "./icons/24x24/Stroked/Box": "./dist/icons/24x24/Stroked/Box.js",
+    "./icons/24x24/Stroked/Briefcase": "./dist/icons/24x24/Stroked/Briefcase.js",
+    "./icons/24x24/Stroked/Burger": "./dist/icons/24x24/Stroked/Burger.js",
+    "./icons/24x24/Stroked/Calendar": "./dist/icons/24x24/Stroked/Calendar.js",
+    "./icons/24x24/Stroked/Camera2": "./dist/icons/24x24/Stroked/Camera2.js",
+    "./icons/24x24/Stroked/Car": "./dist/icons/24x24/Stroked/Car.js",
+    "./icons/24x24/Stroked/Card": "./dist/icons/24x24/Stroked/Card.js",
+    "./icons/24x24/Stroked/Cart": "./dist/icons/24x24/Stroked/Cart.js",
+    "./icons/24x24/Stroked/CatalogSearch": "./dist/icons/24x24/Stroked/CatalogSearch.js",
+    "./icons/24x24/Stroked/Check": "./dist/icons/24x24/Stroked/Check.js",
+    "./icons/24x24/Stroked/Clip": "./dist/icons/24x24/Stroked/Clip.js",
+    "./icons/24x24/Stroked/ComparisonAdd": "./dist/icons/24x24/Stroked/ComparisonAdd.js",
+    "./icons/24x24/Stroked/ComparisonAdded": "./dist/icons/24x24/Stroked/ComparisonAdded.js",
+    "./icons/24x24/Stroked/ComparisonDelete": "./dist/icons/24x24/Stroked/ComparisonDelete.js",
+    "./icons/24x24/Stroked/Consultant": "./dist/icons/24x24/Stroked/Consultant.js",
+    "./icons/24x24/Stroked/Contract": "./dist/icons/24x24/Stroked/Contract.js",
+    "./icons/24x24/Stroked/Copy": "./dist/icons/24x24/Stroked/Copy.js",
+    "./icons/24x24/Stroked/Cross": "./dist/icons/24x24/Stroked/Cross.js",
+    "./icons/24x24/Stroked/Download": "./dist/icons/24x24/Stroked/Download.js",
+    "./icons/24x24/Stroked/Edit": "./dist/icons/24x24/Stroked/Edit.js",
+    "./icons/24x24/Stroked/Entrance": "./dist/icons/24x24/Stroked/Entrance.js",
+    "./icons/24x24/Stroked/Exit": "./dist/icons/24x24/Stroked/Exit.js",
+    "./icons/24x24/Stroked/Expand": "./dist/icons/24x24/Stroked/Expand.js",
+    "./icons/24x24/Stroked/FaceId": "./dist/icons/24x24/Stroked/FaceId.js",
+    "./icons/24x24/Stroked/Favorite": "./dist/icons/24x24/Stroked/Favorite.js",
+    "./icons/24x24/Stroked/Feedback": "./dist/icons/24x24/Stroked/Feedback.js",
+    "./icons/24x24/Stroked/Filters": "./dist/icons/24x24/Stroked/Filters.js",
+    "./icons/24x24/Stroked/Gift": "./dist/icons/24x24/Stroked/Gift.js",
+    "./icons/24x24/Stroked/GovernmentBuilding": "./dist/icons/24x24/Stroked/GovernmentBuilding.js",
+    "./icons/24x24/Stroked/Hanger": "./dist/icons/24x24/Stroked/Hanger.js",
+    "./icons/24x24/Stroked/Help": "./dist/icons/24x24/Stroked/Help.js",
+    "./icons/24x24/Stroked/Home": "./dist/icons/24x24/Stroked/Home.js",
+    "./icons/24x24/Stroked/Info": "./dist/icons/24x24/Stroked/Info.js",
+    "./icons/24x24/Stroked/Links": "./dist/icons/24x24/Stroked/Links.js",
+    "./icons/24x24/Stroked/List": "./dist/icons/24x24/Stroked/List.js",
+    "./icons/24x24/Stroked/Loader": "./dist/icons/24x24/Stroked/Loader.js",
+    "./icons/24x24/Stroked/Location": "./dist/icons/24x24/Stroked/Location.js",
+    "./icons/24x24/Stroked/Lock": "./dist/icons/24x24/Stroked/Lock.js",
+    "./icons/24x24/Stroked/Mail": "./dist/icons/24x24/Stroked/Mail.js",
+    "./icons/24x24/Stroked/MainPage": "./dist/icons/24x24/Stroked/MainPage.js",
+    "./icons/24x24/Stroked/Map": "./dist/icons/24x24/Stroked/Map.js",
+    "./icons/24x24/Stroked/MarkHeart": "./dist/icons/24x24/Stroked/MarkHeart.js",
+    "./icons/24x24/Stroked/MicrophoneOff": "./dist/icons/24x24/Stroked/MicrophoneOff.js",
+    "./icons/24x24/Stroked/MicrophoneOn": "./dist/icons/24x24/Stroked/MicrophoneOn.js",
+    "./icons/24x24/Stroked/Minus": "./dist/icons/24x24/Stroked/Minus.js",
+    "./icons/24x24/Stroked/Mobile": "./dist/icons/24x24/Stroked/Mobile.js",
+    "./icons/24x24/Stroked/Navigation": "./dist/icons/24x24/Stroked/Navigation.js",
+    "./icons/24x24/Stroked/NoFavorite": "./dist/icons/24x24/Stroked/NoFavorite.js",
+    "./icons/24x24/Stroked/Notification": "./dist/icons/24x24/Stroked/Notification.js",
+    "./icons/24x24/Stroked/PasswordHide": "./dist/icons/24x24/Stroked/PasswordHide.js",
+    "./icons/24x24/Stroked/PasswordShow": "./dist/icons/24x24/Stroked/PasswordShow.js",
+    "./icons/24x24/Stroked/Payment": "./dist/icons/24x24/Stroked/Payment.js",
+    "./icons/24x24/Stroked/Person": "./dist/icons/24x24/Stroked/Person.js",
+    "./icons/24x24/Stroked/Phone": "./dist/icons/24x24/Stroked/Phone.js",
+    "./icons/24x24/Stroked/Placeholder": "./dist/icons/24x24/Stroked/Placeholder.js",
+    "./icons/24x24/Stroked/Plus": "./dist/icons/24x24/Stroked/Plus.js",
+    "./icons/24x24/Stroked/Progress": "./dist/icons/24x24/Stroked/Progress.js",
+    "./icons/24x24/Stroked/QuickView": "./dist/icons/24x24/Stroked/QuickView.js",
+    "./icons/24x24/Stroked/QuickView2": "./dist/icons/24x24/Stroked/QuickView2.js",
+    "./icons/24x24/Stroked/Repeat": "./dist/icons/24x24/Stroked/Repeat.js",
+    "./icons/24x24/Stroked/Revise": "./dist/icons/24x24/Stroked/Revise.js",
+    "./icons/24x24/Stroked/Rubles": "./dist/icons/24x24/Stroked/Rubles.js",
+    "./icons/24x24/Stroked/SalaryStatement": "./dist/icons/24x24/Stroked/SalaryStatement.js",
+    "./icons/24x24/Stroked/Screamer": "./dist/icons/24x24/Stroked/Screamer.js",
+    "./icons/24x24/Stroked/Screwdriver": "./dist/icons/24x24/Stroked/Screwdriver.js",
+    "./icons/24x24/Stroked/Search": "./dist/icons/24x24/Stroked/Search.js",
+    "./icons/24x24/Stroked/Settings": "./dist/icons/24x24/Stroked/Settings.js",
+    "./icons/24x24/Stroked/ShareAndroid": "./dist/icons/24x24/Stroked/ShareAndroid.js",
+    "./icons/24x24/Stroked/ShareIOs": "./dist/icons/24x24/Stroked/ShareIOs.js",
+    "./icons/24x24/Stroked/Sima": "./dist/icons/24x24/Stroked/Sima.js",
+    "./icons/24x24/Stroked/Size": "./dist/icons/24x24/Stroked/Size.js",
+    "./icons/24x24/Stroked/Skype": "./dist/icons/24x24/Stroked/Skype.js",
+    "./icons/24x24/Stroked/Sort": "./dist/icons/24x24/Stroked/Sort.js",
+    "./icons/24x24/Stroked/Sort2": "./dist/icons/24x24/Stroked/Sort2.js",
+    "./icons/24x24/Stroked/SpeakerOff": "./dist/icons/24x24/Stroked/SpeakerOff.js",
+    "./icons/24x24/Stroked/SpeakerOn": "./dist/icons/24x24/Stroked/SpeakerOn.js",
+    "./icons/24x24/Stroked/Spruce": "./dist/icons/24x24/Stroked/Spruce.js",
+    "./icons/24x24/Stroked/Statement": "./dist/icons/24x24/Stroked/Statement.js",
+    "./icons/24x24/Stroked/Taxes": "./dist/icons/24x24/Stroked/Taxes.js",
+    "./icons/24x24/Stroked/Thermometer": "./dist/icons/24x24/Stroked/Thermometer.js",
+    "./icons/24x24/Stroked/ThumbsUp": "./dist/icons/24x24/Stroked/ThumbsUp.js",
+    "./icons/24x24/Stroked/TouchId": "./dist/icons/24x24/Stroked/TouchId.js",
+    "./icons/24x24/Stroked/Trailer": "./dist/icons/24x24/Stroked/Trailer.js",
+    "./icons/24x24/Stroked/Transfer": "./dist/icons/24x24/Stroked/Transfer.js",
+    "./icons/24x24/Stroked/Trash": "./dist/icons/24x24/Stroked/Trash.js",
+    "./icons/24x24/Stroked/UnitedCustomers": "./dist/icons/24x24/Stroked/UnitedCustomers.js",
+    "./icons/24x24/Stroked/UnknownType": "./dist/icons/24x24/Stroked/UnknownType.js",
+    "./icons/24x24/Stroked/Upload": "./dist/icons/24x24/Stroked/Upload.js",
+    "./icons/24x24/Stroked/View1": "./dist/icons/24x24/Stroked/View1.js",
+    "./icons/24x24/Stroked/View2": "./dist/icons/24x24/Stroked/View2.js",
+    "./icons/24x24/Stroked/View3": "./dist/icons/24x24/Stroked/View3.js",
+    "./icons/24x24/Stroked/Wallet": "./dist/icons/24x24/Stroked/Wallet.js",
+    "./icons/24x24/Stroked/Watch": "./dist/icons/24x24/Stroked/Watch.js",
+    "./icons/40x40/Filled/Pause": "./dist/icons/40x40/Filled/Pause.js",
+    "./icons/40x40/Filled/Play": "./dist/icons/40x40/Filled/Play.js",
+    "./icons/40x40/Filled/Round360": "./dist/icons/40x40/Filled/Round360.js",
+    "./icons/40x40/Stroked/ImageBroken": "./dist/icons/40x40/Stroked/ImageBroken.js",
+    "./icons/64x64/Colorful/TouchScrollX": "./dist/icons/64x64/Colorful/TouchScrollX.js",
+    "./icons/64x64/Stroked/EighteenPlus": "./dist/icons/64x64/Stroked/EighteenPlus.js",
+    "./icons/64x64/Stroked/Upload": "./dist/icons/64x64/Stroked/Upload.js"
   }
 }

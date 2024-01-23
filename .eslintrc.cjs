@@ -1,6 +1,6 @@
 module.exports = {
   root: true,
-  extends: [require.resolve('@sima-land/linters/eslint'), 'plugin:react/jsx-runtime'],
+  extends: [require.resolve('@sima-land/linters/eslint')],
   rules: {
     'require-jsdoc': 'off',
     'jsdoc/require-jsdoc': 'off',

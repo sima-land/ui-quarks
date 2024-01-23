@@ -1,12 +1,11 @@
 {
   "compilerOptions": {
-    "jsx": "react-jsx",
-    "target": "ES2021",
+    "target": "ESNext",
+    "moduleResolution": "Bundler",
     "esModuleInterop": true,
     "strict": true,
     "skipLibCheck": true,
-    "moduleResolution": "nodenext"
   },
-  "include": ["./temp/**/*"],
-  "exclude": ["node_modules"]
+  "include": [".build", "scripts"],
+  "exclude": ["node_modules"],
 }
