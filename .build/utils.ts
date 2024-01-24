@@ -1,9 +1,11 @@
 import path from 'node:path';
-import { readFile, outputFile } from 'fs-extra';
+import fs from 'fs-extra';
 import { transform } from '@svgr/core';
-import { camelCase, upperFirst } from 'lodash';
+import { camelCase, upperFirst } from 'lodash-es';
 import { optimize, Config as SVGOConfig } from 'svgo';
 import { svgoConfig, svgoConfigColorful, svgrConfig } from './configs';
+
+const { readFile, outputFile } = fs;
 
 export interface IconDefined {
   svgSourcePath: string;

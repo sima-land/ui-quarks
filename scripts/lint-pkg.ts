@@ -1,7 +1,7 @@
 import path from 'node:path';
 import glob from 'fast-glob';
-import { readFile } from 'fs-extra';
-import { isEqual } from 'lodash';
+import fs from 'node:fs/promises';
+import { isEqual } from 'lodash-es';
 import { defineExports } from '../.build/utils';
 
 lintPkg();
@@ -28,7 +28,7 @@ async function lintDistFilenames() {
 }
 
 async function lintPackageJsonExports() {
-  const { exports: fromPackageJson } = JSON.parse(await readFile('./package.json', 'utf-8'));
+  const { exports: fromPackageJson } = JSON.parse(await fs.readFile('./package.json', 'utf-8'));
 
   const basedOnSrc = await glob('./src/**/*.svg').then(defineExports);
 
