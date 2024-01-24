@@ -12,7 +12,7 @@
     "build": "npm run build:clean && npm run build:prebuild && npm run build:esm && npm run build:after",
     "sync:exports": "tsx scripts/emit-exports.ts && npm pkg set --json exports=\"$(cat ./temp/exports.json)\" && rm -rf temp/exports.json",
     "dist": "npm run build && npm run sync:exports",
-    "lint": "eslint scripts .build --ext .js,.jsx,.ts,.tsx",
+    "lint": "eslint scripts .build --ext .js,.jsx,.ts,.tsx && npx tsc -p . --noEmit",
     "lint:pkg": "tsx scripts/lint-pkg.ts",
     "prepare": "husky install"
   },

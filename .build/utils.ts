@@ -52,7 +52,7 @@ export async function prebuildIcon(svgPath: string) {
 
 export async function defineIcon(svgPath: string): Promise<IconDefined> {
   const filename = path.basename(svgPath, path.extname(svgPath)).trim();
-  const baseName = upperFirst(camelCase(filename.replace(/\+/g, 'Plus').replace(/\&/g, 'And')));
+  const baseName = upperFirst(camelCase(filename.replace(/\+/g, 'Plus').replace(/&/g, 'And')));
 
   // @todo валидация имени
 
