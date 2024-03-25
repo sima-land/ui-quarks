@@ -2,11 +2,9 @@
   "name": "@sima-land/ui-quarks",
   "version": "0.0.0",
   "description": "Sima-land design system icons as a React components",
+  "author": "www.sima-land.ru team",
+  "license": "Apache-2.0",
   "repository": "ssh://git@gitlab.sima-land.ru:7888/dev-dep/dev/packages/ui-quarks.git",
-  "files": [
-    "dist",
-    "README.md"
-  ],
   "scripts": {
     "build:before": "rm -rf temp dist",
     "build:main": "ts-node scripts/prebuild.ts",
@@ -20,8 +18,6 @@
     "lint:pkg": "ts-node --project tsconfig.node.json scripts/lint-pkg.ts",
     "prepare": "husky install"
   },
-  "author": "www.sima-land.ru team",
-  "license": "Apache-2.0",
   "devDependencies": {
     "@sima-land/linters": "^4.0.0",
     "@svgr/core": "^6.5.1",
@@ -42,6 +38,10 @@
   "peerDependencies": {
     "react": "^17.0 || ^18.0"
   },
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "exports": {
     "./icons/16x16/Filled/Add": {
       "types": "./dist/types/icons/16x16/Filled/Add.d.ts",

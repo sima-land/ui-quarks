@@ -1,7 +1,7 @@
 import path from 'node:path';
-import type { Configuration } from '@rspack/cli';
+import rspack from '@rspack/core';
 
-export default function config(env: unknown, argv: any): Configuration {
+export default function config(env: unknown, argv: any): rspack.Configuration {
   return {
     entry: {
       main: './src/index.tsx',
@@ -11,15 +11,31 @@ export default function config(env: unknown, argv: any): Configuration {
       filename: 'main.js',
       path: path.resolve(__dirname, 'dist'),
     },
-    builtins: {
-      html: [
-        {
-          template: './src/index.html',
-        },
-      ],
+    resolve: {
+      extensions: ['.js', '.jsx', '.ts', '.tsx'],
     },
     module: {
       rules: [
+        {
+          test: /\.(js|jsx|ts|tsx)$/,
+          exclude: /node_modules/,
+          loader: 'builtin:swc-loader',
+          options: {
+            sourceMap: true,
+            jsc: {
+              parser: {
+                syntax: 'typescript',
+                jsx: true,
+              },
+              transform: {
+                react: {
+                  runtime: 'automatic',
+                },
+              },
+            },
+          },
+          type: 'javascript/auto',
+        },
         {
           test: /\.css$/i,
           type: 'css',
@@ -35,5 +51,10 @@ export default function config(env: unknown, argv: any): Configuration {
         },
       ],
     },
+    plugins: [
+      new rspack.HtmlRspackPlugin({
+        template: './src/index.html',
+      }),
+    ],
   };
 }
