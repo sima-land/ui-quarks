@@ -379,11 +379,11 @@
       "import": "./dist/esm/icons/16x16/Stroked/Cross.js",
       "default": "./dist/esm/icons/16x16/Stroked/Cross.js"
     },
-    "./icons/16x16/Stroked/Fullscreen": {
-      "types": "./dist/types/icons/16x16/Stroked/Fullscreen.d.ts",
-      "require": "./dist/cjs/icons/16x16/Stroked/Fullscreen.js",
-      "import": "./dist/esm/icons/16x16/Stroked/Fullscreen.js",
-      "default": "./dist/esm/icons/16x16/Stroked/Fullscreen.js"
+    "./icons/16x16/Stroked/ExpandArrows": {
+      "types": "./dist/types/icons/16x16/Stroked/ExpandArrows.d.ts",
+      "require": "./dist/cjs/icons/16x16/Stroked/ExpandArrows.js",
+      "import": "./dist/esm/icons/16x16/Stroked/ExpandArrows.js",
+      "default": "./dist/esm/icons/16x16/Stroked/ExpandArrows.js"
     },
     "./icons/16x16/Stroked/Information": {
       "types": "./dist/types/icons/16x16/Stroked/Information.d.ts",
