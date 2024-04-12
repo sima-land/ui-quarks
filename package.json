@@ -157,11 +157,11 @@
       "import": "./dist/esm/icons/16x16/Filled/Camera.js",
       "default": "./dist/esm/icons/16x16/Filled/Camera.js"
     },
-    "./icons/16x16/Filled/Check": {
-      "types": "./dist/types/icons/16x16/Filled/Check.d.ts",
-      "require": "./dist/cjs/icons/16x16/Filled/Check.js",
-      "import": "./dist/esm/icons/16x16/Filled/Check.js",
-      "default": "./dist/esm/icons/16x16/Filled/Check.js"
+    "./icons/16x16/Filled/CheckCircle": {
+      "types": "./dist/types/icons/16x16/Filled/CheckCircle.d.ts",
+      "require": "./dist/cjs/icons/16x16/Filled/CheckCircle.js",
+      "import": "./dist/esm/icons/16x16/Filled/CheckCircle.js",
+      "default": "./dist/esm/icons/16x16/Filled/CheckCircle.js"
     },
     "./icons/16x16/Filled/Cross": {
       "types": "./dist/types/icons/16x16/Filled/Cross.d.ts",
