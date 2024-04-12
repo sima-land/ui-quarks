@@ -43,6 +43,108 @@
     "README.md"
   ],
   "exports": {
+    "./icons/16x16/Colorful/Logo5Post": {
+      "types": "./dist/types/icons/16x16/Colorful/Logo5Post.d.ts",
+      "require": "./dist/cjs/icons/16x16/Colorful/Logo5Post.js",
+      "import": "./dist/esm/icons/16x16/Colorful/Logo5Post.js",
+      "default": "./dist/esm/icons/16x16/Colorful/Logo5Post.js"
+    },
+    "./icons/16x16/Colorful/LogoAptekaPlus": {
+      "types": "./dist/types/icons/16x16/Colorful/LogoAptekaPlus.d.ts",
+      "require": "./dist/cjs/icons/16x16/Colorful/LogoAptekaPlus.js",
+      "import": "./dist/esm/icons/16x16/Colorful/LogoAptekaPlus.js",
+      "default": "./dist/esm/icons/16x16/Colorful/LogoAptekaPlus.js"
+    },
+    "./icons/16x16/Colorful/LogoAvitoSima": {
+      "types": "./dist/types/icons/16x16/Colorful/LogoAvitoSima.d.ts",
+      "require": "./dist/cjs/icons/16x16/Colorful/LogoAvitoSima.js",
+      "import": "./dist/esm/icons/16x16/Colorful/LogoAvitoSima.js",
+      "default": "./dist/esm/icons/16x16/Colorful/LogoAvitoSima.js"
+    },
+    "./icons/16x16/Colorful/LogoBoxberry": {
+      "types": "./dist/types/icons/16x16/Colorful/LogoBoxberry.d.ts",
+      "require": "./dist/cjs/icons/16x16/Colorful/LogoBoxberry.js",
+      "import": "./dist/esm/icons/16x16/Colorful/LogoBoxberry.js",
+      "default": "./dist/esm/icons/16x16/Colorful/LogoBoxberry.js"
+    },
+    "./icons/16x16/Colorful/LogoDalli": {
+      "types": "./dist/types/icons/16x16/Colorful/LogoDalli.d.ts",
+      "require": "./dist/cjs/icons/16x16/Colorful/LogoDalli.js",
+      "import": "./dist/esm/icons/16x16/Colorful/LogoDalli.js",
+      "default": "./dist/esm/icons/16x16/Colorful/LogoDalli.js"
+    },
+    "./icons/16x16/Colorful/LogoDellin": {
+      "types": "./dist/types/icons/16x16/Colorful/LogoDellin.d.ts",
+      "require": "./dist/cjs/icons/16x16/Colorful/LogoDellin.js",
+      "import": "./dist/esm/icons/16x16/Colorful/LogoDellin.js",
+      "default": "./dist/esm/icons/16x16/Colorful/LogoDellin.js"
+    },
+    "./icons/16x16/Colorful/LogoDpd": {
+      "types": "./dist/types/icons/16x16/Colorful/LogoDpd.d.ts",
+      "require": "./dist/cjs/icons/16x16/Colorful/LogoDpd.js",
+      "import": "./dist/esm/icons/16x16/Colorful/LogoDpd.js",
+      "default": "./dist/esm/icons/16x16/Colorful/LogoDpd.js"
+    },
+    "./icons/16x16/Colorful/LogoGalamart": {
+      "types": "./dist/types/icons/16x16/Colorful/LogoGalamart.d.ts",
+      "require": "./dist/cjs/icons/16x16/Colorful/LogoGalamart.js",
+      "import": "./dist/esm/icons/16x16/Colorful/LogoGalamart.js",
+      "default": "./dist/esm/icons/16x16/Colorful/LogoGalamart.js"
+    },
+    "./icons/16x16/Colorful/LogoOzon": {
+      "types": "./dist/types/icons/16x16/Colorful/LogoOzon.d.ts",
+      "require": "./dist/cjs/icons/16x16/Colorful/LogoOzon.js",
+      "import": "./dist/esm/icons/16x16/Colorful/LogoOzon.js",
+      "default": "./dist/esm/icons/16x16/Colorful/LogoOzon.js"
+    },
+    "./icons/16x16/Colorful/LogoOzonSima": {
+      "types": "./dist/types/icons/16x16/Colorful/LogoOzonSima.d.ts",
+      "require": "./dist/cjs/icons/16x16/Colorful/LogoOzonSima.js",
+      "import": "./dist/esm/icons/16x16/Colorful/LogoOzonSima.js",
+      "default": "./dist/esm/icons/16x16/Colorful/LogoOzonSima.js"
+    },
+    "./icons/16x16/Colorful/LogoPickPoint": {
+      "types": "./dist/types/icons/16x16/Colorful/LogoPickPoint.d.ts",
+      "require": "./dist/cjs/icons/16x16/Colorful/LogoPickPoint.js",
+      "import": "./dist/esm/icons/16x16/Colorful/LogoPickPoint.js",
+      "default": "./dist/esm/icons/16x16/Colorful/LogoPickPoint.js"
+    },
+    "./icons/16x16/Colorful/LogoPost": {
+      "types": "./dist/types/icons/16x16/Colorful/LogoPost.d.ts",
+      "require": "./dist/cjs/icons/16x16/Colorful/LogoPost.js",
+      "import": "./dist/esm/icons/16x16/Colorful/LogoPost.js",
+      "default": "./dist/esm/icons/16x16/Colorful/LogoPost.js"
+    },
+    "./icons/16x16/Colorful/LogoSberLogistic": {
+      "types": "./dist/types/icons/16x16/Colorful/LogoSberLogistic.d.ts",
+      "require": "./dist/cjs/icons/16x16/Colorful/LogoSberLogistic.js",
+      "import": "./dist/esm/icons/16x16/Colorful/LogoSberLogistic.js",
+      "default": "./dist/esm/icons/16x16/Colorful/LogoSberLogistic.js"
+    },
+    "./icons/16x16/Colorful/LogoSdek": {
+      "types": "./dist/types/icons/16x16/Colorful/LogoSdek.d.ts",
+      "require": "./dist/cjs/icons/16x16/Colorful/LogoSdek.js",
+      "import": "./dist/esm/icons/16x16/Colorful/LogoSdek.js",
+      "default": "./dist/esm/icons/16x16/Colorful/LogoSdek.js"
+    },
+    "./icons/16x16/Colorful/LogoSima": {
+      "types": "./dist/types/icons/16x16/Colorful/LogoSima.d.ts",
+      "require": "./dist/cjs/icons/16x16/Colorful/LogoSima.js",
+      "import": "./dist/esm/icons/16x16/Colorful/LogoSima.js",
+      "default": "./dist/esm/icons/16x16/Colorful/LogoSima.js"
+    },
+    "./icons/16x16/Colorful/LogoWildberriesSima": {
+      "types": "./dist/types/icons/16x16/Colorful/LogoWildberriesSima.d.ts",
+      "require": "./dist/cjs/icons/16x16/Colorful/LogoWildberriesSima.js",
+      "import": "./dist/esm/icons/16x16/Colorful/LogoWildberriesSima.js",
+      "default": "./dist/esm/icons/16x16/Colorful/LogoWildberriesSima.js"
+    },
+    "./icons/16x16/Colorful/LogoYandex": {
+      "types": "./dist/types/icons/16x16/Colorful/LogoYandex.d.ts",
+      "require": "./dist/cjs/icons/16x16/Colorful/LogoYandex.js",
+      "import": "./dist/esm/icons/16x16/Colorful/LogoYandex.js",
+      "default": "./dist/esm/icons/16x16/Colorful/LogoYandex.js"
+    },
     "./icons/16x16/Filled/Add": {
       "types": "./dist/types/icons/16x16/Filled/Add.d.ts",
       "require": "./dist/cjs/icons/16x16/Filled/Add.js",
@@ -55,17 +157,23 @@
       "import": "./dist/esm/icons/16x16/Filled/Camera.js",
       "default": "./dist/esm/icons/16x16/Filled/Camera.js"
     },
-    "./icons/16x16/Filled/Comment": {
-      "types": "./dist/types/icons/16x16/Filled/Comment.d.ts",
-      "require": "./dist/cjs/icons/16x16/Filled/Comment.js",
-      "import": "./dist/esm/icons/16x16/Filled/Comment.js",
-      "default": "./dist/esm/icons/16x16/Filled/Comment.js"
+    "./icons/16x16/Filled/CheckCircle": {
+      "types": "./dist/types/icons/16x16/Filled/CheckCircle.d.ts",
+      "require": "./dist/cjs/icons/16x16/Filled/CheckCircle.js",
+      "import": "./dist/esm/icons/16x16/Filled/CheckCircle.js",
+      "default": "./dist/esm/icons/16x16/Filled/CheckCircle.js"
     },
     "./icons/16x16/Filled/Cross": {
       "types": "./dist/types/icons/16x16/Filled/Cross.d.ts",
       "require": "./dist/cjs/icons/16x16/Filled/Cross.js",
       "import": "./dist/esm/icons/16x16/Filled/Cross.js",
       "default": "./dist/esm/icons/16x16/Filled/Cross.js"
+    },
+    "./icons/16x16/Filled/Dolphin": {
+      "types": "./dist/types/icons/16x16/Filled/Dolphin.d.ts",
+      "require": "./dist/cjs/icons/16x16/Filled/Dolphin.js",
+      "import": "./dist/esm/icons/16x16/Filled/Dolphin.js",
+      "default": "./dist/esm/icons/16x16/Filled/Dolphin.js"
     },
     "./icons/16x16/Filled/Eye": {
       "types": "./dist/types/icons/16x16/Filled/Eye.d.ts",
@@ -78,6 +186,12 @@
       "require": "./dist/cjs/icons/16x16/Filled/Funnel.js",
       "import": "./dist/esm/icons/16x16/Filled/Funnel.js",
       "default": "./dist/esm/icons/16x16/Filled/Funnel.js"
+    },
+    "./icons/16x16/Filled/GeoArrow": {
+      "types": "./dist/types/icons/16x16/Filled/GeoArrow.d.ts",
+      "require": "./dist/cjs/icons/16x16/Filled/GeoArrow.js",
+      "import": "./dist/esm/icons/16x16/Filled/GeoArrow.js",
+      "default": "./dist/esm/icons/16x16/Filled/GeoArrow.js"
     },
     "./icons/16x16/Filled/Heart": {
       "types": "./dist/types/icons/16x16/Filled/Heart.d.ts",
@@ -115,6 +229,12 @@
       "import": "./dist/esm/icons/16x16/Filled/SortUp.js",
       "default": "./dist/esm/icons/16x16/Filled/SortUp.js"
     },
+    "./icons/16x16/Filled/SpeechBubble": {
+      "types": "./dist/types/icons/16x16/Filled/SpeechBubble.d.ts",
+      "require": "./dist/cjs/icons/16x16/Filled/SpeechBubble.js",
+      "import": "./dist/esm/icons/16x16/Filled/SpeechBubble.js",
+      "default": "./dist/esm/icons/16x16/Filled/SpeechBubble.js"
+    },
     "./icons/16x16/Filled/Star": {
       "types": "./dist/types/icons/16x16/Filled/Star.d.ts",
       "require": "./dist/cjs/icons/16x16/Filled/Star.js",
@@ -132,6 +252,12 @@
       "require": "./dist/cjs/icons/16x16/Filled/ThumbUp.js",
       "import": "./dist/esm/icons/16x16/Filled/ThumbUp.js",
       "default": "./dist/esm/icons/16x16/Filled/ThumbUp.js"
+    },
+    "./icons/16x16/Filled/Tooltip": {
+      "types": "./dist/types/icons/16x16/Filled/Tooltip.d.ts",
+      "require": "./dist/cjs/icons/16x16/Filled/Tooltip.js",
+      "import": "./dist/esm/icons/16x16/Filled/Tooltip.js",
+      "default": "./dist/esm/icons/16x16/Filled/Tooltip.js"
     },
     "./icons/16x16/Filled/Trash": {
       "types": "./dist/types/icons/16x16/Filled/Trash.d.ts",
@@ -157,6 +283,36 @@
       "import": "./dist/esm/icons/16x16/Stroked/ArrowDown.js",
       "default": "./dist/esm/icons/16x16/Stroked/ArrowDown.js"
     },
+    "./icons/16x16/Stroked/ArrowDownSquare": {
+      "types": "./dist/types/icons/16x16/Stroked/ArrowDownSquare.d.ts",
+      "require": "./dist/cjs/icons/16x16/Stroked/ArrowDownSquare.js",
+      "import": "./dist/esm/icons/16x16/Stroked/ArrowDownSquare.js",
+      "default": "./dist/esm/icons/16x16/Stroked/ArrowDownSquare.js"
+    },
+    "./icons/16x16/Stroked/ArrowExpandDown": {
+      "types": "./dist/types/icons/16x16/Stroked/ArrowExpandDown.d.ts",
+      "require": "./dist/cjs/icons/16x16/Stroked/ArrowExpandDown.js",
+      "import": "./dist/esm/icons/16x16/Stroked/ArrowExpandDown.js",
+      "default": "./dist/esm/icons/16x16/Stroked/ArrowExpandDown.js"
+    },
+    "./icons/16x16/Stroked/ArrowExpandLeft": {
+      "types": "./dist/types/icons/16x16/Stroked/ArrowExpandLeft.d.ts",
+      "require": "./dist/cjs/icons/16x16/Stroked/ArrowExpandLeft.js",
+      "import": "./dist/esm/icons/16x16/Stroked/ArrowExpandLeft.js",
+      "default": "./dist/esm/icons/16x16/Stroked/ArrowExpandLeft.js"
+    },
+    "./icons/16x16/Stroked/ArrowExpandRight": {
+      "types": "./dist/types/icons/16x16/Stroked/ArrowExpandRight.d.ts",
+      "require": "./dist/cjs/icons/16x16/Stroked/ArrowExpandRight.js",
+      "import": "./dist/esm/icons/16x16/Stroked/ArrowExpandRight.js",
+      "default": "./dist/esm/icons/16x16/Stroked/ArrowExpandRight.js"
+    },
+    "./icons/16x16/Stroked/ArrowExpandUp": {
+      "types": "./dist/types/icons/16x16/Stroked/ArrowExpandUp.d.ts",
+      "require": "./dist/cjs/icons/16x16/Stroked/ArrowExpandUp.js",
+      "import": "./dist/esm/icons/16x16/Stroked/ArrowExpandUp.js",
+      "default": "./dist/esm/icons/16x16/Stroked/ArrowExpandUp.js"
+    },
     "./icons/16x16/Stroked/ArrowLeft": {
       "types": "./dist/types/icons/16x16/Stroked/ArrowLeft.d.ts",
       "require": "./dist/cjs/icons/16x16/Stroked/ArrowLeft.js",
@@ -169,65 +325,41 @@
       "import": "./dist/esm/icons/16x16/Stroked/ArrowRight.js",
       "default": "./dist/esm/icons/16x16/Stroked/ArrowRight.js"
     },
+    "./icons/16x16/Stroked/ArrowTurnLeft": {
+      "types": "./dist/types/icons/16x16/Stroked/ArrowTurnLeft.d.ts",
+      "require": "./dist/cjs/icons/16x16/Stroked/ArrowTurnLeft.js",
+      "import": "./dist/esm/icons/16x16/Stroked/ArrowTurnLeft.js",
+      "default": "./dist/esm/icons/16x16/Stroked/ArrowTurnLeft.js"
+    },
+    "./icons/16x16/Stroked/ArrowTurnRight": {
+      "types": "./dist/types/icons/16x16/Stroked/ArrowTurnRight.d.ts",
+      "require": "./dist/cjs/icons/16x16/Stroked/ArrowTurnRight.js",
+      "import": "./dist/esm/icons/16x16/Stroked/ArrowTurnRight.js",
+      "default": "./dist/esm/icons/16x16/Stroked/ArrowTurnRight.js"
+    },
     "./icons/16x16/Stroked/ArrowUp": {
       "types": "./dist/types/icons/16x16/Stroked/ArrowUp.d.ts",
       "require": "./dist/cjs/icons/16x16/Stroked/ArrowUp.js",
       "import": "./dist/esm/icons/16x16/Stroked/ArrowUp.js",
       "default": "./dist/esm/icons/16x16/Stroked/ArrowUp.js"
     },
-    "./icons/16x16/Stroked/Arrows/Down": {
-      "types": "./dist/types/icons/16x16/Stroked/Arrows/Down.d.ts",
-      "require": "./dist/cjs/icons/16x16/Stroked/Arrows/Down.js",
-      "import": "./dist/esm/icons/16x16/Stroked/Arrows/Down.js",
-      "default": "./dist/esm/icons/16x16/Stroked/Arrows/Down.js"
-    },
-    "./icons/16x16/Stroked/Arrows/DownSquare": {
-      "types": "./dist/types/icons/16x16/Stroked/Arrows/DownSquare.d.ts",
-      "require": "./dist/cjs/icons/16x16/Stroked/Arrows/DownSquare.js",
-      "import": "./dist/esm/icons/16x16/Stroked/Arrows/DownSquare.js",
-      "default": "./dist/esm/icons/16x16/Stroked/Arrows/DownSquare.js"
-    },
-    "./icons/16x16/Stroked/Arrows/Left": {
-      "types": "./dist/types/icons/16x16/Stroked/Arrows/Left.d.ts",
-      "require": "./dist/cjs/icons/16x16/Stroked/Arrows/Left.js",
-      "import": "./dist/esm/icons/16x16/Stroked/Arrows/Left.js",
-      "default": "./dist/esm/icons/16x16/Stroked/Arrows/Left.js"
-    },
-    "./icons/16x16/Stroked/Arrows/Right": {
-      "types": "./dist/types/icons/16x16/Stroked/Arrows/Right.d.ts",
-      "require": "./dist/cjs/icons/16x16/Stroked/Arrows/Right.js",
-      "import": "./dist/esm/icons/16x16/Stroked/Arrows/Right.js",
-      "default": "./dist/esm/icons/16x16/Stroked/Arrows/Right.js"
-    },
-    "./icons/16x16/Stroked/Arrows/TurnLeft": {
-      "types": "./dist/types/icons/16x16/Stroked/Arrows/TurnLeft.d.ts",
-      "require": "./dist/cjs/icons/16x16/Stroked/Arrows/TurnLeft.js",
-      "import": "./dist/esm/icons/16x16/Stroked/Arrows/TurnLeft.js",
-      "default": "./dist/esm/icons/16x16/Stroked/Arrows/TurnLeft.js"
-    },
-    "./icons/16x16/Stroked/Arrows/TurnRight": {
-      "types": "./dist/types/icons/16x16/Stroked/Arrows/TurnRight.d.ts",
-      "require": "./dist/cjs/icons/16x16/Stroked/Arrows/TurnRight.js",
-      "import": "./dist/esm/icons/16x16/Stroked/Arrows/TurnRight.js",
-      "default": "./dist/esm/icons/16x16/Stroked/Arrows/TurnRight.js"
-    },
-    "./icons/16x16/Stroked/Arrows/Up": {
-      "types": "./dist/types/icons/16x16/Stroked/Arrows/Up.d.ts",
-      "require": "./dist/cjs/icons/16x16/Stroked/Arrows/Up.js",
-      "import": "./dist/esm/icons/16x16/Stroked/Arrows/Up.js",
-      "default": "./dist/esm/icons/16x16/Stroked/Arrows/Up.js"
-    },
-    "./icons/16x16/Stroked/Arrows/UpAndDown": {
-      "types": "./dist/types/icons/16x16/Stroked/Arrows/UpAndDown.d.ts",
-      "require": "./dist/cjs/icons/16x16/Stroked/Arrows/UpAndDown.js",
-      "import": "./dist/esm/icons/16x16/Stroked/Arrows/UpAndDown.js",
-      "default": "./dist/esm/icons/16x16/Stroked/Arrows/UpAndDown.js"
+    "./icons/16x16/Stroked/ArrowUpAndDown": {
+      "types": "./dist/types/icons/16x16/Stroked/ArrowUpAndDown.d.ts",
+      "require": "./dist/cjs/icons/16x16/Stroked/ArrowUpAndDown.js",
+      "import": "./dist/esm/icons/16x16/Stroked/ArrowUpAndDown.js",
+      "default": "./dist/esm/icons/16x16/Stroked/ArrowUpAndDown.js"
     },
     "./icons/16x16/Stroked/Burger": {
       "types": "./dist/types/icons/16x16/Stroked/Burger.d.ts",
       "require": "./dist/cjs/icons/16x16/Stroked/Burger.js",
       "import": "./dist/esm/icons/16x16/Stroked/Burger.js",
       "default": "./dist/esm/icons/16x16/Stroked/Burger.js"
+    },
+    "./icons/16x16/Stroked/Cart": {
+      "types": "./dist/types/icons/16x16/Stroked/Cart.d.ts",
+      "require": "./dist/cjs/icons/16x16/Stroked/Cart.js",
+      "import": "./dist/esm/icons/16x16/Stroked/Cart.js",
+      "default": "./dist/esm/icons/16x16/Stroked/Cart.js"
     },
     "./icons/16x16/Stroked/Check": {
       "types": "./dist/types/icons/16x16/Stroked/Check.d.ts",
@@ -246,6 +378,12 @@
       "require": "./dist/cjs/icons/16x16/Stroked/Cross.js",
       "import": "./dist/esm/icons/16x16/Stroked/Cross.js",
       "default": "./dist/esm/icons/16x16/Stroked/Cross.js"
+    },
+    "./icons/16x16/Stroked/ExpandArrows": {
+      "types": "./dist/types/icons/16x16/Stroked/ExpandArrows.d.ts",
+      "require": "./dist/cjs/icons/16x16/Stroked/ExpandArrows.js",
+      "import": "./dist/esm/icons/16x16/Stroked/ExpandArrows.js",
+      "default": "./dist/esm/icons/16x16/Stroked/ExpandArrows.js"
     },
     "./icons/16x16/Stroked/Information": {
       "types": "./dist/types/icons/16x16/Stroked/Information.d.ts",
@@ -289,17 +427,41 @@
       "import": "./dist/esm/icons/16x16/Stroked/Screamer.js",
       "default": "./dist/esm/icons/16x16/Stroked/Screamer.js"
     },
+    "./icons/16x16/Stroked/Variation": {
+      "types": "./dist/types/icons/16x16/Stroked/Variation.d.ts",
+      "require": "./dist/cjs/icons/16x16/Stroked/Variation.js",
+      "import": "./dist/esm/icons/16x16/Stroked/Variation.js",
+      "default": "./dist/esm/icons/16x16/Stroked/Variation.js"
+    },
     "./icons/16x16/Stroked/Watch": {
       "types": "./dist/types/icons/16x16/Stroked/Watch.d.ts",
       "require": "./dist/cjs/icons/16x16/Stroked/Watch.js",
       "import": "./dist/esm/icons/16x16/Stroked/Watch.js",
       "default": "./dist/esm/icons/16x16/Stroked/Watch.js"
     },
+    "./icons/24x24/Colorful/Link": {
+      "types": "./dist/types/icons/24x24/Colorful/Link.d.ts",
+      "require": "./dist/cjs/icons/24x24/Colorful/Link.js",
+      "import": "./dist/esm/icons/24x24/Colorful/Link.js",
+      "default": "./dist/esm/icons/24x24/Colorful/Link.js"
+    },
+    "./icons/24x24/Colorful/LinkCheck": {
+      "types": "./dist/types/icons/24x24/Colorful/LinkCheck.d.ts",
+      "require": "./dist/cjs/icons/24x24/Colorful/LinkCheck.js",
+      "import": "./dist/esm/icons/24x24/Colorful/LinkCheck.js",
+      "default": "./dist/esm/icons/24x24/Colorful/LinkCheck.js"
+    },
     "./icons/24x24/Colorful/LogoDolyame": {
       "types": "./dist/types/icons/24x24/Colorful/LogoDolyame.d.ts",
       "require": "./dist/cjs/icons/24x24/Colorful/LogoDolyame.js",
       "import": "./dist/esm/icons/24x24/Colorful/LogoDolyame.js",
       "default": "./dist/esm/icons/24x24/Colorful/LogoDolyame.js"
+    },
+    "./icons/24x24/Colorful/LogoFacebook": {
+      "types": "./dist/types/icons/24x24/Colorful/LogoFacebook.d.ts",
+      "require": "./dist/cjs/icons/24x24/Colorful/LogoFacebook.js",
+      "import": "./dist/esm/icons/24x24/Colorful/LogoFacebook.js",
+      "default": "./dist/esm/icons/24x24/Colorful/LogoFacebook.js"
     },
     "./icons/24x24/Colorful/LogoJcb": {
       "types": "./dist/types/icons/24x24/Colorful/LogoJcb.d.ts",
@@ -325,11 +487,11 @@
       "import": "./dist/esm/icons/24x24/Colorful/LogoMir.js",
       "default": "./dist/esm/icons/24x24/Colorful/LogoMir.js"
     },
-    "./icons/24x24/Colorful/LogoPackmanSplit": {
-      "types": "./dist/types/icons/24x24/Colorful/LogoPackmanSplit.d.ts",
-      "require": "./dist/cjs/icons/24x24/Colorful/LogoPackmanSplit.js",
-      "import": "./dist/esm/icons/24x24/Colorful/LogoPackmanSplit.js",
-      "default": "./dist/esm/icons/24x24/Colorful/LogoPackmanSplit.js"
+    "./icons/24x24/Colorful/LogoOk": {
+      "types": "./dist/types/icons/24x24/Colorful/LogoOk.d.ts",
+      "require": "./dist/cjs/icons/24x24/Colorful/LogoOk.js",
+      "import": "./dist/esm/icons/24x24/Colorful/LogoOk.js",
+      "default": "./dist/esm/icons/24x24/Colorful/LogoOk.js"
     },
     "./icons/24x24/Colorful/LogoPodeli": {
       "types": "./dist/types/icons/24x24/Colorful/LogoPodeli.d.ts",
@@ -355,11 +517,29 @@
       "import": "./dist/esm/icons/24x24/Colorful/LogoSbp.js",
       "default": "./dist/esm/icons/24x24/Colorful/LogoSbp.js"
     },
+    "./icons/24x24/Colorful/LogoTelegram": {
+      "types": "./dist/types/icons/24x24/Colorful/LogoTelegram.d.ts",
+      "require": "./dist/cjs/icons/24x24/Colorful/LogoTelegram.js",
+      "import": "./dist/esm/icons/24x24/Colorful/LogoTelegram.js",
+      "default": "./dist/esm/icons/24x24/Colorful/LogoTelegram.js"
+    },
+    "./icons/24x24/Colorful/LogoTwitter": {
+      "types": "./dist/types/icons/24x24/Colorful/LogoTwitter.d.ts",
+      "require": "./dist/cjs/icons/24x24/Colorful/LogoTwitter.js",
+      "import": "./dist/esm/icons/24x24/Colorful/LogoTwitter.js",
+      "default": "./dist/esm/icons/24x24/Colorful/LogoTwitter.js"
+    },
     "./icons/24x24/Colorful/LogoUnionPay": {
       "types": "./dist/types/icons/24x24/Colorful/LogoUnionPay.d.ts",
       "require": "./dist/cjs/icons/24x24/Colorful/LogoUnionPay.js",
       "import": "./dist/esm/icons/24x24/Colorful/LogoUnionPay.js",
       "default": "./dist/esm/icons/24x24/Colorful/LogoUnionPay.js"
+    },
+    "./icons/24x24/Colorful/LogoViber": {
+      "types": "./dist/types/icons/24x24/Colorful/LogoViber.d.ts",
+      "require": "./dist/cjs/icons/24x24/Colorful/LogoViber.js",
+      "import": "./dist/esm/icons/24x24/Colorful/LogoViber.js",
+      "default": "./dist/esm/icons/24x24/Colorful/LogoViber.js"
     },
     "./icons/24x24/Colorful/LogoVisa": {
       "types": "./dist/types/icons/24x24/Colorful/LogoVisa.d.ts",
@@ -367,23 +547,89 @@
       "import": "./dist/esm/icons/24x24/Colorful/LogoVisa.js",
       "default": "./dist/esm/icons/24x24/Colorful/LogoVisa.js"
     },
+    "./icons/24x24/Colorful/LogoVisaDarkMode": {
+      "types": "./dist/types/icons/24x24/Colorful/LogoVisaDarkMode.d.ts",
+      "require": "./dist/cjs/icons/24x24/Colorful/LogoVisaDarkMode.js",
+      "import": "./dist/esm/icons/24x24/Colorful/LogoVisaDarkMode.js",
+      "default": "./dist/esm/icons/24x24/Colorful/LogoVisaDarkMode.js"
+    },
+    "./icons/24x24/Colorful/LogoVk": {
+      "types": "./dist/types/icons/24x24/Colorful/LogoVk.d.ts",
+      "require": "./dist/cjs/icons/24x24/Colorful/LogoVk.js",
+      "import": "./dist/esm/icons/24x24/Colorful/LogoVk.js",
+      "default": "./dist/esm/icons/24x24/Colorful/LogoVk.js"
+    },
     "./icons/24x24/Colorful/LogoVsegdaDa": {
       "types": "./dist/types/icons/24x24/Colorful/LogoVsegdaDa.d.ts",
       "require": "./dist/cjs/icons/24x24/Colorful/LogoVsegdaDa.js",
       "import": "./dist/esm/icons/24x24/Colorful/LogoVsegdaDa.js",
       "default": "./dist/esm/icons/24x24/Colorful/LogoVsegdaDa.js"
     },
-    "./icons/24x24/Colorful/SberCredit": {
-      "types": "./dist/types/icons/24x24/Colorful/SberCredit.d.ts",
-      "require": "./dist/cjs/icons/24x24/Colorful/SberCredit.js",
-      "import": "./dist/esm/icons/24x24/Colorful/SberCredit.js",
-      "default": "./dist/esm/icons/24x24/Colorful/SberCredit.js"
+    "./icons/24x24/Colorful/LogoVsegdaDaDarkMode": {
+      "types": "./dist/types/icons/24x24/Colorful/LogoVsegdaDaDarkMode.d.ts",
+      "require": "./dist/cjs/icons/24x24/Colorful/LogoVsegdaDaDarkMode.js",
+      "import": "./dist/esm/icons/24x24/Colorful/LogoVsegdaDaDarkMode.js",
+      "default": "./dist/esm/icons/24x24/Colorful/LogoVsegdaDaDarkMode.js"
+    },
+    "./icons/24x24/Colorful/LogoWhatsApp": {
+      "types": "./dist/types/icons/24x24/Colorful/LogoWhatsApp.d.ts",
+      "require": "./dist/cjs/icons/24x24/Colorful/LogoWhatsApp.js",
+      "import": "./dist/esm/icons/24x24/Colorful/LogoWhatsApp.js",
+      "default": "./dist/esm/icons/24x24/Colorful/LogoWhatsApp.js"
+    },
+    "./icons/24x24/Colorful/LogoYandexSplit": {
+      "types": "./dist/types/icons/24x24/Colorful/LogoYandexSplit.d.ts",
+      "require": "./dist/cjs/icons/24x24/Colorful/LogoYandexSplit.js",
+      "import": "./dist/esm/icons/24x24/Colorful/LogoYandexSplit.js",
+      "default": "./dist/esm/icons/24x24/Colorful/LogoYandexSplit.js"
+    },
+    "./icons/24x24/Filled/Ball": {
+      "types": "./dist/types/icons/24x24/Filled/Ball.d.ts",
+      "require": "./dist/cjs/icons/24x24/Filled/Ball.js",
+      "import": "./dist/esm/icons/24x24/Filled/Ball.js",
+      "default": "./dist/esm/icons/24x24/Filled/Ball.js"
+    },
+    "./icons/24x24/Filled/Blazon": {
+      "types": "./dist/types/icons/24x24/Filled/Blazon.d.ts",
+      "require": "./dist/cjs/icons/24x24/Filled/Blazon.js",
+      "import": "./dist/esm/icons/24x24/Filled/Blazon.js",
+      "default": "./dist/esm/icons/24x24/Filled/Blazon.js"
+    },
+    "./icons/24x24/Filled/Business": {
+      "types": "./dist/types/icons/24x24/Filled/Business.d.ts",
+      "require": "./dist/cjs/icons/24x24/Filled/Business.js",
+      "import": "./dist/esm/icons/24x24/Filled/Business.js",
+      "default": "./dist/esm/icons/24x24/Filled/Business.js"
+    },
+    "./icons/24x24/Filled/Card": {
+      "types": "./dist/types/icons/24x24/Filled/Card.d.ts",
+      "require": "./dist/cjs/icons/24x24/Filled/Card.js",
+      "import": "./dist/esm/icons/24x24/Filled/Card.js",
+      "default": "./dist/esm/icons/24x24/Filled/Card.js"
+    },
+    "./icons/24x24/Filled/CheckCircle": {
+      "types": "./dist/types/icons/24x24/Filled/CheckCircle.d.ts",
+      "require": "./dist/cjs/icons/24x24/Filled/CheckCircle.js",
+      "import": "./dist/esm/icons/24x24/Filled/CheckCircle.js",
+      "default": "./dist/esm/icons/24x24/Filled/CheckCircle.js"
     },
     "./icons/24x24/Filled/Cross": {
       "types": "./dist/types/icons/24x24/Filled/Cross.d.ts",
       "require": "./dist/cjs/icons/24x24/Filled/Cross.js",
       "import": "./dist/esm/icons/24x24/Filled/Cross.js",
       "default": "./dist/esm/icons/24x24/Filled/Cross.js"
+    },
+    "./icons/24x24/Filled/Crown": {
+      "types": "./dist/types/icons/24x24/Filled/Crown.d.ts",
+      "require": "./dist/cjs/icons/24x24/Filled/Crown.js",
+      "import": "./dist/esm/icons/24x24/Filled/Crown.js",
+      "default": "./dist/esm/icons/24x24/Filled/Crown.js"
+    },
+    "./icons/24x24/Filled/Egg": {
+      "types": "./dist/types/icons/24x24/Filled/Egg.d.ts",
+      "require": "./dist/cjs/icons/24x24/Filled/Egg.js",
+      "import": "./dist/esm/icons/24x24/Filled/Egg.js",
+      "default": "./dist/esm/icons/24x24/Filled/Egg.js"
     },
     "./icons/24x24/Filled/Favorite": {
       "types": "./dist/types/icons/24x24/Filled/Favorite.d.ts",
@@ -396,6 +642,144 @@
       "require": "./dist/cjs/icons/24x24/Filled/Flash.js",
       "import": "./dist/esm/icons/24x24/Filled/Flash.js",
       "default": "./dist/esm/icons/24x24/Filled/Flash.js"
+    },
+    "./icons/24x24/Filled/Flower": {
+      "types": "./dist/types/icons/24x24/Filled/Flower.d.ts",
+      "require": "./dist/cjs/icons/24x24/Filled/Flower.js",
+      "import": "./dist/esm/icons/24x24/Filled/Flower.js",
+      "default": "./dist/esm/icons/24x24/Filled/Flower.js"
+    },
+    "./icons/24x24/Filled/Halloween": {
+      "types": "./dist/types/icons/24x24/Filled/Halloween.d.ts",
+      "require": "./dist/cjs/icons/24x24/Filled/Halloween.js",
+      "import": "./dist/esm/icons/24x24/Filled/Halloween.js",
+      "default": "./dist/esm/icons/24x24/Filled/Halloween.js"
+    },
+    "./icons/24x24/Filled/Hat": {
+      "types": "./dist/types/icons/24x24/Filled/Hat.d.ts",
+      "require": "./dist/cjs/icons/24x24/Filled/Hat.js",
+      "import": "./dist/esm/icons/24x24/Filled/Hat.js",
+      "default": "./dist/esm/icons/24x24/Filled/Hat.js"
+    },
+    "./icons/24x24/Filled/Heart": {
+      "types": "./dist/types/icons/24x24/Filled/Heart.d.ts",
+      "require": "./dist/cjs/icons/24x24/Filled/Heart.js",
+      "import": "./dist/esm/icons/24x24/Filled/Heart.js",
+      "default": "./dist/esm/icons/24x24/Filled/Heart.js"
+    },
+    "./icons/24x24/Filled/LogoDzen": {
+      "types": "./dist/types/icons/24x24/Filled/LogoDzen.d.ts",
+      "require": "./dist/cjs/icons/24x24/Filled/LogoDzen.js",
+      "import": "./dist/esm/icons/24x24/Filled/LogoDzen.js",
+      "default": "./dist/esm/icons/24x24/Filled/LogoDzen.js"
+    },
+    "./icons/24x24/Filled/LogoFacebook": {
+      "types": "./dist/types/icons/24x24/Filled/LogoFacebook.d.ts",
+      "require": "./dist/cjs/icons/24x24/Filled/LogoFacebook.js",
+      "import": "./dist/esm/icons/24x24/Filled/LogoFacebook.js",
+      "default": "./dist/esm/icons/24x24/Filled/LogoFacebook.js"
+    },
+    "./icons/24x24/Filled/LogoGoogle": {
+      "types": "./dist/types/icons/24x24/Filled/LogoGoogle.d.ts",
+      "require": "./dist/cjs/icons/24x24/Filled/LogoGoogle.js",
+      "import": "./dist/esm/icons/24x24/Filled/LogoGoogle.js",
+      "default": "./dist/esm/icons/24x24/Filled/LogoGoogle.js"
+    },
+    "./icons/24x24/Filled/LogoInspiration": {
+      "types": "./dist/types/icons/24x24/Filled/LogoInspiration.d.ts",
+      "require": "./dist/cjs/icons/24x24/Filled/LogoInspiration.js",
+      "import": "./dist/esm/icons/24x24/Filled/LogoInspiration.js",
+      "default": "./dist/esm/icons/24x24/Filled/LogoInspiration.js"
+    },
+    "./icons/24x24/Filled/LogoInstagram": {
+      "types": "./dist/types/icons/24x24/Filled/LogoInstagram.d.ts",
+      "require": "./dist/cjs/icons/24x24/Filled/LogoInstagram.js",
+      "import": "./dist/esm/icons/24x24/Filled/LogoInstagram.js",
+      "default": "./dist/esm/icons/24x24/Filled/LogoInstagram.js"
+    },
+    "./icons/24x24/Filled/LogoMail": {
+      "types": "./dist/types/icons/24x24/Filled/LogoMail.d.ts",
+      "require": "./dist/cjs/icons/24x24/Filled/LogoMail.js",
+      "import": "./dist/esm/icons/24x24/Filled/LogoMail.js",
+      "default": "./dist/esm/icons/24x24/Filled/LogoMail.js"
+    },
+    "./icons/24x24/Filled/LogoOk": {
+      "types": "./dist/types/icons/24x24/Filled/LogoOk.d.ts",
+      "require": "./dist/cjs/icons/24x24/Filled/LogoOk.js",
+      "import": "./dist/esm/icons/24x24/Filled/LogoOk.js",
+      "default": "./dist/esm/icons/24x24/Filled/LogoOk.js"
+    },
+    "./icons/24x24/Filled/LogoSkype": {
+      "types": "./dist/types/icons/24x24/Filled/LogoSkype.d.ts",
+      "require": "./dist/cjs/icons/24x24/Filled/LogoSkype.js",
+      "import": "./dist/esm/icons/24x24/Filled/LogoSkype.js",
+      "default": "./dist/esm/icons/24x24/Filled/LogoSkype.js"
+    },
+    "./icons/24x24/Filled/LogoTelegram": {
+      "types": "./dist/types/icons/24x24/Filled/LogoTelegram.d.ts",
+      "require": "./dist/cjs/icons/24x24/Filled/LogoTelegram.js",
+      "import": "./dist/esm/icons/24x24/Filled/LogoTelegram.js",
+      "default": "./dist/esm/icons/24x24/Filled/LogoTelegram.js"
+    },
+    "./icons/24x24/Filled/LogoTikTok": {
+      "types": "./dist/types/icons/24x24/Filled/LogoTikTok.d.ts",
+      "require": "./dist/cjs/icons/24x24/Filled/LogoTikTok.js",
+      "import": "./dist/esm/icons/24x24/Filled/LogoTikTok.js",
+      "default": "./dist/esm/icons/24x24/Filled/LogoTikTok.js"
+    },
+    "./icons/24x24/Filled/LogoTwitter": {
+      "types": "./dist/types/icons/24x24/Filled/LogoTwitter.d.ts",
+      "require": "./dist/cjs/icons/24x24/Filled/LogoTwitter.js",
+      "import": "./dist/esm/icons/24x24/Filled/LogoTwitter.js",
+      "default": "./dist/esm/icons/24x24/Filled/LogoTwitter.js"
+    },
+    "./icons/24x24/Filled/LogoViber": {
+      "types": "./dist/types/icons/24x24/Filled/LogoViber.d.ts",
+      "require": "./dist/cjs/icons/24x24/Filled/LogoViber.js",
+      "import": "./dist/esm/icons/24x24/Filled/LogoViber.js",
+      "default": "./dist/esm/icons/24x24/Filled/LogoViber.js"
+    },
+    "./icons/24x24/Filled/LogoVk": {
+      "types": "./dist/types/icons/24x24/Filled/LogoVk.d.ts",
+      "require": "./dist/cjs/icons/24x24/Filled/LogoVk.js",
+      "import": "./dist/esm/icons/24x24/Filled/LogoVk.js",
+      "default": "./dist/esm/icons/24x24/Filled/LogoVk.js"
+    },
+    "./icons/24x24/Filled/LogoWhatsApp": {
+      "types": "./dist/types/icons/24x24/Filled/LogoWhatsApp.d.ts",
+      "require": "./dist/cjs/icons/24x24/Filled/LogoWhatsApp.js",
+      "import": "./dist/esm/icons/24x24/Filled/LogoWhatsApp.js",
+      "default": "./dist/esm/icons/24x24/Filled/LogoWhatsApp.js"
+    },
+    "./icons/24x24/Filled/LogoYandex": {
+      "types": "./dist/types/icons/24x24/Filled/LogoYandex.d.ts",
+      "require": "./dist/cjs/icons/24x24/Filled/LogoYandex.js",
+      "import": "./dist/esm/icons/24x24/Filled/LogoYandex.js",
+      "default": "./dist/esm/icons/24x24/Filled/LogoYandex.js"
+    },
+    "./icons/24x24/Filled/LogoYandexSplit": {
+      "types": "./dist/types/icons/24x24/Filled/LogoYandexSplit.d.ts",
+      "require": "./dist/cjs/icons/24x24/Filled/LogoYandexSplit.js",
+      "import": "./dist/esm/icons/24x24/Filled/LogoYandexSplit.js",
+      "default": "./dist/esm/icons/24x24/Filled/LogoYandexSplit.js"
+    },
+    "./icons/24x24/Filled/LogoYouTube": {
+      "types": "./dist/types/icons/24x24/Filled/LogoYouTube.d.ts",
+      "require": "./dist/cjs/icons/24x24/Filled/LogoYouTube.js",
+      "import": "./dist/esm/icons/24x24/Filled/LogoYouTube.js",
+      "default": "./dist/esm/icons/24x24/Filled/LogoYouTube.js"
+    },
+    "./icons/24x24/Filled/Markdown": {
+      "types": "./dist/types/icons/24x24/Filled/Markdown.d.ts",
+      "require": "./dist/cjs/icons/24x24/Filled/Markdown.js",
+      "import": "./dist/esm/icons/24x24/Filled/Markdown.js",
+      "default": "./dist/esm/icons/24x24/Filled/Markdown.js"
+    },
+    "./icons/24x24/Filled/Mickey": {
+      "types": "./dist/types/icons/24x24/Filled/Mickey.d.ts",
+      "require": "./dist/cjs/icons/24x24/Filled/Mickey.js",
+      "import": "./dist/esm/icons/24x24/Filled/Mickey.js",
+      "default": "./dist/esm/icons/24x24/Filled/Mickey.js"
     },
     "./icons/24x24/Filled/Mobile": {
       "types": "./dist/types/icons/24x24/Filled/Mobile.d.ts",
@@ -427,125 +811,89 @@
       "import": "./dist/esm/icons/24x24/Filled/Play.js",
       "default": "./dist/esm/icons/24x24/Filled/Play.js"
     },
+    "./icons/24x24/Filled/PlayFrame": {
+      "types": "./dist/types/icons/24x24/Filled/PlayFrame.d.ts",
+      "require": "./dist/cjs/icons/24x24/Filled/PlayFrame.js",
+      "import": "./dist/esm/icons/24x24/Filled/PlayFrame.js",
+      "default": "./dist/esm/icons/24x24/Filled/PlayFrame.js"
+    },
     "./icons/24x24/Filled/RadiobuttonSelected": {
       "types": "./dist/types/icons/24x24/Filled/RadiobuttonSelected.d.ts",
       "require": "./dist/cjs/icons/24x24/Filled/RadiobuttonSelected.js",
       "import": "./dist/esm/icons/24x24/Filled/RadiobuttonSelected.js",
       "default": "./dist/esm/icons/24x24/Filled/RadiobuttonSelected.js"
     },
-    "./icons/24x24/Filled/Social/Facebook": {
-      "types": "./dist/types/icons/24x24/Filled/Social/Facebook.d.ts",
-      "require": "./dist/cjs/icons/24x24/Filled/Social/Facebook.js",
-      "import": "./dist/esm/icons/24x24/Filled/Social/Facebook.js",
-      "default": "./dist/esm/icons/24x24/Filled/Social/Facebook.js"
+    "./icons/24x24/Filled/Sale": {
+      "types": "./dist/types/icons/24x24/Filled/Sale.d.ts",
+      "require": "./dist/cjs/icons/24x24/Filled/Sale.js",
+      "import": "./dist/esm/icons/24x24/Filled/Sale.js",
+      "default": "./dist/esm/icons/24x24/Filled/Sale.js"
     },
-    "./icons/24x24/Filled/Social/Google": {
-      "types": "./dist/types/icons/24x24/Filled/Social/Google.d.ts",
-      "require": "./dist/cjs/icons/24x24/Filled/Social/Google.js",
-      "import": "./dist/esm/icons/24x24/Filled/Social/Google.js",
-      "default": "./dist/esm/icons/24x24/Filled/Social/Google.js"
+    "./icons/24x24/Filled/September": {
+      "types": "./dist/types/icons/24x24/Filled/September.d.ts",
+      "require": "./dist/cjs/icons/24x24/Filled/September.js",
+      "import": "./dist/esm/icons/24x24/Filled/September.js",
+      "default": "./dist/esm/icons/24x24/Filled/September.js"
     },
-    "./icons/24x24/Filled/Social/Inspiration": {
-      "types": "./dist/types/icons/24x24/Filled/Social/Inspiration.d.ts",
-      "require": "./dist/cjs/icons/24x24/Filled/Social/Inspiration.js",
-      "import": "./dist/esm/icons/24x24/Filled/Social/Inspiration.js",
-      "default": "./dist/esm/icons/24x24/Filled/Social/Inspiration.js"
+    "./icons/24x24/Filled/ShoulderStraps": {
+      "types": "./dist/types/icons/24x24/Filled/ShoulderStraps.d.ts",
+      "require": "./dist/cjs/icons/24x24/Filled/ShoulderStraps.js",
+      "import": "./dist/esm/icons/24x24/Filled/ShoulderStraps.js",
+      "default": "./dist/esm/icons/24x24/Filled/ShoulderStraps.js"
     },
-    "./icons/24x24/Filled/Social/Instagram": {
-      "types": "./dist/types/icons/24x24/Filled/Social/Instagram.d.ts",
-      "require": "./dist/cjs/icons/24x24/Filled/Social/Instagram.js",
-      "import": "./dist/esm/icons/24x24/Filled/Social/Instagram.js",
-      "default": "./dist/esm/icons/24x24/Filled/Social/Instagram.js"
+    "./icons/24x24/Filled/Sima": {
+      "types": "./dist/types/icons/24x24/Filled/Sima.d.ts",
+      "require": "./dist/cjs/icons/24x24/Filled/Sima.js",
+      "import": "./dist/esm/icons/24x24/Filled/Sima.js",
+      "default": "./dist/esm/icons/24x24/Filled/Sima.js"
     },
-    "./icons/24x24/Filled/Social/Mail": {
-      "types": "./dist/types/icons/24x24/Filled/Social/Mail.d.ts",
-      "require": "./dist/cjs/icons/24x24/Filled/Social/Mail.js",
-      "import": "./dist/esm/icons/24x24/Filled/Social/Mail.js",
-      "default": "./dist/esm/icons/24x24/Filled/Social/Mail.js"
+    "./icons/24x24/Filled/Snowflake": {
+      "types": "./dist/types/icons/24x24/Filled/Snowflake.d.ts",
+      "require": "./dist/cjs/icons/24x24/Filled/Snowflake.js",
+      "import": "./dist/esm/icons/24x24/Filled/Snowflake.js",
+      "default": "./dist/esm/icons/24x24/Filled/Snowflake.js"
     },
-    "./icons/24x24/Filled/Social/Ok": {
-      "types": "./dist/types/icons/24x24/Filled/Social/Ok.d.ts",
-      "require": "./dist/cjs/icons/24x24/Filled/Social/Ok.js",
-      "import": "./dist/esm/icons/24x24/Filled/Social/Ok.js",
-      "default": "./dist/esm/icons/24x24/Filled/Social/Ok.js"
+    "./icons/24x24/Filled/Spruce": {
+      "types": "./dist/types/icons/24x24/Filled/Spruce.d.ts",
+      "require": "./dist/cjs/icons/24x24/Filled/Spruce.js",
+      "import": "./dist/esm/icons/24x24/Filled/Spruce.js",
+      "default": "./dist/esm/icons/24x24/Filled/Spruce.js"
     },
-    "./icons/24x24/Filled/Social/Skype": {
-      "types": "./dist/types/icons/24x24/Filled/Social/Skype.d.ts",
-      "require": "./dist/cjs/icons/24x24/Filled/Social/Skype.js",
-      "import": "./dist/esm/icons/24x24/Filled/Social/Skype.js",
-      "default": "./dist/esm/icons/24x24/Filled/Social/Skype.js"
+    "./icons/24x24/Filled/Star": {
+      "types": "./dist/types/icons/24x24/Filled/Star.d.ts",
+      "require": "./dist/cjs/icons/24x24/Filled/Star.js",
+      "import": "./dist/esm/icons/24x24/Filled/Star.js",
+      "default": "./dist/esm/icons/24x24/Filled/Star.js"
     },
-    "./icons/24x24/Filled/Social/Telegram": {
-      "types": "./dist/types/icons/24x24/Filled/Social/Telegram.d.ts",
-      "require": "./dist/cjs/icons/24x24/Filled/Social/Telegram.js",
-      "import": "./dist/esm/icons/24x24/Filled/Social/Telegram.js",
-      "default": "./dist/esm/icons/24x24/Filled/Social/Telegram.js"
+    "./icons/24x24/Filled/Sun": {
+      "types": "./dist/types/icons/24x24/Filled/Sun.d.ts",
+      "require": "./dist/cjs/icons/24x24/Filled/Sun.js",
+      "import": "./dist/esm/icons/24x24/Filled/Sun.js",
+      "default": "./dist/esm/icons/24x24/Filled/Sun.js"
     },
-    "./icons/24x24/Filled/Social/TikTok": {
-      "types": "./dist/types/icons/24x24/Filled/Social/TikTok.d.ts",
-      "require": "./dist/cjs/icons/24x24/Filled/Social/TikTok.js",
-      "import": "./dist/esm/icons/24x24/Filled/Social/TikTok.js",
-      "default": "./dist/esm/icons/24x24/Filled/Social/TikTok.js"
+    "./icons/24x24/Filled/Tank": {
+      "types": "./dist/types/icons/24x24/Filled/Tank.d.ts",
+      "require": "./dist/cjs/icons/24x24/Filled/Tank.js",
+      "import": "./dist/esm/icons/24x24/Filled/Tank.js",
+      "default": "./dist/esm/icons/24x24/Filled/Tank.js"
     },
-    "./icons/24x24/Filled/Social/Twitter": {
-      "types": "./dist/types/icons/24x24/Filled/Social/Twitter.d.ts",
-      "require": "./dist/cjs/icons/24x24/Filled/Social/Twitter.js",
-      "import": "./dist/esm/icons/24x24/Filled/Social/Twitter.js",
-      "default": "./dist/esm/icons/24x24/Filled/Social/Twitter.js"
+    "./icons/24x24/Filled/Tulip": {
+      "types": "./dist/types/icons/24x24/Filled/Tulip.d.ts",
+      "require": "./dist/cjs/icons/24x24/Filled/Tulip.js",
+      "import": "./dist/esm/icons/24x24/Filled/Tulip.js",
+      "default": "./dist/esm/icons/24x24/Filled/Tulip.js"
     },
-    "./icons/24x24/Filled/Social/Viber": {
-      "types": "./dist/types/icons/24x24/Filled/Social/Viber.d.ts",
-      "require": "./dist/cjs/icons/24x24/Filled/Social/Viber.js",
-      "import": "./dist/esm/icons/24x24/Filled/Social/Viber.js",
-      "default": "./dist/esm/icons/24x24/Filled/Social/Viber.js"
+    "./icons/24x24/Filled/Wedding": {
+      "types": "./dist/types/icons/24x24/Filled/Wedding.d.ts",
+      "require": "./dist/cjs/icons/24x24/Filled/Wedding.js",
+      "import": "./dist/esm/icons/24x24/Filled/Wedding.js",
+      "default": "./dist/esm/icons/24x24/Filled/Wedding.js"
     },
-    "./icons/24x24/Filled/Social/Vk": {
-      "types": "./dist/types/icons/24x24/Filled/Social/Vk.d.ts",
-      "require": "./dist/cjs/icons/24x24/Filled/Social/Vk.js",
-      "import": "./dist/esm/icons/24x24/Filled/Social/Vk.js",
-      "default": "./dist/esm/icons/24x24/Filled/Social/Vk.js"
-    },
-    "./icons/24x24/Filled/Social/WhatsApp": {
-      "types": "./dist/types/icons/24x24/Filled/Social/WhatsApp.d.ts",
-      "require": "./dist/cjs/icons/24x24/Filled/Social/WhatsApp.js",
-      "import": "./dist/esm/icons/24x24/Filled/Social/WhatsApp.js",
-      "default": "./dist/esm/icons/24x24/Filled/Social/WhatsApp.js"
-    },
-    "./icons/24x24/Filled/Social/Yandex": {
-      "types": "./dist/types/icons/24x24/Filled/Social/Yandex.d.ts",
-      "require": "./dist/cjs/icons/24x24/Filled/Social/Yandex.js",
-      "import": "./dist/esm/icons/24x24/Filled/Social/Yandex.js",
-      "default": "./dist/esm/icons/24x24/Filled/Social/Yandex.js"
-    },
-    "./icons/24x24/Filled/Social/YouTube": {
-      "types": "./dist/types/icons/24x24/Filled/Social/YouTube.d.ts",
-      "require": "./dist/cjs/icons/24x24/Filled/Social/YouTube.js",
-      "import": "./dist/esm/icons/24x24/Filled/Social/YouTube.js",
-      "default": "./dist/esm/icons/24x24/Filled/Social/YouTube.js"
-    },
-    "./icons/24x24/Filled/Social/Zen": {
-      "types": "./dist/types/icons/24x24/Filled/Social/Zen.d.ts",
-      "require": "./dist/cjs/icons/24x24/Filled/Social/Zen.js",
-      "import": "./dist/esm/icons/24x24/Filled/Social/Zen.js",
-      "default": "./dist/esm/icons/24x24/Filled/Social/Zen.js"
-    },
-    "./icons/24x24/Filled/Tick": {
-      "types": "./dist/types/icons/24x24/Filled/Tick.d.ts",
-      "require": "./dist/cjs/icons/24x24/Filled/Tick.js",
-      "import": "./dist/esm/icons/24x24/Filled/Tick.js",
-      "default": "./dist/esm/icons/24x24/Filled/Tick.js"
-    },
-    "./icons/24x24/Stroked/Add": {
-      "types": "./dist/types/icons/24x24/Stroked/Add.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Add.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Add.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Add.js"
-    },
-    "./icons/24x24/Stroked/AddComment": {
-      "types": "./dist/types/icons/24x24/Stroked/AddComment.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/AddComment.js",
-      "import": "./dist/esm/icons/24x24/Stroked/AddComment.js",
-      "default": "./dist/esm/icons/24x24/Stroked/AddComment.js"
+    "./icons/24x24/Filled/Тм": {
+      "types": "./dist/types/icons/24x24/Filled/Тм.d.ts",
+      "require": "./dist/cjs/icons/24x24/Filled/Тм.js",
+      "import": "./dist/esm/icons/24x24/Filled/Тм.js",
+      "default": "./dist/esm/icons/24x24/Filled/Тм.js"
     },
     "./icons/24x24/Stroked/ApiKey": {
       "types": "./dist/types/icons/24x24/Stroked/ApiKey.d.ts",
@@ -558,6 +906,30 @@
       "require": "./dist/cjs/icons/24x24/Stroked/ArrowDown.js",
       "import": "./dist/esm/icons/24x24/Stroked/ArrowDown.js",
       "default": "./dist/esm/icons/24x24/Stroked/ArrowDown.js"
+    },
+    "./icons/24x24/Stroked/ArrowExpandDown": {
+      "types": "./dist/types/icons/24x24/Stroked/ArrowExpandDown.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/ArrowExpandDown.js",
+      "import": "./dist/esm/icons/24x24/Stroked/ArrowExpandDown.js",
+      "default": "./dist/esm/icons/24x24/Stroked/ArrowExpandDown.js"
+    },
+    "./icons/24x24/Stroked/ArrowExpandLeft": {
+      "types": "./dist/types/icons/24x24/Stroked/ArrowExpandLeft.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/ArrowExpandLeft.js",
+      "import": "./dist/esm/icons/24x24/Stroked/ArrowExpandLeft.js",
+      "default": "./dist/esm/icons/24x24/Stroked/ArrowExpandLeft.js"
+    },
+    "./icons/24x24/Stroked/ArrowExpandRight": {
+      "types": "./dist/types/icons/24x24/Stroked/ArrowExpandRight.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/ArrowExpandRight.js",
+      "import": "./dist/esm/icons/24x24/Stroked/ArrowExpandRight.js",
+      "default": "./dist/esm/icons/24x24/Stroked/ArrowExpandRight.js"
+    },
+    "./icons/24x24/Stroked/ArrowExpandUp": {
+      "types": "./dist/types/icons/24x24/Stroked/ArrowExpandUp.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/ArrowExpandUp.js",
+      "import": "./dist/esm/icons/24x24/Stroked/ArrowExpandUp.js",
+      "default": "./dist/esm/icons/24x24/Stroked/ArrowExpandUp.js"
     },
     "./icons/24x24/Stroked/ArrowLeft": {
       "types": "./dist/types/icons/24x24/Stroked/ArrowLeft.d.ts",
@@ -577,23 +949,11 @@
       "import": "./dist/esm/icons/24x24/Stroked/ArrowUp.js",
       "default": "./dist/esm/icons/24x24/Stroked/ArrowUp.js"
     },
-    "./icons/24x24/Stroked/Arrows/Down": {
-      "types": "./dist/types/icons/24x24/Stroked/Arrows/Down.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Arrows/Down.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Arrows/Down.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Arrows/Down.js"
-    },
-    "./icons/24x24/Stroked/Arrows/Up": {
-      "types": "./dist/types/icons/24x24/Stroked/Arrows/Up.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Arrows/Up.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Arrows/Up.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Arrows/Up.js"
-    },
-    "./icons/24x24/Stroked/Bag2": {
-      "types": "./dist/types/icons/24x24/Stroked/Bag2.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Bag2.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Bag2.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Bag2.js"
+    "./icons/24x24/Stroked/Bag": {
+      "types": "./dist/types/icons/24x24/Stroked/Bag.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/Bag.js",
+      "import": "./dist/esm/icons/24x24/Stroked/Bag.js",
+      "default": "./dist/esm/icons/24x24/Stroked/Bag.js"
     },
     "./icons/24x24/Stroked/BagCheck": {
       "types": "./dist/types/icons/24x24/Stroked/BagCheck.d.ts",
@@ -649,11 +1009,11 @@
       "import": "./dist/esm/icons/24x24/Stroked/Calendar.js",
       "default": "./dist/esm/icons/24x24/Stroked/Calendar.js"
     },
-    "./icons/24x24/Stroked/Camera2": {
-      "types": "./dist/types/icons/24x24/Stroked/Camera2.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Camera2.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Camera2.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Camera2.js"
+    "./icons/24x24/Stroked/Camera": {
+      "types": "./dist/types/icons/24x24/Stroked/Camera.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/Camera.js",
+      "import": "./dist/esm/icons/24x24/Stroked/Camera.js",
+      "default": "./dist/esm/icons/24x24/Stroked/Camera.js"
     },
     "./icons/24x24/Stroked/Car": {
       "types": "./dist/types/icons/24x24/Stroked/Car.d.ts",
@@ -679,6 +1039,12 @@
       "import": "./dist/esm/icons/24x24/Stroked/CatalogSearch.js",
       "default": "./dist/esm/icons/24x24/Stroked/CatalogSearch.js"
     },
+    "./icons/24x24/Stroked/Certificate": {
+      "types": "./dist/types/icons/24x24/Stroked/Certificate.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/Certificate.js",
+      "import": "./dist/esm/icons/24x24/Stroked/Certificate.js",
+      "default": "./dist/esm/icons/24x24/Stroked/Certificate.js"
+    },
     "./icons/24x24/Stroked/Check": {
       "types": "./dist/types/icons/24x24/Stroked/Check.d.ts",
       "require": "./dist/cjs/icons/24x24/Stroked/Check.js",
@@ -690,6 +1056,12 @@
       "require": "./dist/cjs/icons/24x24/Stroked/Clip.js",
       "import": "./dist/esm/icons/24x24/Stroked/Clip.js",
       "default": "./dist/esm/icons/24x24/Stroked/Clip.js"
+    },
+    "./icons/24x24/Stroked/Collapse": {
+      "types": "./dist/types/icons/24x24/Stroked/Collapse.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/Collapse.js",
+      "import": "./dist/esm/icons/24x24/Stroked/Collapse.js",
+      "default": "./dist/esm/icons/24x24/Stroked/Collapse.js"
     },
     "./icons/24x24/Stroked/ComparisonAdd": {
       "types": "./dist/types/icons/24x24/Stroked/ComparisonAdd.d.ts",
@@ -709,17 +1081,23 @@
       "import": "./dist/esm/icons/24x24/Stroked/ComparisonDelete.js",
       "default": "./dist/esm/icons/24x24/Stroked/ComparisonDelete.js"
     },
-    "./icons/24x24/Stroked/Consultant": {
-      "types": "./dist/types/icons/24x24/Stroked/Consultant.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Consultant.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Consultant.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Consultant.js"
+    "./icons/24x24/Stroked/Contacts": {
+      "types": "./dist/types/icons/24x24/Stroked/Contacts.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/Contacts.js",
+      "import": "./dist/esm/icons/24x24/Stroked/Contacts.js",
+      "default": "./dist/esm/icons/24x24/Stroked/Contacts.js"
     },
-    "./icons/24x24/Stroked/Contract": {
-      "types": "./dist/types/icons/24x24/Stroked/Contract.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Contract.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Contract.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Contract.js"
+    "./icons/24x24/Stroked/Controls": {
+      "types": "./dist/types/icons/24x24/Stroked/Controls.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/Controls.js",
+      "import": "./dist/esm/icons/24x24/Stroked/Controls.js",
+      "default": "./dist/esm/icons/24x24/Stroked/Controls.js"
+    },
+    "./icons/24x24/Stroked/ControlsMore": {
+      "types": "./dist/types/icons/24x24/Stroked/ControlsMore.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/ControlsMore.js",
+      "import": "./dist/esm/icons/24x24/Stroked/ControlsMore.js",
+      "default": "./dist/esm/icons/24x24/Stroked/ControlsMore.js"
     },
     "./icons/24x24/Stroked/Copy": {
       "types": "./dist/types/icons/24x24/Stroked/Copy.d.ts",
@@ -739,11 +1117,11 @@
       "import": "./dist/esm/icons/24x24/Stroked/Download.js",
       "default": "./dist/esm/icons/24x24/Stroked/Download.js"
     },
-    "./icons/24x24/Stroked/Edit": {
-      "types": "./dist/types/icons/24x24/Stroked/Edit.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Edit.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Edit.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Edit.js"
+    "./icons/24x24/Stroked/Eclipse": {
+      "types": "./dist/types/icons/24x24/Stroked/Eclipse.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/Eclipse.js",
+      "import": "./dist/esm/icons/24x24/Stroked/Eclipse.js",
+      "default": "./dist/esm/icons/24x24/Stroked/Eclipse.js"
     },
     "./icons/24x24/Stroked/Entrance": {
       "types": "./dist/types/icons/24x24/Stroked/Entrance.d.ts",
@@ -763,6 +1141,24 @@
       "import": "./dist/esm/icons/24x24/Stroked/Expand.js",
       "default": "./dist/esm/icons/24x24/Stroked/Expand.js"
     },
+    "./icons/24x24/Stroked/ExpandArrows": {
+      "types": "./dist/types/icons/24x24/Stroked/ExpandArrows.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/ExpandArrows.js",
+      "import": "./dist/esm/icons/24x24/Stroked/ExpandArrows.js",
+      "default": "./dist/esm/icons/24x24/Stroked/ExpandArrows.js"
+    },
+    "./icons/24x24/Stroked/Eye": {
+      "types": "./dist/types/icons/24x24/Stroked/Eye.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/Eye.js",
+      "import": "./dist/esm/icons/24x24/Stroked/Eye.js",
+      "default": "./dist/esm/icons/24x24/Stroked/Eye.js"
+    },
+    "./icons/24x24/Stroked/EyeClosed": {
+      "types": "./dist/types/icons/24x24/Stroked/EyeClosed.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/EyeClosed.js",
+      "import": "./dist/esm/icons/24x24/Stroked/EyeClosed.js",
+      "default": "./dist/esm/icons/24x24/Stroked/EyeClosed.js"
+    },
     "./icons/24x24/Stroked/FaceId": {
       "types": "./dist/types/icons/24x24/Stroked/FaceId.d.ts",
       "require": "./dist/cjs/icons/24x24/Stroked/FaceId.js",
@@ -775,17 +1171,41 @@
       "import": "./dist/esm/icons/24x24/Stroked/Favorite.js",
       "default": "./dist/esm/icons/24x24/Stroked/Favorite.js"
     },
-    "./icons/24x24/Stroked/Feedback": {
-      "types": "./dist/types/icons/24x24/Stroked/Feedback.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Feedback.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Feedback.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Feedback.js"
+    "./icons/24x24/Stroked/File": {
+      "types": "./dist/types/icons/24x24/Stroked/File.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/File.js",
+      "import": "./dist/esm/icons/24x24/Stroked/File.js",
+      "default": "./dist/esm/icons/24x24/Stroked/File.js"
     },
-    "./icons/24x24/Stroked/Filters": {
-      "types": "./dist/types/icons/24x24/Stroked/Filters.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Filters.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Filters.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Filters.js"
+    "./icons/24x24/Stroked/Files": {
+      "types": "./dist/types/icons/24x24/Stroked/Files.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/Files.js",
+      "import": "./dist/esm/icons/24x24/Stroked/Files.js",
+      "default": "./dist/esm/icons/24x24/Stroked/Files.js"
+    },
+    "./icons/24x24/Stroked/FilterOther": {
+      "types": "./dist/types/icons/24x24/Stroked/FilterOther.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/FilterOther.js",
+      "import": "./dist/esm/icons/24x24/Stroked/FilterOther.js",
+      "default": "./dist/esm/icons/24x24/Stroked/FilterOther.js"
+    },
+    "./icons/24x24/Stroked/Gear": {
+      "types": "./dist/types/icons/24x24/Stroked/Gear.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/Gear.js",
+      "import": "./dist/esm/icons/24x24/Stroked/Gear.js",
+      "default": "./dist/esm/icons/24x24/Stroked/Gear.js"
+    },
+    "./icons/24x24/Stroked/Genders": {
+      "types": "./dist/types/icons/24x24/Stroked/Genders.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/Genders.js",
+      "import": "./dist/esm/icons/24x24/Stroked/Genders.js",
+      "default": "./dist/esm/icons/24x24/Stroked/Genders.js"
+    },
+    "./icons/24x24/Stroked/GeoArrow": {
+      "types": "./dist/types/icons/24x24/Stroked/GeoArrow.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/GeoArrow.js",
+      "import": "./dist/esm/icons/24x24/Stroked/GeoArrow.js",
+      "default": "./dist/esm/icons/24x24/Stroked/GeoArrow.js"
     },
     "./icons/24x24/Stroked/Gift": {
       "types": "./dist/types/icons/24x24/Stroked/Gift.d.ts",
@@ -805,6 +1225,12 @@
       "import": "./dist/esm/icons/24x24/Stroked/Hanger.js",
       "default": "./dist/esm/icons/24x24/Stroked/Hanger.js"
     },
+    "./icons/24x24/Stroked/Headset": {
+      "types": "./dist/types/icons/24x24/Stroked/Headset.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/Headset.js",
+      "import": "./dist/esm/icons/24x24/Stroked/Headset.js",
+      "default": "./dist/esm/icons/24x24/Stroked/Headset.js"
+    },
     "./icons/24x24/Stroked/Help": {
       "types": "./dist/types/icons/24x24/Stroked/Help.d.ts",
       "require": "./dist/cjs/icons/24x24/Stroked/Help.js",
@@ -823,11 +1249,11 @@
       "import": "./dist/esm/icons/24x24/Stroked/Info.js",
       "default": "./dist/esm/icons/24x24/Stroked/Info.js"
     },
-    "./icons/24x24/Stroked/Links": {
-      "types": "./dist/types/icons/24x24/Stroked/Links.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Links.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Links.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Links.js"
+    "./icons/24x24/Stroked/Link": {
+      "types": "./dist/types/icons/24x24/Stroked/Link.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/Link.js",
+      "import": "./dist/esm/icons/24x24/Stroked/Link.js",
+      "default": "./dist/esm/icons/24x24/Stroked/Link.js"
     },
     "./icons/24x24/Stroked/List": {
       "types": "./dist/types/icons/24x24/Stroked/List.d.ts",
@@ -853,17 +1279,41 @@
       "import": "./dist/esm/icons/24x24/Stroked/Lock.js",
       "default": "./dist/esm/icons/24x24/Stroked/Lock.js"
     },
+    "./icons/24x24/Stroked/LogoChestnyZnak": {
+      "types": "./dist/types/icons/24x24/Stroked/LogoChestnyZnak.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/LogoChestnyZnak.js",
+      "import": "./dist/esm/icons/24x24/Stroked/LogoChestnyZnak.js",
+      "default": "./dist/esm/icons/24x24/Stroked/LogoChestnyZnak.js"
+    },
+    "./icons/24x24/Stroked/LogoSima": {
+      "types": "./dist/types/icons/24x24/Stroked/LogoSima.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/LogoSima.js",
+      "import": "./dist/esm/icons/24x24/Stroked/LogoSima.js",
+      "default": "./dist/esm/icons/24x24/Stroked/LogoSima.js"
+    },
+    "./icons/24x24/Stroked/LogoSkype": {
+      "types": "./dist/types/icons/24x24/Stroked/LogoSkype.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/LogoSkype.js",
+      "import": "./dist/esm/icons/24x24/Stroked/LogoSkype.js",
+      "default": "./dist/esm/icons/24x24/Stroked/LogoSkype.js"
+    },
+    "./icons/24x24/Stroked/Magnifier": {
+      "types": "./dist/types/icons/24x24/Stroked/Magnifier.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/Magnifier.js",
+      "import": "./dist/esm/icons/24x24/Stroked/Magnifier.js",
+      "default": "./dist/esm/icons/24x24/Stroked/Magnifier.js"
+    },
+    "./icons/24x24/Stroked/MagnifierPlus": {
+      "types": "./dist/types/icons/24x24/Stroked/MagnifierPlus.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/MagnifierPlus.js",
+      "import": "./dist/esm/icons/24x24/Stroked/MagnifierPlus.js",
+      "default": "./dist/esm/icons/24x24/Stroked/MagnifierPlus.js"
+    },
     "./icons/24x24/Stroked/Mail": {
       "types": "./dist/types/icons/24x24/Stroked/Mail.d.ts",
       "require": "./dist/cjs/icons/24x24/Stroked/Mail.js",
       "import": "./dist/esm/icons/24x24/Stroked/Mail.js",
       "default": "./dist/esm/icons/24x24/Stroked/Mail.js"
-    },
-    "./icons/24x24/Stroked/MainPage": {
-      "types": "./dist/types/icons/24x24/Stroked/MainPage.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/MainPage.js",
-      "import": "./dist/esm/icons/24x24/Stroked/MainPage.js",
-      "default": "./dist/esm/icons/24x24/Stroked/MainPage.js"
     },
     "./icons/24x24/Stroked/Map": {
       "types": "./dist/types/icons/24x24/Stroked/Map.d.ts",
@@ -877,17 +1327,17 @@
       "import": "./dist/esm/icons/24x24/Stroked/MarkHeart.js",
       "default": "./dist/esm/icons/24x24/Stroked/MarkHeart.js"
     },
+    "./icons/24x24/Stroked/Microphone": {
+      "types": "./dist/types/icons/24x24/Stroked/Microphone.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/Microphone.js",
+      "import": "./dist/esm/icons/24x24/Stroked/Microphone.js",
+      "default": "./dist/esm/icons/24x24/Stroked/Microphone.js"
+    },
     "./icons/24x24/Stroked/MicrophoneOff": {
       "types": "./dist/types/icons/24x24/Stroked/MicrophoneOff.d.ts",
       "require": "./dist/cjs/icons/24x24/Stroked/MicrophoneOff.js",
       "import": "./dist/esm/icons/24x24/Stroked/MicrophoneOff.js",
       "default": "./dist/esm/icons/24x24/Stroked/MicrophoneOff.js"
-    },
-    "./icons/24x24/Stroked/MicrophoneOn": {
-      "types": "./dist/types/icons/24x24/Stroked/MicrophoneOn.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/MicrophoneOn.js",
-      "import": "./dist/esm/icons/24x24/Stroked/MicrophoneOn.js",
-      "default": "./dist/esm/icons/24x24/Stroked/MicrophoneOn.js"
     },
     "./icons/24x24/Stroked/Minus": {
       "types": "./dist/types/icons/24x24/Stroked/Minus.d.ts",
@@ -901,11 +1351,11 @@
       "import": "./dist/esm/icons/24x24/Stroked/Mobile.js",
       "default": "./dist/esm/icons/24x24/Stroked/Mobile.js"
     },
-    "./icons/24x24/Stroked/Navigation": {
-      "types": "./dist/types/icons/24x24/Stroked/Navigation.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Navigation.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Navigation.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Navigation.js"
+    "./icons/24x24/Stroked/Moon": {
+      "types": "./dist/types/icons/24x24/Stroked/Moon.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/Moon.js",
+      "import": "./dist/esm/icons/24x24/Stroked/Moon.js",
+      "default": "./dist/esm/icons/24x24/Stroked/Moon.js"
     },
     "./icons/24x24/Stroked/NoFavorite": {
       "types": "./dist/types/icons/24x24/Stroked/NoFavorite.d.ts",
@@ -919,23 +1369,23 @@
       "import": "./dist/esm/icons/24x24/Stroked/Notification.js",
       "default": "./dist/esm/icons/24x24/Stroked/Notification.js"
     },
-    "./icons/24x24/Stroked/PasswordHide": {
-      "types": "./dist/types/icons/24x24/Stroked/PasswordHide.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/PasswordHide.js",
-      "import": "./dist/esm/icons/24x24/Stroked/PasswordHide.js",
-      "default": "./dist/esm/icons/24x24/Stroked/PasswordHide.js"
+    "./icons/24x24/Stroked/Pencil": {
+      "types": "./dist/types/icons/24x24/Stroked/Pencil.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/Pencil.js",
+      "import": "./dist/esm/icons/24x24/Stroked/Pencil.js",
+      "default": "./dist/esm/icons/24x24/Stroked/Pencil.js"
     },
-    "./icons/24x24/Stroked/PasswordShow": {
-      "types": "./dist/types/icons/24x24/Stroked/PasswordShow.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/PasswordShow.js",
-      "import": "./dist/esm/icons/24x24/Stroked/PasswordShow.js",
-      "default": "./dist/esm/icons/24x24/Stroked/PasswordShow.js"
+    "./icons/24x24/Stroked/Percent": {
+      "types": "./dist/types/icons/24x24/Stroked/Percent.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/Percent.js",
+      "import": "./dist/esm/icons/24x24/Stroked/Percent.js",
+      "default": "./dist/esm/icons/24x24/Stroked/Percent.js"
     },
-    "./icons/24x24/Stroked/Payment": {
-      "types": "./dist/types/icons/24x24/Stroked/Payment.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Payment.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Payment.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Payment.js"
+    "./icons/24x24/Stroked/PercentageSign": {
+      "types": "./dist/types/icons/24x24/Stroked/PercentageSign.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/PercentageSign.js",
+      "import": "./dist/esm/icons/24x24/Stroked/PercentageSign.js",
+      "default": "./dist/esm/icons/24x24/Stroked/PercentageSign.js"
     },
     "./icons/24x24/Stroked/Person": {
       "types": "./dist/types/icons/24x24/Stroked/Person.d.ts",
@@ -961,11 +1411,23 @@
       "import": "./dist/esm/icons/24x24/Stroked/Placeholder.js",
       "default": "./dist/esm/icons/24x24/Stroked/Placeholder.js"
     },
+    "./icons/24x24/Stroked/PlayCircle": {
+      "types": "./dist/types/icons/24x24/Stroked/PlayCircle.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/PlayCircle.js",
+      "import": "./dist/esm/icons/24x24/Stroked/PlayCircle.js",
+      "default": "./dist/esm/icons/24x24/Stroked/PlayCircle.js"
+    },
     "./icons/24x24/Stroked/Plus": {
       "types": "./dist/types/icons/24x24/Stroked/Plus.d.ts",
       "require": "./dist/cjs/icons/24x24/Stroked/Plus.js",
       "import": "./dist/esm/icons/24x24/Stroked/Plus.js",
       "default": "./dist/esm/icons/24x24/Stroked/Plus.js"
+    },
+    "./icons/24x24/Stroked/PlusCircle": {
+      "types": "./dist/types/icons/24x24/Stroked/PlusCircle.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/PlusCircle.js",
+      "import": "./dist/esm/icons/24x24/Stroked/PlusCircle.js",
+      "default": "./dist/esm/icons/24x24/Stroked/PlusCircle.js"
     },
     "./icons/24x24/Stroked/Progress": {
       "types": "./dist/types/icons/24x24/Stroked/Progress.d.ts",
@@ -973,29 +1435,11 @@
       "import": "./dist/esm/icons/24x24/Stroked/Progress.js",
       "default": "./dist/esm/icons/24x24/Stroked/Progress.js"
     },
-    "./icons/24x24/Stroked/QuickView": {
-      "types": "./dist/types/icons/24x24/Stroked/QuickView.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/QuickView.js",
-      "import": "./dist/esm/icons/24x24/Stroked/QuickView.js",
-      "default": "./dist/esm/icons/24x24/Stroked/QuickView.js"
-    },
-    "./icons/24x24/Stroked/QuickView2": {
-      "types": "./dist/types/icons/24x24/Stroked/QuickView2.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/QuickView2.js",
-      "import": "./dist/esm/icons/24x24/Stroked/QuickView2.js",
-      "default": "./dist/esm/icons/24x24/Stroked/QuickView2.js"
-    },
     "./icons/24x24/Stroked/Repeat": {
       "types": "./dist/types/icons/24x24/Stroked/Repeat.d.ts",
       "require": "./dist/cjs/icons/24x24/Stroked/Repeat.js",
       "import": "./dist/esm/icons/24x24/Stroked/Repeat.js",
       "default": "./dist/esm/icons/24x24/Stroked/Repeat.js"
-    },
-    "./icons/24x24/Stroked/Revise": {
-      "types": "./dist/types/icons/24x24/Stroked/Revise.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Revise.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Revise.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Revise.js"
     },
     "./icons/24x24/Stroked/Rubles": {
       "types": "./dist/types/icons/24x24/Stroked/Rubles.d.ts",
@@ -1009,6 +1453,12 @@
       "import": "./dist/esm/icons/24x24/Stroked/SalaryStatement.js",
       "default": "./dist/esm/icons/24x24/Stroked/SalaryStatement.js"
     },
+    "./icons/24x24/Stroked/Scissors": {
+      "types": "./dist/types/icons/24x24/Stroked/Scissors.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/Scissors.js",
+      "import": "./dist/esm/icons/24x24/Stroked/Scissors.js",
+      "default": "./dist/esm/icons/24x24/Stroked/Scissors.js"
+    },
     "./icons/24x24/Stroked/Screamer": {
       "types": "./dist/types/icons/24x24/Stroked/Screamer.d.ts",
       "require": "./dist/cjs/icons/24x24/Stroked/Screamer.js",
@@ -1021,17 +1471,11 @@
       "import": "./dist/esm/icons/24x24/Stroked/Screwdriver.js",
       "default": "./dist/esm/icons/24x24/Stroked/Screwdriver.js"
     },
-    "./icons/24x24/Stroked/Search": {
-      "types": "./dist/types/icons/24x24/Stroked/Search.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Search.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Search.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Search.js"
-    },
-    "./icons/24x24/Stroked/Settings": {
-      "types": "./dist/types/icons/24x24/Stroked/Settings.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Settings.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Settings.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Settings.js"
+    "./icons/24x24/Stroked/Share": {
+      "types": "./dist/types/icons/24x24/Stroked/Share.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/Share.js",
+      "import": "./dist/esm/icons/24x24/Stroked/Share.js",
+      "default": "./dist/esm/icons/24x24/Stroked/Share.js"
     },
     "./icons/24x24/Stroked/ShareAndroid": {
       "types": "./dist/types/icons/24x24/Stroked/ShareAndroid.d.ts",
@@ -1039,29 +1483,11 @@
       "import": "./dist/esm/icons/24x24/Stroked/ShareAndroid.js",
       "default": "./dist/esm/icons/24x24/Stroked/ShareAndroid.js"
     },
-    "./icons/24x24/Stroked/ShareIOs": {
-      "types": "./dist/types/icons/24x24/Stroked/ShareIOs.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/ShareIOs.js",
-      "import": "./dist/esm/icons/24x24/Stroked/ShareIOs.js",
-      "default": "./dist/esm/icons/24x24/Stroked/ShareIOs.js"
-    },
-    "./icons/24x24/Stroked/Sima": {
-      "types": "./dist/types/icons/24x24/Stroked/Sima.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Sima.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Sima.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Sima.js"
-    },
-    "./icons/24x24/Stroked/Size": {
-      "types": "./dist/types/icons/24x24/Stroked/Size.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Size.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Size.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Size.js"
-    },
-    "./icons/24x24/Stroked/Skype": {
-      "types": "./dist/types/icons/24x24/Stroked/Skype.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Skype.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Skype.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Skype.js"
+    "./icons/24x24/Stroked/ShareiOs": {
+      "types": "./dist/types/icons/24x24/Stroked/ShareiOs.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/ShareiOs.js",
+      "import": "./dist/esm/icons/24x24/Stroked/ShareiOs.js",
+      "default": "./dist/esm/icons/24x24/Stroked/ShareiOs.js"
     },
     "./icons/24x24/Stroked/Sort": {
       "types": "./dist/types/icons/24x24/Stroked/Sort.d.ts",
@@ -1075,17 +1501,23 @@
       "import": "./dist/esm/icons/24x24/Stroked/Sort2.js",
       "default": "./dist/esm/icons/24x24/Stroked/Sort2.js"
     },
+    "./icons/24x24/Stroked/Speaker": {
+      "types": "./dist/types/icons/24x24/Stroked/Speaker.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/Speaker.js",
+      "import": "./dist/esm/icons/24x24/Stroked/Speaker.js",
+      "default": "./dist/esm/icons/24x24/Stroked/Speaker.js"
+    },
     "./icons/24x24/Stroked/SpeakerOff": {
       "types": "./dist/types/icons/24x24/Stroked/SpeakerOff.d.ts",
       "require": "./dist/cjs/icons/24x24/Stroked/SpeakerOff.js",
       "import": "./dist/esm/icons/24x24/Stroked/SpeakerOff.js",
       "default": "./dist/esm/icons/24x24/Stroked/SpeakerOff.js"
     },
-    "./icons/24x24/Stroked/SpeakerOn": {
-      "types": "./dist/types/icons/24x24/Stroked/SpeakerOn.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/SpeakerOn.js",
-      "import": "./dist/esm/icons/24x24/Stroked/SpeakerOn.js",
-      "default": "./dist/esm/icons/24x24/Stroked/SpeakerOn.js"
+    "./icons/24x24/Stroked/SpeechBubble": {
+      "types": "./dist/types/icons/24x24/Stroked/SpeechBubble.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/SpeechBubble.js",
+      "import": "./dist/esm/icons/24x24/Stroked/SpeechBubble.js",
+      "default": "./dist/esm/icons/24x24/Stroked/SpeechBubble.js"
     },
     "./icons/24x24/Stroked/Spruce": {
       "types": "./dist/types/icons/24x24/Stroked/Spruce.d.ts",
@@ -1099,11 +1531,11 @@
       "import": "./dist/esm/icons/24x24/Stroked/Statement.js",
       "default": "./dist/esm/icons/24x24/Stroked/Statement.js"
     },
-    "./icons/24x24/Stroked/Taxes": {
-      "types": "./dist/types/icons/24x24/Stroked/Taxes.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Taxes.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Taxes.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Taxes.js"
+    "./icons/24x24/Stroked/Sun": {
+      "types": "./dist/types/icons/24x24/Stroked/Sun.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/Sun.js",
+      "import": "./dist/esm/icons/24x24/Stroked/Sun.js",
+      "default": "./dist/esm/icons/24x24/Stroked/Sun.js"
     },
     "./icons/24x24/Stroked/Thermometer": {
       "types": "./dist/types/icons/24x24/Stroked/Thermometer.d.ts",
@@ -1116,6 +1548,18 @@
       "require": "./dist/cjs/icons/24x24/Stroked/ThumbsUp.js",
       "import": "./dist/esm/icons/24x24/Stroked/ThumbsUp.js",
       "default": "./dist/esm/icons/24x24/Stroked/ThumbsUp.js"
+    },
+    "./icons/24x24/Stroked/Tooltip": {
+      "types": "./dist/types/icons/24x24/Stroked/Tooltip.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/Tooltip.js",
+      "import": "./dist/esm/icons/24x24/Stroked/Tooltip.js",
+      "default": "./dist/esm/icons/24x24/Stroked/Tooltip.js"
+    },
+    "./icons/24x24/Stroked/TooltipPlus": {
+      "types": "./dist/types/icons/24x24/Stroked/TooltipPlus.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/TooltipPlus.js",
+      "import": "./dist/esm/icons/24x24/Stroked/TooltipPlus.js",
+      "default": "./dist/esm/icons/24x24/Stroked/TooltipPlus.js"
     },
     "./icons/24x24/Stroked/TouchId": {
       "types": "./dist/types/icons/24x24/Stroked/TouchId.d.ts",
@@ -1153,29 +1597,47 @@
       "import": "./dist/esm/icons/24x24/Stroked/UnknownType.js",
       "default": "./dist/esm/icons/24x24/Stroked/UnknownType.js"
     },
+    "./icons/24x24/Stroked/Unlock": {
+      "types": "./dist/types/icons/24x24/Stroked/Unlock.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/Unlock.js",
+      "import": "./dist/esm/icons/24x24/Stroked/Unlock.js",
+      "default": "./dist/esm/icons/24x24/Stroked/Unlock.js"
+    },
     "./icons/24x24/Stroked/Upload": {
       "types": "./dist/types/icons/24x24/Stroked/Upload.d.ts",
       "require": "./dist/cjs/icons/24x24/Stroked/Upload.js",
       "import": "./dist/esm/icons/24x24/Stroked/Upload.js",
       "default": "./dist/esm/icons/24x24/Stroked/Upload.js"
     },
-    "./icons/24x24/Stroked/View1": {
-      "types": "./dist/types/icons/24x24/Stroked/View1.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/View1.js",
-      "import": "./dist/esm/icons/24x24/Stroked/View1.js",
-      "default": "./dist/esm/icons/24x24/Stroked/View1.js"
+    "./icons/24x24/Stroked/ViewCards": {
+      "types": "./dist/types/icons/24x24/Stroked/ViewCards.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/ViewCards.js",
+      "import": "./dist/esm/icons/24x24/Stroked/ViewCards.js",
+      "default": "./dist/esm/icons/24x24/Stroked/ViewCards.js"
     },
-    "./icons/24x24/Stroked/View2": {
-      "types": "./dist/types/icons/24x24/Stroked/View2.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/View2.js",
-      "import": "./dist/esm/icons/24x24/Stroked/View2.js",
-      "default": "./dist/esm/icons/24x24/Stroked/View2.js"
+    "./icons/24x24/Stroked/ViewGrid": {
+      "types": "./dist/types/icons/24x24/Stroked/ViewGrid.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/ViewGrid.js",
+      "import": "./dist/esm/icons/24x24/Stroked/ViewGrid.js",
+      "default": "./dist/esm/icons/24x24/Stroked/ViewGrid.js"
     },
-    "./icons/24x24/Stroked/View3": {
-      "types": "./dist/types/icons/24x24/Stroked/View3.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/View3.js",
-      "import": "./dist/esm/icons/24x24/Stroked/View3.js",
-      "default": "./dist/esm/icons/24x24/Stroked/View3.js"
+    "./icons/24x24/Stroked/ViewLarge": {
+      "types": "./dist/types/icons/24x24/Stroked/ViewLarge.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/ViewLarge.js",
+      "import": "./dist/esm/icons/24x24/Stroked/ViewLarge.js",
+      "default": "./dist/esm/icons/24x24/Stroked/ViewLarge.js"
+    },
+    "./icons/24x24/Stroked/ViewList": {
+      "types": "./dist/types/icons/24x24/Stroked/ViewList.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/ViewList.js",
+      "import": "./dist/esm/icons/24x24/Stroked/ViewList.js",
+      "default": "./dist/esm/icons/24x24/Stroked/ViewList.js"
+    },
+    "./icons/24x24/Stroked/ViewQuick": {
+      "types": "./dist/types/icons/24x24/Stroked/ViewQuick.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/ViewQuick.js",
+      "import": "./dist/esm/icons/24x24/Stroked/ViewQuick.js",
+      "default": "./dist/esm/icons/24x24/Stroked/ViewQuick.js"
     },
     "./icons/24x24/Stroked/Wallet": {
       "types": "./dist/types/icons/24x24/Stroked/Wallet.d.ts",
@@ -1189,6 +1651,102 @@
       "import": "./dist/esm/icons/24x24/Stroked/Watch.js",
       "default": "./dist/esm/icons/24x24/Stroked/Watch.js"
     },
+    "./icons/32x32/Colorful/Logo5Post": {
+      "types": "./dist/types/icons/32x32/Colorful/Logo5Post.d.ts",
+      "require": "./dist/cjs/icons/32x32/Colorful/Logo5Post.js",
+      "import": "./dist/esm/icons/32x32/Colorful/Logo5Post.js",
+      "default": "./dist/esm/icons/32x32/Colorful/Logo5Post.js"
+    },
+    "./icons/32x32/Colorful/LogoAptekaPlus": {
+      "types": "./dist/types/icons/32x32/Colorful/LogoAptekaPlus.d.ts",
+      "require": "./dist/cjs/icons/32x32/Colorful/LogoAptekaPlus.js",
+      "import": "./dist/esm/icons/32x32/Colorful/LogoAptekaPlus.js",
+      "default": "./dist/esm/icons/32x32/Colorful/LogoAptekaPlus.js"
+    },
+    "./icons/32x32/Colorful/LogoBoxberry": {
+      "types": "./dist/types/icons/32x32/Colorful/LogoBoxberry.d.ts",
+      "require": "./dist/cjs/icons/32x32/Colorful/LogoBoxberry.js",
+      "import": "./dist/esm/icons/32x32/Colorful/LogoBoxberry.js",
+      "default": "./dist/esm/icons/32x32/Colorful/LogoBoxberry.js"
+    },
+    "./icons/32x32/Colorful/LogoDellin": {
+      "types": "./dist/types/icons/32x32/Colorful/LogoDellin.d.ts",
+      "require": "./dist/cjs/icons/32x32/Colorful/LogoDellin.js",
+      "import": "./dist/esm/icons/32x32/Colorful/LogoDellin.js",
+      "default": "./dist/esm/icons/32x32/Colorful/LogoDellin.js"
+    },
+    "./icons/32x32/Colorful/LogoDpd": {
+      "types": "./dist/types/icons/32x32/Colorful/LogoDpd.d.ts",
+      "require": "./dist/cjs/icons/32x32/Colorful/LogoDpd.js",
+      "import": "./dist/esm/icons/32x32/Colorful/LogoDpd.js",
+      "default": "./dist/esm/icons/32x32/Colorful/LogoDpd.js"
+    },
+    "./icons/32x32/Colorful/LogoGalamart": {
+      "types": "./dist/types/icons/32x32/Colorful/LogoGalamart.d.ts",
+      "require": "./dist/cjs/icons/32x32/Colorful/LogoGalamart.js",
+      "import": "./dist/esm/icons/32x32/Colorful/LogoGalamart.js",
+      "default": "./dist/esm/icons/32x32/Colorful/LogoGalamart.js"
+    },
+    "./icons/32x32/Colorful/LogoOzon": {
+      "types": "./dist/types/icons/32x32/Colorful/LogoOzon.d.ts",
+      "require": "./dist/cjs/icons/32x32/Colorful/LogoOzon.js",
+      "import": "./dist/esm/icons/32x32/Colorful/LogoOzon.js",
+      "default": "./dist/esm/icons/32x32/Colorful/LogoOzon.js"
+    },
+    "./icons/32x32/Colorful/LogoPickPoint": {
+      "types": "./dist/types/icons/32x32/Colorful/LogoPickPoint.d.ts",
+      "require": "./dist/cjs/icons/32x32/Colorful/LogoPickPoint.js",
+      "import": "./dist/esm/icons/32x32/Colorful/LogoPickPoint.js",
+      "default": "./dist/esm/icons/32x32/Colorful/LogoPickPoint.js"
+    },
+    "./icons/32x32/Colorful/LogoPost": {
+      "types": "./dist/types/icons/32x32/Colorful/LogoPost.d.ts",
+      "require": "./dist/cjs/icons/32x32/Colorful/LogoPost.js",
+      "import": "./dist/esm/icons/32x32/Colorful/LogoPost.js",
+      "default": "./dist/esm/icons/32x32/Colorful/LogoPost.js"
+    },
+    "./icons/32x32/Colorful/LogoSberLogistic": {
+      "types": "./dist/types/icons/32x32/Colorful/LogoSberLogistic.d.ts",
+      "require": "./dist/cjs/icons/32x32/Colorful/LogoSberLogistic.js",
+      "import": "./dist/esm/icons/32x32/Colorful/LogoSberLogistic.js",
+      "default": "./dist/esm/icons/32x32/Colorful/LogoSberLogistic.js"
+    },
+    "./icons/32x32/Colorful/LogoSdek": {
+      "types": "./dist/types/icons/32x32/Colorful/LogoSdek.d.ts",
+      "require": "./dist/cjs/icons/32x32/Colorful/LogoSdek.js",
+      "import": "./dist/esm/icons/32x32/Colorful/LogoSdek.js",
+      "default": "./dist/esm/icons/32x32/Colorful/LogoSdek.js"
+    },
+    "./icons/32x32/Colorful/LogoSima": {
+      "types": "./dist/types/icons/32x32/Colorful/LogoSima.d.ts",
+      "require": "./dist/cjs/icons/32x32/Colorful/LogoSima.js",
+      "import": "./dist/esm/icons/32x32/Colorful/LogoSima.js",
+      "default": "./dist/esm/icons/32x32/Colorful/LogoSima.js"
+    },
+    "./icons/32x32/Colorful/LogoSimaBlue": {
+      "types": "./dist/types/icons/32x32/Colorful/LogoSimaBlue.d.ts",
+      "require": "./dist/cjs/icons/32x32/Colorful/LogoSimaBlue.js",
+      "import": "./dist/esm/icons/32x32/Colorful/LogoSimaBlue.js",
+      "default": "./dist/esm/icons/32x32/Colorful/LogoSimaBlue.js"
+    },
+    "./icons/32x32/Colorful/LogoSimaGreen": {
+      "types": "./dist/types/icons/32x32/Colorful/LogoSimaGreen.d.ts",
+      "require": "./dist/cjs/icons/32x32/Colorful/LogoSimaGreen.js",
+      "import": "./dist/esm/icons/32x32/Colorful/LogoSimaGreen.js",
+      "default": "./dist/esm/icons/32x32/Colorful/LogoSimaGreen.js"
+    },
+    "./icons/32x32/Colorful/LogoSimaPurple": {
+      "types": "./dist/types/icons/32x32/Colorful/LogoSimaPurple.d.ts",
+      "require": "./dist/cjs/icons/32x32/Colorful/LogoSimaPurple.js",
+      "import": "./dist/esm/icons/32x32/Colorful/LogoSimaPurple.js",
+      "default": "./dist/esm/icons/32x32/Colorful/LogoSimaPurple.js"
+    },
+    "./icons/32x32/Colorful/LogoYandex": {
+      "types": "./dist/types/icons/32x32/Colorful/LogoYandex.d.ts",
+      "require": "./dist/cjs/icons/32x32/Colorful/LogoYandex.js",
+      "import": "./dist/esm/icons/32x32/Colorful/LogoYandex.js",
+      "default": "./dist/esm/icons/32x32/Colorful/LogoYandex.js"
+    },
     "./icons/40x40/Filled/Pause": {
       "types": "./dist/types/icons/40x40/Filled/Pause.d.ts",
       "require": "./dist/cjs/icons/40x40/Filled/Pause.js",
@@ -1201,17 +1759,125 @@
       "import": "./dist/esm/icons/40x40/Filled/Play.js",
       "default": "./dist/esm/icons/40x40/Filled/Play.js"
     },
-    "./icons/40x40/Filled/Round360": {
-      "types": "./dist/types/icons/40x40/Filled/Round360.d.ts",
-      "require": "./dist/cjs/icons/40x40/Filled/Round360.js",
-      "import": "./dist/esm/icons/40x40/Filled/Round360.js",
-      "default": "./dist/esm/icons/40x40/Filled/Round360.js"
+    "./icons/40x40/Filled/Viewing360": {
+      "types": "./dist/types/icons/40x40/Filled/Viewing360.d.ts",
+      "require": "./dist/cjs/icons/40x40/Filled/Viewing360.js",
+      "import": "./dist/esm/icons/40x40/Filled/Viewing360.js",
+      "default": "./dist/esm/icons/40x40/Filled/Viewing360.js"
+    },
+    "./icons/40x40/Filled/Viewing360Perspective": {
+      "types": "./dist/types/icons/40x40/Filled/Viewing360Perspective.d.ts",
+      "require": "./dist/cjs/icons/40x40/Filled/Viewing360Perspective.js",
+      "import": "./dist/esm/icons/40x40/Filled/Viewing360Perspective.js",
+      "default": "./dist/esm/icons/40x40/Filled/Viewing360Perspective.js"
+    },
+    "./icons/40x40/Stroked/Camera": {
+      "types": "./dist/types/icons/40x40/Stroked/Camera.d.ts",
+      "require": "./dist/cjs/icons/40x40/Stroked/Camera.js",
+      "import": "./dist/esm/icons/40x40/Stroked/Camera.js",
+      "default": "./dist/esm/icons/40x40/Stroked/Camera.js"
+    },
+    "./icons/40x40/Stroked/Cup": {
+      "types": "./dist/types/icons/40x40/Stroked/Cup.d.ts",
+      "require": "./dist/cjs/icons/40x40/Stroked/Cup.js",
+      "import": "./dist/esm/icons/40x40/Stroked/Cup.js",
+      "default": "./dist/esm/icons/40x40/Stroked/Cup.js"
     },
     "./icons/40x40/Stroked/ImageBroken": {
       "types": "./dist/types/icons/40x40/Stroked/ImageBroken.d.ts",
       "require": "./dist/cjs/icons/40x40/Stroked/ImageBroken.js",
       "import": "./dist/esm/icons/40x40/Stroked/ImageBroken.js",
       "default": "./dist/esm/icons/40x40/Stroked/ImageBroken.js"
+    },
+    "./icons/40x40/Stroked/Lock": {
+      "types": "./dist/types/icons/40x40/Stroked/Lock.d.ts",
+      "require": "./dist/cjs/icons/40x40/Stroked/Lock.js",
+      "import": "./dist/esm/icons/40x40/Stroked/Lock.js",
+      "default": "./dist/esm/icons/40x40/Stroked/Lock.js"
+    },
+    "./icons/40x40/Stroked/Map": {
+      "types": "./dist/types/icons/40x40/Stroked/Map.d.ts",
+      "require": "./dist/cjs/icons/40x40/Stroked/Map.js",
+      "import": "./dist/esm/icons/40x40/Stroked/Map.js",
+      "default": "./dist/esm/icons/40x40/Stroked/Map.js"
+    },
+    "./icons/40x40/Stroked/Matryoshka": {
+      "types": "./dist/types/icons/40x40/Stroked/Matryoshka.d.ts",
+      "require": "./dist/cjs/icons/40x40/Stroked/Matryoshka.js",
+      "import": "./dist/esm/icons/40x40/Stroked/Matryoshka.js",
+      "default": "./dist/esm/icons/40x40/Stroked/Matryoshka.js"
+    },
+    "./icons/40x40/Stroked/PaymentCards": {
+      "types": "./dist/types/icons/40x40/Stroked/PaymentCards.d.ts",
+      "require": "./dist/cjs/icons/40x40/Stroked/PaymentCards.js",
+      "import": "./dist/esm/icons/40x40/Stroked/PaymentCards.js",
+      "default": "./dist/esm/icons/40x40/Stroked/PaymentCards.js"
+    },
+    "./icons/40x40/Stroked/PaymentMoney": {
+      "types": "./dist/types/icons/40x40/Stroked/PaymentMoney.d.ts",
+      "require": "./dist/cjs/icons/40x40/Stroked/PaymentMoney.js",
+      "import": "./dist/esm/icons/40x40/Stroked/PaymentMoney.js",
+      "default": "./dist/esm/icons/40x40/Stroked/PaymentMoney.js"
+    },
+    "./icons/40x40/Stroked/Paymentсash": {
+      "types": "./dist/types/icons/40x40/Stroked/Paymentсash.d.ts",
+      "require": "./dist/cjs/icons/40x40/Stroked/Paymentсash.js",
+      "import": "./dist/esm/icons/40x40/Stroked/Paymentсash.js",
+      "default": "./dist/esm/icons/40x40/Stroked/Paymentсash.js"
+    },
+    "./icons/40x40/Stroked/Paymentсheck": {
+      "types": "./dist/types/icons/40x40/Stroked/Paymentсheck.d.ts",
+      "require": "./dist/cjs/icons/40x40/Stroked/Paymentсheck.js",
+      "import": "./dist/esm/icons/40x40/Stroked/Paymentсheck.js",
+      "default": "./dist/esm/icons/40x40/Stroked/Paymentсheck.js"
+    },
+    "./icons/40x40/Stroked/People": {
+      "types": "./dist/types/icons/40x40/Stroked/People.d.ts",
+      "require": "./dist/cjs/icons/40x40/Stroked/People.js",
+      "import": "./dist/esm/icons/40x40/Stroked/People.js",
+      "default": "./dist/esm/icons/40x40/Stroked/People.js"
+    },
+    "./icons/40x40/Stroked/Planet": {
+      "types": "./dist/types/icons/40x40/Stroked/Planet.d.ts",
+      "require": "./dist/cjs/icons/40x40/Stroked/Planet.js",
+      "import": "./dist/esm/icons/40x40/Stroked/Planet.js",
+      "default": "./dist/esm/icons/40x40/Stroked/Planet.js"
+    },
+    "./icons/40x40/Stroked/PlayRound": {
+      "types": "./dist/types/icons/40x40/Stroked/PlayRound.d.ts",
+      "require": "./dist/cjs/icons/40x40/Stroked/PlayRound.js",
+      "import": "./dist/esm/icons/40x40/Stroked/PlayRound.js",
+      "default": "./dist/esm/icons/40x40/Stroked/PlayRound.js"
+    },
+    "./icons/40x40/Stroked/Products": {
+      "types": "./dist/types/icons/40x40/Stroked/Products.d.ts",
+      "require": "./dist/cjs/icons/40x40/Stroked/Products.js",
+      "import": "./dist/esm/icons/40x40/Stroked/Products.js",
+      "default": "./dist/esm/icons/40x40/Stroked/Products.js"
+    },
+    "./icons/40x40/Stroked/Purchases": {
+      "types": "./dist/types/icons/40x40/Stroked/Purchases.d.ts",
+      "require": "./dist/cjs/icons/40x40/Stroked/Purchases.js",
+      "import": "./dist/esm/icons/40x40/Stroked/Purchases.js",
+      "default": "./dist/esm/icons/40x40/Stroked/Purchases.js"
+    },
+    "./icons/40x40/Stroked/Sad": {
+      "types": "./dist/types/icons/40x40/Stroked/Sad.d.ts",
+      "require": "./dist/cjs/icons/40x40/Stroked/Sad.js",
+      "import": "./dist/esm/icons/40x40/Stroked/Sad.js",
+      "default": "./dist/esm/icons/40x40/Stroked/Sad.js"
+    },
+    "./icons/40x40/Stroked/Timer": {
+      "types": "./dist/types/icons/40x40/Stroked/Timer.d.ts",
+      "require": "./dist/cjs/icons/40x40/Stroked/Timer.js",
+      "import": "./dist/esm/icons/40x40/Stroked/Timer.js",
+      "default": "./dist/esm/icons/40x40/Stroked/Timer.js"
+    },
+    "./icons/40x40/Stroked/TooltipLike": {
+      "types": "./dist/types/icons/40x40/Stroked/TooltipLike.d.ts",
+      "require": "./dist/cjs/icons/40x40/Stroked/TooltipLike.js",
+      "import": "./dist/esm/icons/40x40/Stroked/TooltipLike.js",
+      "default": "./dist/esm/icons/40x40/Stroked/TooltipLike.js"
     },
     "./icons/64x64/Colorful/TouchScrollX": {
       "types": "./dist/types/icons/64x64/Colorful/TouchScrollX.d.ts",
