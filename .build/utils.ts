@@ -45,6 +45,22 @@ export interface TSXGenerated extends SVGOptimized {
   tsxSource: string;
 }
 
+export function validateFilenames(filenames: string[]): string[] {
+  const errors: string[] = [];
+
+  for (const item of filenames) {
+    if (item.match(/[А-я]/g)) {
+      errors.push(`Filename must not contain cyrillic: ${item}`);
+    }
+  }
+
+  if (errors.length > 0) {
+    throw new Error(`Filenames validation:\n${errors.join('\n')}`);
+  }
+
+  return filenames;
+}
+
 export async function prebuildIcon(svgPath: string) {
   return Promise.resolve(svgPath)
     .then(defineIcon)

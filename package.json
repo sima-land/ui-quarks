@@ -877,6 +877,12 @@
       "import": "./dist/esm/icons/24x24/Filled/Tank.js",
       "default": "./dist/esm/icons/24x24/Filled/Tank.js"
     },
+    "./icons/24x24/Filled/Tm": {
+      "types": "./dist/types/icons/24x24/Filled/Tm.d.ts",
+      "require": "./dist/cjs/icons/24x24/Filled/Tm.js",
+      "import": "./dist/esm/icons/24x24/Filled/Tm.js",
+      "default": "./dist/esm/icons/24x24/Filled/Tm.js"
+    },
     "./icons/24x24/Filled/Tulip": {
       "types": "./dist/types/icons/24x24/Filled/Tulip.d.ts",
       "require": "./dist/cjs/icons/24x24/Filled/Tulip.js",
@@ -888,12 +894,6 @@
       "require": "./dist/cjs/icons/24x24/Filled/Wedding.js",
       "import": "./dist/esm/icons/24x24/Filled/Wedding.js",
       "default": "./dist/esm/icons/24x24/Filled/Wedding.js"
-    },
-    "./icons/24x24/Filled/Тм": {
-      "types": "./dist/types/icons/24x24/Filled/Тм.d.ts",
-      "require": "./dist/cjs/icons/24x24/Filled/Тм.js",
-      "import": "./dist/esm/icons/24x24/Filled/Тм.js",
-      "default": "./dist/esm/icons/24x24/Filled/Тм.js"
     },
     "./icons/24x24/Stroked/ApiKey": {
       "types": "./dist/types/icons/24x24/Stroked/ApiKey.d.ts",
@@ -1489,17 +1489,17 @@
       "import": "./dist/esm/icons/24x24/Stroked/ShareiOs.js",
       "default": "./dist/esm/icons/24x24/Stroked/ShareiOs.js"
     },
-    "./icons/24x24/Stroked/Sort": {
-      "types": "./dist/types/icons/24x24/Stroked/Sort.d.ts",
-      "require": "./dist/cjs/icons/24x24/Stroked/Sort.js",
-      "import": "./dist/esm/icons/24x24/Stroked/Sort.js",
-      "default": "./dist/esm/icons/24x24/Stroked/Sort.js"
-    },
     "./icons/24x24/Stroked/Sort2": {
       "types": "./dist/types/icons/24x24/Stroked/Sort2.d.ts",
       "require": "./dist/cjs/icons/24x24/Stroked/Sort2.js",
       "import": "./dist/esm/icons/24x24/Stroked/Sort2.js",
       "default": "./dist/esm/icons/24x24/Stroked/Sort2.js"
+    },
+    "./icons/24x24/Stroked/SortUp": {
+      "types": "./dist/types/icons/24x24/Stroked/SortUp.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/SortUp.js",
+      "import": "./dist/esm/icons/24x24/Stroked/SortUp.js",
+      "default": "./dist/esm/icons/24x24/Stroked/SortUp.js"
     },
     "./icons/24x24/Stroked/Speaker": {
       "types": "./dist/types/icons/24x24/Stroked/Speaker.d.ts",
@@ -1813,23 +1813,23 @@
       "import": "./dist/esm/icons/40x40/Stroked/PaymentCards.js",
       "default": "./dist/esm/icons/40x40/Stroked/PaymentCards.js"
     },
+    "./icons/40x40/Stroked/PaymentCash": {
+      "types": "./dist/types/icons/40x40/Stroked/PaymentCash.d.ts",
+      "require": "./dist/cjs/icons/40x40/Stroked/PaymentCash.js",
+      "import": "./dist/esm/icons/40x40/Stroked/PaymentCash.js",
+      "default": "./dist/esm/icons/40x40/Stroked/PaymentCash.js"
+    },
+    "./icons/40x40/Stroked/PaymentCheck": {
+      "types": "./dist/types/icons/40x40/Stroked/PaymentCheck.d.ts",
+      "require": "./dist/cjs/icons/40x40/Stroked/PaymentCheck.js",
+      "import": "./dist/esm/icons/40x40/Stroked/PaymentCheck.js",
+      "default": "./dist/esm/icons/40x40/Stroked/PaymentCheck.js"
+    },
     "./icons/40x40/Stroked/PaymentMoney": {
       "types": "./dist/types/icons/40x40/Stroked/PaymentMoney.d.ts",
       "require": "./dist/cjs/icons/40x40/Stroked/PaymentMoney.js",
       "import": "./dist/esm/icons/40x40/Stroked/PaymentMoney.js",
       "default": "./dist/esm/icons/40x40/Stroked/PaymentMoney.js"
-    },
-    "./icons/40x40/Stroked/Paymentсash": {
-      "types": "./dist/types/icons/40x40/Stroked/Paymentсash.d.ts",
-      "require": "./dist/cjs/icons/40x40/Stroked/Paymentсash.js",
-      "import": "./dist/esm/icons/40x40/Stroked/Paymentсash.js",
-      "default": "./dist/esm/icons/40x40/Stroked/Paymentсash.js"
-    },
-    "./icons/40x40/Stroked/Paymentсheck": {
-      "types": "./dist/types/icons/40x40/Stroked/Paymentсheck.d.ts",
-      "require": "./dist/cjs/icons/40x40/Stroked/Paymentсheck.js",
-      "import": "./dist/esm/icons/40x40/Stroked/Paymentсheck.js",
-      "default": "./dist/esm/icons/40x40/Stroked/Paymentсheck.js"
     },
     "./icons/40x40/Stroked/People": {
       "types": "./dist/types/icons/40x40/Stroked/People.d.ts",
