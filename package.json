@@ -145,29 +145,29 @@
       "import": "./dist/esm/icons/16x16/Colorful/LogoYandex.js",
       "default": "./dist/esm/icons/16x16/Colorful/LogoYandex.js"
     },
-    "./icons/16x16/Filled/Add": {
-      "types": "./dist/types/icons/16x16/Filled/Add.d.ts",
-      "require": "./dist/cjs/icons/16x16/Filled/Add.js",
-      "import": "./dist/esm/icons/16x16/Filled/Add.js",
-      "default": "./dist/esm/icons/16x16/Filled/Add.js"
-    },
     "./icons/16x16/Filled/Camera": {
       "types": "./dist/types/icons/16x16/Filled/Camera.d.ts",
       "require": "./dist/cjs/icons/16x16/Filled/Camera.js",
       "import": "./dist/esm/icons/16x16/Filled/Camera.js",
       "default": "./dist/esm/icons/16x16/Filled/Camera.js"
     },
-    "./icons/16x16/Filled/CheckCircle": {
-      "types": "./dist/types/icons/16x16/Filled/CheckCircle.d.ts",
-      "require": "./dist/cjs/icons/16x16/Filled/CheckCircle.js",
-      "import": "./dist/esm/icons/16x16/Filled/CheckCircle.js",
-      "default": "./dist/esm/icons/16x16/Filled/CheckCircle.js"
+    "./icons/16x16/Filled/CircleAdd": {
+      "types": "./dist/types/icons/16x16/Filled/CircleAdd.d.ts",
+      "require": "./dist/cjs/icons/16x16/Filled/CircleAdd.js",
+      "import": "./dist/esm/icons/16x16/Filled/CircleAdd.js",
+      "default": "./dist/esm/icons/16x16/Filled/CircleAdd.js"
     },
-    "./icons/16x16/Filled/Cross": {
-      "types": "./dist/types/icons/16x16/Filled/Cross.d.ts",
-      "require": "./dist/cjs/icons/16x16/Filled/Cross.js",
-      "import": "./dist/esm/icons/16x16/Filled/Cross.js",
-      "default": "./dist/esm/icons/16x16/Filled/Cross.js"
+    "./icons/16x16/Filled/CircleCheck": {
+      "types": "./dist/types/icons/16x16/Filled/CircleCheck.d.ts",
+      "require": "./dist/cjs/icons/16x16/Filled/CircleCheck.js",
+      "import": "./dist/esm/icons/16x16/Filled/CircleCheck.js",
+      "default": "./dist/esm/icons/16x16/Filled/CircleCheck.js"
+    },
+    "./icons/16x16/Filled/CircleCross": {
+      "types": "./dist/types/icons/16x16/Filled/CircleCross.d.ts",
+      "require": "./dist/cjs/icons/16x16/Filled/CircleCross.js",
+      "import": "./dist/esm/icons/16x16/Filled/CircleCross.js",
+      "default": "./dist/esm/icons/16x16/Filled/CircleCross.js"
     },
     "./icons/16x16/Filled/Dolphin": {
       "types": "./dist/types/icons/16x16/Filled/Dolphin.d.ts",
@@ -607,17 +607,17 @@
       "import": "./dist/esm/icons/24x24/Filled/Card.js",
       "default": "./dist/esm/icons/24x24/Filled/Card.js"
     },
-    "./icons/24x24/Filled/CheckCircle": {
-      "types": "./dist/types/icons/24x24/Filled/CheckCircle.d.ts",
-      "require": "./dist/cjs/icons/24x24/Filled/CheckCircle.js",
-      "import": "./dist/esm/icons/24x24/Filled/CheckCircle.js",
-      "default": "./dist/esm/icons/24x24/Filled/CheckCircle.js"
+    "./icons/24x24/Filled/CircleCheck": {
+      "types": "./dist/types/icons/24x24/Filled/CircleCheck.d.ts",
+      "require": "./dist/cjs/icons/24x24/Filled/CircleCheck.js",
+      "import": "./dist/esm/icons/24x24/Filled/CircleCheck.js",
+      "default": "./dist/esm/icons/24x24/Filled/CircleCheck.js"
     },
-    "./icons/24x24/Filled/Cross": {
-      "types": "./dist/types/icons/24x24/Filled/Cross.d.ts",
-      "require": "./dist/cjs/icons/24x24/Filled/Cross.js",
-      "import": "./dist/esm/icons/24x24/Filled/Cross.js",
-      "default": "./dist/esm/icons/24x24/Filled/Cross.js"
+    "./icons/24x24/Filled/CircleCross": {
+      "types": "./dist/types/icons/24x24/Filled/CircleCross.d.ts",
+      "require": "./dist/cjs/icons/24x24/Filled/CircleCross.js",
+      "import": "./dist/esm/icons/24x24/Filled/CircleCross.js",
+      "default": "./dist/esm/icons/24x24/Filled/CircleCross.js"
     },
     "./icons/24x24/Filled/Crown": {
       "types": "./dist/types/icons/24x24/Filled/Crown.d.ts",
