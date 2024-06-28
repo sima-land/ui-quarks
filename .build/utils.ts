@@ -1,10 +1,11 @@
 import path from 'node:path';
-import glob from 'fast-glob';
-import { readFile, outputFile } from 'fs-extra';
+import fs from 'fs-extra';
 import { transform } from '@svgr/core';
-import { camelCase, upperFirst } from 'lodash';
+import lodash from 'lodash';
 import { optimize, Config as SVGOConfig } from 'svgo';
-import { svgoConfig, svgoConfigColorful, svgrConfig } from './configs';
+import { svgoConfig, svgoConfigColorful, svgrConfig } from './configs.js';
+
+const { camelCase, upperFirst } = lodash;
 
 export interface IconDefined {
   svgSourcePath: string;
@@ -121,7 +122,7 @@ export function defineExportsItem(ctx: OutputDefined): ExportItemDefined {
 async function readSVG(ctx: OutputDefined): Promise<SVGRead> {
   return {
     ...ctx,
-    svgSourceRaw: await readFile(ctx.svgSourcePath, 'utf-8'),
+    svgSourceRaw: await fs.readFile(ctx.svgSourcePath, 'utf-8'),
   };
 }
 
@@ -153,8 +154,8 @@ async function generateTSX(ctx: SVGOptimized): Promise<TSXGenerated> {
 
 async function outputSvgAndTsx(ctx: TSXGenerated): Promise<TSXGenerated> {
   await Promise.all([
-    outputFile(ctx.svgOutputPath, ctx.svgSourceOptimized),
-    outputFile(ctx.tsxOutputPath, ctx.tsxSource),
+    fs.outputFile(ctx.svgOutputPath, ctx.svgSourceOptimized),
+    fs.outputFile(ctx.tsxOutputPath, ctx.tsxSource),
   ]);
 
   return { ...ctx };
