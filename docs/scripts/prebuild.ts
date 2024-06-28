@@ -1,5 +1,5 @@
 import { outputFile } from 'fs-extra';
-import { defineIcons, moduleTemplate } from '../.build';
+import { defineIcons, moduleTemplate } from '../.build/index.js';
 
 defineIcons()
   .then(moduleTemplate)

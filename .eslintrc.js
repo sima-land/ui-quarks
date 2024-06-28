@@ -5,5 +5,6 @@ module.exports = {
     'require-jsdoc': 'off',
     'jsdoc/require-jsdoc': 'off',
     'no-console': 'off',
+    'lodash/import-scope': 'off',
   },
 };
