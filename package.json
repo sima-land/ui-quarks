@@ -1177,6 +1177,12 @@
       "import": "./dist/esm/icons/24x24/Stroked/File.js",
       "default": "./dist/esm/icons/24x24/Stroked/File.js"
     },
+    "./icons/24x24/Stroked/FileAdd": {
+      "types": "./dist/types/icons/24x24/Stroked/FileAdd.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/FileAdd.js",
+      "import": "./dist/esm/icons/24x24/Stroked/FileAdd.js",
+      "default": "./dist/esm/icons/24x24/Stroked/FileAdd.js"
+    },
     "./icons/24x24/Stroked/Files": {
       "types": "./dist/types/icons/24x24/Stroked/Files.d.ts",
       "require": "./dist/cjs/icons/24x24/Stroked/Files.js",
@@ -1441,6 +1447,12 @@
       "import": "./dist/esm/icons/24x24/Stroked/Repeat.js",
       "default": "./dist/esm/icons/24x24/Stroked/Repeat.js"
     },
+    "./icons/24x24/Stroked/ReturnUpBack": {
+      "types": "./dist/types/icons/24x24/Stroked/ReturnUpBack.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/ReturnUpBack.js",
+      "import": "./dist/esm/icons/24x24/Stroked/ReturnUpBack.js",
+      "default": "./dist/esm/icons/24x24/Stroked/ReturnUpBack.js"
+    },
     "./icons/24x24/Stroked/Rubles": {
       "types": "./dist/types/icons/24x24/Stroked/Rubles.d.ts",
       "require": "./dist/cjs/icons/24x24/Stroked/Rubles.js",
@@ -1668,6 +1680,12 @@
       "require": "./dist/cjs/icons/32x32/Colorful/LogoBoxberry.js",
       "import": "./dist/esm/icons/32x32/Colorful/LogoBoxberry.js",
       "default": "./dist/esm/icons/32x32/Colorful/LogoBoxberry.js"
+    },
+    "./icons/32x32/Colorful/LogoDalli": {
+      "types": "./dist/types/icons/32x32/Colorful/LogoDalli.d.ts",
+      "require": "./dist/cjs/icons/32x32/Colorful/LogoDalli.js",
+      "import": "./dist/esm/icons/32x32/Colorful/LogoDalli.js",
+      "default": "./dist/esm/icons/32x32/Colorful/LogoDalli.js"
     },
     "./icons/32x32/Colorful/LogoDellin": {
       "types": "./dist/types/icons/32x32/Colorful/LogoDellin.d.ts",
