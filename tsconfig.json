@@ -2,10 +2,10 @@
   "compilerOptions": {
     "jsx": "react", // ВАЖНО: для того чтобы ESM работал и в react 17 и в react 18
     "target": "ES2021",
+    "module": "NodeNext",
     "esModuleInterop": true,
     "strict": true,
     "skipLibCheck": true,
-    "module": "NodeNext",
   },
-  "exclude": ["node_modules"],
+  "exclude": ["node_modules", "docs"],
 }

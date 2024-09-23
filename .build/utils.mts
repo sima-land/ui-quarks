@@ -3,7 +3,7 @@ import fs from 'fs-extra';
 import { transform } from '@svgr/core';
 import lodash from 'lodash';
 import { optimize, Config as SVGOConfig } from 'svgo';
-import { svgoConfig, svgoConfigColorful, svgrConfig } from './configs.js';
+import { svgoConfig, svgoConfigColorful, svgrConfig } from './configs.mjs';
 
 const { camelCase, upperFirst } = lodash;
 
