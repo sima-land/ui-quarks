@@ -37,7 +37,12 @@ export const svgoConfigColorful: SVGOConfig = {
 };
 
 export const svgrConfig: SVGRConfig = {
-  plugins: ['@svgr/plugin-jsx', '@svgr/plugin-prettier'],
+  plugins: [
+    '@svgr/plugin-jsx',
+
+    // ВАЖНО: временно отключаем так как CJS внутри SVGR не умеет ESM
+    // '@svgr/plugin-prettier'
+  ],
   ref: true,
   jsxRuntime: 'classic', // ВАЖНО: для того чтобы ESM работал и в react 17 и в react 18
   typescript: true,

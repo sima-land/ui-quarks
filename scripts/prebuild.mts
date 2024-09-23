@@ -1,5 +1,5 @@
 import glob from 'fast-glob';
-import { prebuildIcon, validateFilenames } from '../.build/utils.js';
+import { prebuildIcon, validateFilenames } from '../.build/utils.mjs';
 
 glob('src/**/*.svg')
   .then(validateFilenames)

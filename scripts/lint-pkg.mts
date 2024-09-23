@@ -2,7 +2,7 @@ import path from 'node:path';
 import glob from 'fast-glob';
 import fs from 'fs-extra';
 import lodash from 'lodash';
-import { defineExports } from '../.build/utils.js';
+import { defineExports } from '../.build/utils.mjs';
 
 const { isEqual } = lodash;
 

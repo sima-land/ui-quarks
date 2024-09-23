@@ -1,6 +1,6 @@
 import glob from 'fast-glob';
 import { outputFile } from 'fs-extra';
-import { defineExports } from '../.build/utils.js';
+import { defineExports } from '../.build/utils.mjs';
 
 glob('src/**/*.svg')
   .then(defineExports)

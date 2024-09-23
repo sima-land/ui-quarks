@@ -7,7 +7,9 @@
     "preparing": "cd .. && npm run dist && npm pack && cd docs && npm i --no-save ../sima-land-ui-quarks-0.0.0.tgz",
     "prebuild": "node --import=tsimp/import scripts/prebuild.ts",
     "build": "npm run prebuild && npx --node-options='--import=tsimp/import' rspack build --mode=production",
-    "dev": "npx --node-options='--import=tsimp/import' rspack serve --mode=development"
+    "dev": "npx --node-options='--import=tsimp/import' rspack serve --mode=development",
+    "check": "npx tsc -p . --noEmit",
+    "fmt": "npx prettier . --write"
   },
   "keywords": [],
   "author": "www.sima-land.ru team",
@@ -16,20 +18,20 @@
     "@rspack/cli": "^1.0.5",
     "@rspack/core": "^1.0.5",
     "@types/node": "^20.14.9",
-    "@types/react": "^18.0.28",
-    "@types/react-dom": "^18.0.11",
+    "@types/react": "^18.3.8",
+    "@types/react-dom": "^18.3.0",
     "css-loader": "^7.1.2",
     "fast-glob": "^3.2.12",
     "lodash": "^4.17.21",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "sass": "^1.59.3",
     "sass-loader": "^13.2.0",
     "tsimp": "^2.0.11",
     "typescript": "^5.2.2"
   },
   "dependencies": {
-    "@sima-land/ui-nucleons": "^45.0.0-alpha.1",
+    "@sima-land/ui-nucleons": "^45.0.0-alpha.22",
     "clipboard": "^2.0.11"
   }
 }

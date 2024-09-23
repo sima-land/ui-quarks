@@ -1,9 +1,9 @@
-import { readFile, outputFile } from 'fs-extra';
+import fs from 'fs-extra';
 
-readFile('./package.json', 'utf-8')
+await fs.readFile('./package.json', 'utf-8')
   .then(JSON.parse)
   .then(({ name, version, dependencies, peerDependencies }) => ({
-    type: 'module',
+    type: 'commonjs',
 
     // ВАЖНО: копируем эти поля для того чтобы устранить warning'и ModuleFederationPlugin
     name,
@@ -11,5 +11,5 @@ readFile('./package.json', 'utf-8')
     dependencies,
     peerDependencies,
   }))
-  .then(data => outputFile('dist/esm/package.json', JSON.stringify(data, null, 2)))
-  .then(() => console.log('[ui-quarks] ESM pkg emit done'));
+  .then(data => fs.outputFile('dist/cjs/package.json', JSON.stringify(data, null, 2)))
+  .then(() => console.log('[ui-quarks] CJS pkg emit done'));
