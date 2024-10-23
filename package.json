@@ -494,6 +494,12 @@
       "import": "./dist/esm/icons/24x24/Colorful/LogoOk.js",
       "default": "./dist/esm/icons/24x24/Colorful/LogoOk.js"
     },
+    "./icons/24x24/Colorful/LogoPlatiChastyami": {
+      "types": "./dist/types/icons/24x24/Colorful/LogoPlatiChastyami.d.ts",
+      "require": "./dist/cjs/icons/24x24/Colorful/LogoPlatiChastyami.js",
+      "import": "./dist/esm/icons/24x24/Colorful/LogoPlatiChastyami.js",
+      "default": "./dist/esm/icons/24x24/Colorful/LogoPlatiChastyami.js"
+    },
     "./icons/24x24/Colorful/LogoPodeli": {
       "types": "./dist/types/icons/24x24/Colorful/LogoPodeli.d.ts",
       "require": "./dist/cjs/icons/24x24/Colorful/LogoPodeli.js",
@@ -577,6 +583,12 @@
       "require": "./dist/cjs/icons/24x24/Colorful/LogoWhatsApp.js",
       "import": "./dist/esm/icons/24x24/Colorful/LogoWhatsApp.js",
       "default": "./dist/esm/icons/24x24/Colorful/LogoWhatsApp.js"
+    },
+    "./icons/24x24/Colorful/LogoYandexPlus": {
+      "types": "./dist/types/icons/24x24/Colorful/LogoYandexPlus.d.ts",
+      "require": "./dist/cjs/icons/24x24/Colorful/LogoYandexPlus.js",
+      "import": "./dist/esm/icons/24x24/Colorful/LogoYandexPlus.js",
+      "default": "./dist/esm/icons/24x24/Colorful/LogoYandexPlus.js"
     },
     "./icons/24x24/Colorful/LogoYandexSplit": {
       "types": "./dist/types/icons/24x24/Colorful/LogoYandexSplit.d.ts",
@@ -1112,6 +1124,12 @@
       "import": "./dist/esm/icons/24x24/Stroked/Cross.js",
       "default": "./dist/esm/icons/24x24/Stroked/Cross.js"
     },
+    "./icons/24x24/Stroked/Cube": {
+      "types": "./dist/types/icons/24x24/Stroked/Cube.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/Cube.js",
+      "import": "./dist/esm/icons/24x24/Stroked/Cube.js",
+      "default": "./dist/esm/icons/24x24/Stroked/Cube.js"
+    },
     "./icons/24x24/Stroked/Download": {
       "types": "./dist/types/icons/24x24/Stroked/Download.d.ts",
       "require": "./dist/cjs/icons/24x24/Stroked/Download.js",
@@ -1219,6 +1237,12 @@
       "require": "./dist/cjs/icons/24x24/Stroked/Gift.js",
       "import": "./dist/esm/icons/24x24/Stroked/Gift.js",
       "default": "./dist/esm/icons/24x24/Stroked/Gift.js"
+    },
+    "./icons/24x24/Stroked/GiftCard": {
+      "types": "./dist/types/icons/24x24/Stroked/GiftCard.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/GiftCard.js",
+      "import": "./dist/esm/icons/24x24/Stroked/GiftCard.js",
+      "default": "./dist/esm/icons/24x24/Stroked/GiftCard.js"
     },
     "./icons/24x24/Stroked/GovernmentBuilding": {
       "types": "./dist/types/icons/24x24/Stroked/GovernmentBuilding.d.ts",
@@ -1441,6 +1465,12 @@
       "require": "./dist/cjs/icons/24x24/Stroked/Progress.js",
       "import": "./dist/esm/icons/24x24/Stroked/Progress.js",
       "default": "./dist/esm/icons/24x24/Stroked/Progress.js"
+    },
+    "./icons/24x24/Stroked/Promocode": {
+      "types": "./dist/types/icons/24x24/Stroked/Promocode.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/Promocode.js",
+      "import": "./dist/esm/icons/24x24/Stroked/Promocode.js",
+      "default": "./dist/esm/icons/24x24/Stroked/Promocode.js"
     },
     "./icons/24x24/Stroked/Repeat": {
       "types": "./dist/types/icons/24x24/Stroked/Repeat.d.ts",
