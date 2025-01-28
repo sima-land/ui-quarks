@@ -1820,6 +1820,12 @@
       "import": "./dist/esm/icons/40x40/Filled/Viewing360Perspective.js",
       "default": "./dist/esm/icons/40x40/Filled/Viewing360Perspective.js"
     },
+    "./icons/40x40/Stroked/Brand": {
+      "types": "./dist/types/icons/40x40/Stroked/Brand.d.ts",
+      "require": "./dist/cjs/icons/40x40/Stroked/Brand.js",
+      "import": "./dist/esm/icons/40x40/Stroked/Brand.js",
+      "default": "./dist/esm/icons/40x40/Stroked/Brand.js"
+    },
     "./icons/40x40/Stroked/Camera": {
       "types": "./dist/types/icons/40x40/Stroked/Camera.d.ts",
       "require": "./dist/cjs/icons/40x40/Stroked/Camera.js",
@@ -1915,6 +1921,12 @@
       "require": "./dist/cjs/icons/40x40/Stroked/Sad.js",
       "import": "./dist/esm/icons/40x40/Stroked/Sad.js",
       "default": "./dist/esm/icons/40x40/Stroked/Sad.js"
+    },
+    "./icons/40x40/Stroked/Squares": {
+      "types": "./dist/types/icons/40x40/Stroked/Squares.d.ts",
+      "require": "./dist/cjs/icons/40x40/Stroked/Squares.js",
+      "import": "./dist/esm/icons/40x40/Stroked/Squares.js",
+      "default": "./dist/esm/icons/40x40/Stroked/Squares.js"
     },
     "./icons/40x40/Stroked/Timer": {
       "types": "./dist/types/icons/40x40/Stroked/Timer.d.ts",
