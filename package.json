@@ -1694,6 +1694,12 @@
       "import": "./dist/esm/icons/24x24/Stroked/Watch.js",
       "default": "./dist/esm/icons/24x24/Stroked/Watch.js"
     },
+    "./icons/32x32/Colorful/Fire": {
+      "types": "./dist/types/icons/32x32/Colorful/Fire.d.ts",
+      "require": "./dist/cjs/icons/32x32/Colorful/Fire.js",
+      "import": "./dist/esm/icons/32x32/Colorful/Fire.js",
+      "default": "./dist/esm/icons/32x32/Colorful/Fire.js"
+    },
     "./icons/32x32/Colorful/Logo5Post": {
       "types": "./dist/types/icons/32x32/Colorful/Logo5Post.d.ts",
       "require": "./dist/cjs/icons/32x32/Colorful/Logo5Post.js",
