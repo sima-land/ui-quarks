@@ -1058,6 +1058,12 @@
       "import": "./dist/esm/icons/24x24/Stroked/Certificate.js",
       "default": "./dist/esm/icons/24x24/Stroked/Certificate.js"
     },
+    "./icons/24x24/Stroked/Charts": {
+      "types": "./dist/types/icons/24x24/Stroked/Charts.d.ts",
+      "require": "./dist/cjs/icons/24x24/Stroked/Charts.js",
+      "import": "./dist/esm/icons/24x24/Stroked/Charts.js",
+      "default": "./dist/esm/icons/24x24/Stroked/Charts.js"
+    },
     "./icons/24x24/Stroked/Check": {
       "types": "./dist/types/icons/24x24/Stroked/Check.d.ts",
       "require": "./dist/cjs/icons/24x24/Stroked/Check.js",
