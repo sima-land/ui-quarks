@@ -620,6 +620,12 @@
       "import": "./dist/esm/icons/24x24/Filled/Card.js",
       "default": "./dist/esm/icons/24x24/Filled/Card.js"
     },
+    "./icons/24x24/Filled/Charts": {
+      "types": "./dist/types/icons/24x24/Filled/Charts.d.ts",
+      "require": "./dist/cjs/icons/24x24/Filled/Charts.js",
+      "import": "./dist/esm/icons/24x24/Filled/Charts.js",
+      "default": "./dist/esm/icons/24x24/Filled/Charts.js"
+    },
     "./icons/24x24/Filled/CircleCheck": {
       "types": "./dist/types/icons/24x24/Filled/CircleCheck.d.ts",
       "require": "./dist/cjs/icons/24x24/Filled/CircleCheck.js",
