@@ -13,3 +13,7 @@ temp
 
 # npm pack default output
 sima-land-ui-quarks-0.0.0.tgz
+
+# macOS system files
+.DS_Store
+**/.DS_Store
