@@ -58,7 +58,7 @@ export function App() {
       </Layout>
 
       <footer className={styles.footer}>
-        <Layout>Copyright © 2023 Sima-land dev team.</Layout>
+        <Layout>Copyright &copy; {new Date().getFullYear()} Sima-land dev team.</Layout>
       </footer>
     </div>
   );
